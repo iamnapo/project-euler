@@ -1,0 +1,24 @@
+{
+  "name": "projecteuler",
+  "version": "1.0.0",
+  "description": "Solutions for Project Euler problems, in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://iamnapo@github.com/iamnapo/ProjectEuler.git"
+  },
+  "author": {
+    "name": "Napoleon-Christos Oikonomou",
+    "email": "napoleonoikon@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamnapo/ProjectEuler/issues"
+  },
+  "homepage": "https://github.com/iamnapo/ProjectEuler#readme",
+  "private": true
+}
