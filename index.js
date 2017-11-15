@@ -8,3 +8,4 @@ const p5 = require('./app/5'); p5();
 const p6 = require('./app/6'); p6();
 const p7 = require('./app/7'); p7();
 const p8 = require('./app/8'); p8();
+const p9 = require('./app/9'); p9();
