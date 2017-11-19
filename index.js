@@ -17,3 +17,4 @@ const p14 = require('./app/14'); p14();
 const p15 = require('./app/15'); p15();
 const p16 = require('./app/16'); p16();
 const p17 = require('./app/17'); p17();
+const p18 = require('./app/18'); p18();
