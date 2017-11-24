@@ -23,3 +23,4 @@ const p20 = require('./app/20'); p20();
 const p21 = require('./app/21'); p21();
 const p22 = require('./app/22'); p22();
 const p23 = require('./app/23'); p23();
+const p24 = require('./app/24'); p24();
