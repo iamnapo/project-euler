@@ -7,7 +7,7 @@ module.exports = () => {
     if (d(i) === i) continue;
     if (d(b) === i) sum += i;
   }
-  return console.log('Problem 20 solution is: ' + sum);
+  return console.log('Problem 21 solution is: ' + sum);
 };
 
 function d(n) {
