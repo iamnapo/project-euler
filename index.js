@@ -33,3 +33,4 @@ const p30 = require('./problems/30'); p30();
 const p31 = require('./problems/31'); p31();
 const p32 = require('./problems/32'); p32();
 const p33 = require('./problems/33'); p33();
+const p34 = require('./problems/34'); p34();
