@@ -41,3 +41,4 @@ const p38 = require('./problems/38'); p38();
 const p39 = require('./problems/39'); p39();
 const p40 = require('./problems/40'); p40();
 const p41 = require('./problems/41'); p41();
+const p42 = require('./problems/42'); p42();
