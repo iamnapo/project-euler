@@ -43,3 +43,4 @@ require('./problems/42')();
 require('./problems/42')();
 require('./problems/42')();
 require('./problems/43')();
+require('./problems/44')();
