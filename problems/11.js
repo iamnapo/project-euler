@@ -1,5 +1,3 @@
-'use strict';
-
 const grid = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
   [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0],
@@ -25,34 +23,36 @@ const grid = [
 
 module.exports = () => {
   let max = 0;
-  for (let i = 0; i < 20; i++) {
-    let col = grid.map((x) => x[i]);
-    for (let j = 0; j < 16; j++) {
-      let product = grid[i].slice(j, j + 4).reduce((a, b) => a*b);
+  for (let i = 0; i < 20; i += 1) {
+    const col = grid.map(x => x[i]);
+    for (let j = 0; j < 16; j += 1) {
+      let product = grid[i].slice(j, j + 4).reduce((a, b) => a * b);
       max = product > max ? product : max;
       product = col.slice(j, j + 4).reduce((a, b) => a * b);
       max = product > max ? product : max;
     }
   }
-  for (let i = 0; i < 20; i++) {
-    for (let j = 0; j < 20; j++) {
-      if (i+3 > 19 || j+3 > 19) continue;
-      let product = 1;
-      for (let k = 0; k < 4; k++) {
-        product *= grid[i+k][j+k];
+  for (let i = 0; i < 20; i += 1) {
+    for (let j = 0; j < 20; j += 1) {
+      if (!(i + 3 > 19 || j + 3 > 19)) {
+        let product = 1;
+        for (let k = 0; k < 4; k += 1) {
+          product *= grid[i + k][j + k];
+        }
+        max = product > max ? product : max;
       }
-      max = product > max ? product : max;
     }
   }
-  for (let i = 0; i < 20; i++) {
-    for (let j = 0; j < 20; j++) {
-      if (i + 3 > 19 || j - 3 < 0) continue;
-      let product = 1;
-      for (let k = 0; k < 4; k++) {
-        product *= grid[i + k][j - k];
+  for (let i = 0; i < 20; i += 1) {
+    for (let j = 0; j < 20; j += 1) {
+      if (!(i + 3 > 19 || j - 3 < 0)) {
+        let product = 1;
+        for (let k = 0; k < 4; k += 1) {
+          product *= grid[i + k][j - k];
+        }
+        max = product > max ? product : max;
       }
-      max = product > max ? product : max;
     }
   }
-  return console.log('Problem 11 solution is: ' + max);
+  return console.log(`Problem 11 solution is: ${max}`);
 };

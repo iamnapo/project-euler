@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = () => {
   const singleDigit = [
     0, // zero
@@ -38,13 +36,13 @@ module.exports = () => {
     6, // ninety
   ];
   let sum = 11; // "one thousand"
-  for (let i = 0; i < 1000; i++) {
-    let third = ~~(i / 100);
-    let second = ~~(i % 100 / 10);
-    let first = i % 10;
+  for (let i = 0; i < 1000; i += 1) {
+    const third = Math.floor(i / 100);
+    const second = Math.floor((i % 100) / 10);
+    const first = i % 10;
     if (third > 0) sum += singleDigit[third] + 7; // "hundred"
-    let temp = second === 1 ? tens[first] : doubleDigit[second] + singleDigit[first];
+    const temp = second === 1 ? tens[first] : doubleDigit[second] + singleDigit[first];
     if (temp > 0) sum += temp + (third > 0 ? 3 : 0); // "and"
   }
-  return console.log('Problem 17 solution is: ' + sum);
+  return console.log(`Problem 17 solution is: ${sum}`);
 };

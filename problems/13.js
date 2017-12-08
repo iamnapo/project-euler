@@ -1,5 +1,3 @@
-'use strict';
-
 const numbers = [
   37107287533902102798797998220837590246510135740250,
   46376937677490009712648124896970078050417018260538,
@@ -103,6 +101,4 @@ const numbers = [
   53503534226472524250874054075591789781264330331690,
 ];
 
-module.exports = () => {
-  return console.log('Problem 13 solution is: ' + numbers.reduce((a, b) => a + b).toLocaleString('en-US').replace(/,/g, '').slice(0, 10));
-};
+module.exports = () => console.log(`Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString('en-US').replace(/,/g, '').slice(0, 10)}`);

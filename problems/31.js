@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = () => {
   const TARGET = 200;
   let ways = 0;
@@ -10,7 +8,7 @@ module.exports = () => {
           for (let e = d; e > -1; e -= 10) {
             for (let f = e; f > -1; f -= 5) {
               for (let g = f; g > -1; g -= 2) {
-                ways++;
+                ways += 1;
               }
             }
           }
@@ -18,5 +16,5 @@ module.exports = () => {
       }
     }
   }
-  return console.log('Problem 31 solution is: ' + ways);
+  return console.log(`Problem 31 solution is: ${ways}`);
 };

@@ -1,5 +1,4 @@
 /* eslint-disable indent, no-multi-spaces, array-bracket-spacing */
-'use strict';
 
 let numbers = [
 [59],
@@ -107,13 +106,13 @@ let numbers = [
 module.exports = () => {
   numbers = numbers.reverse();
   while (numbers.length > 1) {
-    let newRow = [];
-    for (let j = 0; j < numbers[1].length; j++) {
-      let temp = [numbers[1][j] + numbers[0][j], numbers[1][j] + numbers[0][j + 1]];
-      newRow.push(temp.filter((n) => isFinite(n)).reduce((a, b) => Math.max(a, b)));
+    const newRow = [];
+    for (let j = 0; j < numbers[1].length; j += 1) {
+      const temp = [numbers[1][j] + numbers[0][j], numbers[1][j] + numbers[0][j + 1]];
+      newRow.push(temp.filter(n => Number.isFinite(n)).reduce((a, b) => Math.max(a, b)));
     }
     numbers[1] = newRow;
     numbers = numbers.slice(1);
   }
-  return console.log('Problem 18 solution is: ' + numbers[0].reduce((a, b) => Math.max(a, b)));
+  return console.log(`Problem 18 solution is: ${numbers[0].reduce((a, b) => Math.max(a, b))}`);
 };
