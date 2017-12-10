@@ -54,3 +54,4 @@ require('./problems/51')();
 require('./problems/52')();
 require('./problems/53')();
 require('./problems/54')();
+require('./problems/55')();
