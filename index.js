@@ -71,3 +71,4 @@ require('./problems/68')();
 require('./problems/69')();
 require('./problems/70')();
 require('./problems/71')();
+require('./problems/72')();
