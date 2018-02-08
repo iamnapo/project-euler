@@ -96,3 +96,4 @@ require('./problems/95')();
 require('./problems/96')();
 require('./problems/97')();
 require('./problems/98')();
+require('./problems/99')();
