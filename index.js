@@ -101,3 +101,4 @@ require('./problems/100')();
 require('./problems/101')();
 require('./problems/102')();
 require('./problems/103')();
+require('./problems/104')();
