@@ -113,3 +113,4 @@ require('./problems/112')();
 require('./problems/113')();
 require('./problems/114')();
 require('./problems/115')();
+require('./problems/116')();
