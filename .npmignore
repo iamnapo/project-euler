@@ -1,3 +1,5 @@
+## Everything in .gitignore
+
 # Logs
 logs
 *.log
@@ -57,3 +59,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+## Additional files
+.editorconfig
+.eslintrc.json
+.gitattributes
+.travis.yml
+index.js
