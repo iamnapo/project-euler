@@ -19,7 +19,9 @@ module.exports = () => {
 															if (tmp.indexOf(d) < 0) {
 																let tmp2 = [];
 																tmp2 = d.concat(tmp);
-																if (isPandigital(tmp2)) sum += parseInt(tmp2, 10);
+																if (isPandigital(tmp2)) {
+																	sum += parseInt(tmp2, 10);
+																}
 															}
 														}
 													}
@@ -41,7 +43,9 @@ module.exports = () => {
 function isPandigital(n) {
 	const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 	for (const d of digits) {
-		if (n.indexOf(d) < 0) return false;
+		if (n.indexOf(d) < 0) {
+			return false;
+		}
 	}
 	return n.length === 10;
 }

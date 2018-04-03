@@ -16,7 +16,9 @@ module.exports = () => {
 			penta = Math.trunc((j * ((3 * j) - 1)) / 2);
 		}
 
-		if (p[n] === 0) break;
+		if (p[n] === 0) {
+			break;
+		}
 		n += 1;
 	}
 

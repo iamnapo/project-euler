@@ -6,7 +6,9 @@ module.exports = () => {
 			const pj = (j * ((3 * j) - 1)) / 2;
 			const pk = (k * ((3 * k) - 1)) / 2;
 			if (isPentagonal(Math.abs(pj - pk)) && isPentagonal(pj + pk)) {
-				if (Math.abs(pj - pk) < D) D = Math.abs(pj - pk);
+				if (Math.abs(pj - pk) < D) {
+					D = Math.abs(pj - pk);
+				}
 			}
 		}
 	}
@@ -14,6 +16,8 @@ module.exports = () => {
 };
 
 function isPentagonal(num) {
-	if (num === 0) return false;
+	if (num === 0) {
+		return false;
+	}
 	return ((Math.sqrt(1 + (24 * num)) + 1) / 6) % 1 === 0;
 }

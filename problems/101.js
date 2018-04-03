@@ -15,11 +15,15 @@ module.exports = () => {
 		for (let i = 1; i <= k; i += 1) {
 			let [num, den] = [1, 1];
 			for (let j = 1; j <= k; j += 1) {
-				if (i !== j) [num, den] = [num * (k - j + 1), den * (i - j)];
+				if (i !== j) {
+					[num, den] = [num * (k - j + 1), den * (i - j)];
+				}
 			}
 			potFit += seq[i - 1] * num / den;
 		}
-		if (potFit !== seq[k]) sum += potFit;
+		if (potFit !== seq[k]) {
+			sum += potFit;
+		}
 	}
 	return console.log(`Problem 101 solution is: ${sum}`);
 };

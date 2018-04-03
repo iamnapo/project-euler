@@ -8,7 +8,9 @@ module.exports = () => {
 
 	for (let i = 0; i < numbers[5].length; i += 1) {
 		solution[5] = numbers[5][i];
-		if (findNext(5, 1)) break;
+		if (findNext(5, 1)) {
+			break;
+		}
 	}
 	return console.log(`Problem 61 solution is: ${solution.reduce((a, b) => a + b)}`);
 };
@@ -20,28 +22,30 @@ function generateNumbers(type) {
 	while (number < 10000) {
 		n += 1;
 		switch (type) {
-		case 0:
-			number = (n * (n + 1)) / 2;
-			break;
-		case 1:
-			number = n * n;
-			break;
-		case 2:
-			number = (n * ((3 * n) - 1)) / 2;
-			break;
-		case 3:
-			number = n * ((2 * n) - 1);
-			break;
-		case 4:
-			number = (n * ((5 * n) - 3)) / 2;
-			break;
-		case 5:
-			number = n * ((3 * n) - 2);
-			break;
-		default:
-			break;
+			case 0:
+				number = (n * (n + 1)) / 2;
+				break;
+			case 1:
+				number = n * n;
+				break;
+			case 2:
+				number = (n * ((3 * n) - 1)) / 2;
+				break;
+			case 3:
+				number = n * ((2 * n) - 1);
+				break;
+			case 4:
+				number = (n * ((5 * n) - 3)) / 2;
+				break;
+			case 5:
+				number = n * ((3 * n) - 2);
+				break;
+			default:
+				break;
 		}
-		if (number > 999) newNumbers.push(number);
+		if (number > 999) {
+newNumbers.push(number);
+		}
 	}
 	return newNumbers;
 }
@@ -59,7 +63,9 @@ function findNext(last, length) {
 				}
 				if (unique && (Math.trunc(numbers[i][j] / 100) === (solution[last] % 100))) {
 					solution[i] = numbers[i][j];
-					if ((length === 5 && Math.trunc(solution[5] / 100) === solution[i] % 100) || findNext(i, length + 1)) return true;
+					if ((length === 5 && Math.trunc(solution[5] / 100) === solution[i] % 100) || findNext(i, length + 1)) {
+						return true;
+					}
 				}
 			}
 			solution[i] = 0;

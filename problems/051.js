@@ -13,7 +13,9 @@ module.exports = () => {
 						const pattern = fillPattern(patterns[j], i);
 						const candidate = generateNumber(k, pattern);
 						if (candidate < result && isPrime(candidate)) {
-							if (familySize(k, pattern) === 8) result = candidate;
+							if (familySize(k, pattern) === 8) {
+								result = candidate;
+							}
 							break;
 						}
 					}
@@ -25,15 +27,29 @@ module.exports = () => {
 };
 
 function isPrime(n) {
-	if (n <= 1) return false;
-	if (n === 2) return true;
-	if (n % 2 === 0) return false;
-	if (n < 9) return true;
-	if (n % 3 === 0) return false;
+	if (n <= 1) {
+		return false;
+	}
+	if (n === 2) {
+		return true;
+	}
+	if (n % 2 === 0) {
+		return false;
+	}
+	if (n < 9) {
+		return true;
+	}
+	if (n % 3 === 0) {
+		return false;
+	}
 	let counter = 5;
 	while ((counter * counter) <= n) {
-		if (n % counter === 0) return false;
-		if (n % (counter + 2) === 0) return false;
+		if (n % counter === 0) {
+			return false;
+		}
+		if (n % (counter + 2) === 0) {
+			return false;
+		}
 		counter += 6;
 	}
 	return true;
@@ -66,7 +82,9 @@ function get6digitPatterns() {
 function familySize(repeatingNumber, pattern) {
 	let fSize = 1;
 	for (let i = repeatingNumber + 1; i < 10; i += 1) {
-		if (isPrime(generateNumber(i, pattern))) fSize += 1;
+		if (isPrime(generateNumber(i, pattern))) {
+			fSize += 1;
+		}
 	}
 	return fSize;
 }

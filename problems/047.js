@@ -1,7 +1,9 @@
 module.exports = () => {
 	const primeList = [];
 	for (let i = 2; primeList.length < 1000; i += 1) { // 1000 LGTM
-		if (isPrime(i)) primeList.push(i);
+		if (isPrime(i)) {
+primeList.push(i);
+		}
 	}
 	let consec = 1;
 	let result = 2 * 3 * 5 * 7;
@@ -18,7 +20,9 @@ module.exports = () => {
 
 function isPrime(number) {
 	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) return false;
+		if (number % i === 0) {
+			return false;
+		}
 	}
 	return number > 1;
 }
@@ -36,8 +40,12 @@ function numberOfPrimeFacors(number, primeList) {
 			pf = true;
 			remain = Math.trunc(remain / primeList[i]);
 		}
-		if (pf) nod += 1;
-		if (remain === 1) return nod;
+		if (pf) {
+			nod += 1;
+		}
+		if (remain === 1) {
+			return nod;
+		}
 	}
 	return nod;
 }

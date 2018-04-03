@@ -3,8 +3,12 @@ module.exports = () => {
 	for (let i = 2; i < 1e07; i += 1) {
 		let tmp = i;
 		for (;;) {
-			if (tmp === 89) result += 1;
-			if ([1, 89].includes(tmp)) break;
+			if (tmp === 89) {
+				result += 1;
+			}
+			if ([1, 89].includes(tmp)) {
+				break;
+			}
 			tmp = squareDigitSum(tmp);
 		}
 	}

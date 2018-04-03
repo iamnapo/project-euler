@@ -98,7 +98,7 @@ const sets = [
 	[150, 143, 157, 152, 184, 112, 154, 151, 132],
 	[36, 41, 54, 40, 25, 44, 42],
 	[37, 48, 34, 59, 39, 41, 40],
-	[681, 603, 638, 611, 584, 303, 454, 607, 606, 605, 596],
+	[681, 603, 638, 611, 584, 303, 454, 607, 606, 605, 596]
 ];
 
 module.exports = () => {
@@ -107,7 +107,9 @@ module.exports = () => {
 		set.sort();
 		if (verifyRule2(set)) {
 			const tmp = makeSubsetSums(set);
-			if (verifyRule1(tmp)) sum += set.reduce((a, b) => a + b, 0);
+			if (verifyRule1(tmp)) {
+				sum += set.reduce((a, b) => a + b, 0);
+			}
 		}
 	}
 	return console.log(`Problem 105 solution is: ${sum}`);
@@ -122,11 +124,12 @@ function makeSubsetSums(a) {
 }
 
 function makeSubsetSum(a, mm) {
-	/* eslint-disable no-bitwise */
 	let sum = 0;
 	let m = mm;
 	for (let i = 0; i < a.length; i += 1) {
-		if ((m & 1) === 1) sum += a[i];
+		if ((m & 1) === 1) {
+			sum += a[i];
+		}
 		m >>= 1;
 	}
 	return sum;
@@ -137,9 +140,13 @@ function verifyRule1(a) {
 		let k = i;
 		while (k !== -1) {
 			k += 1;
-			if (k >= a.length) break;
+			if (k >= a.length) {
+				break;
+			}
 			k = a.indexOf(a[i], k);
-			if (k !== -1 && ((i & k) === 0)) return false;
+			if (k !== -1 && ((i & k) === 0)) {
+				return false;
+			}
 		}
 	}
 	return true;
@@ -151,7 +158,9 @@ function verifyRule2(a) {
 	for (let i = 0; i < a.length / 2; i += 1) {
 		sum1 += a[i + 1];
 		sum2 += a[a.length - i - 1];
-		if (sum1 <= sum2) return false;
+		if (sum1 <= sum2) {
+			return false;
+		}
 	}
 	return true;
 }

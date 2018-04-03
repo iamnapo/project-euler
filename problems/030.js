@@ -8,7 +8,9 @@ module.exports = () => {
 		const fourth = Math.floor(i / 1000) % 10;
 		const fifth = Math.floor(i / 1e04) % 10;
 		const sixth = Math.floor(i / 1e05) % 10;
-		if (i === ((first ** POWER) + (second ** POWER) + (third ** POWER) + (fourth ** POWER) + (fifth ** POWER) + (sixth ** POWER))) sum += i;
+		if (i === ((first ** POWER) + (second ** POWER) + (third ** POWER) + (fourth ** POWER) + (fifth ** POWER) + (sixth ** POWER))) {
+			sum += i;
+		}
 	}
 	return console.log(`Problem 30 solution is: ${sum}`);
 };

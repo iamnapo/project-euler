@@ -4,7 +4,9 @@ module.exports = () => {
 	let max = 0;
 	for (let i = 1; i < 988; i += 1) {
 		const t = num.slice(i, i + 13).split('').reduce((a, b) => a * b);
-		if (t > max) max = t;
+		if (t > max) {
+			max = t;
+		}
 	}
 	return console.log(`Problem 8 solution is: ${max}`);
 };

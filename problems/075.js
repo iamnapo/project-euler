@@ -10,8 +10,12 @@ module.exports = () => {
 				let p = a + b + c;
 				while (p < 1500001) {
 					triangles[p] += 1;
-					if (triangles[p] === 1) result += 1;
-					if (triangles[p] === 2) result -= 1;
+					if (triangles[p] === 1) {
+						result += 1;
+					}
+					if (triangles[p] === 2) {
+						result -= 1;
+					}
 					p += a + b + c;
 				}
 			}
@@ -25,6 +29,8 @@ function gcd(a, b) {
 	let x;
 	let y;
 	[x, y] = a > b ? [a, b] : [b, a];
-	while (x % y !== 0)[x, y] = [y, x % y];
+	while (x % y !== 0) {
+		[x, y] = [y, x % y];
+	}
 	return y;
 }

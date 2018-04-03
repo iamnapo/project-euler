@@ -3,7 +3,9 @@ module.exports = () => {
 	let xMax = 9;
 	for (let D = 8; D < 1001; D += 1) {
 		const x = chakravala(D);
-		if (x > xMax) [xMax, result] = [x, D];
+		if (x > xMax) {
+			[xMax, result] = [x, D];
+		}
 	}
 	return console.log(`Problem 66 solution is: ${result}`);
 };
@@ -14,7 +16,9 @@ function chakravala(N) {
 	let a = m;
 	let b = 1;
 	let k = (m ** 2) - N;
-	if (k === 0) return 0;
+	if (k === 0) {
+		return 0;
+	}
 	while (k !== 1) {
 		const absK = Math.abs(k);
 		if (k === -1 || absK === 2 || (absK === 4 && !((a && 1) && (b && 1)))) {

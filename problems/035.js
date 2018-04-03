@@ -13,7 +13,9 @@ module.exports = () => {
 				tmp = tmp.toString();
 				tmp = parseInt(tmp[tmp.length - 1] + tmp.slice(0, tmp.length - 1), 10);
 			}
-			if (allGood) count += 1;
+			if (allGood) {
+				count += 1;
+			}
 		}
 	}
 	return console.log(`Problem 35 solution is: ${count}`);
@@ -21,7 +23,9 @@ module.exports = () => {
 
 function isPrime(number) {
 	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) return false;
+		if (number % i === 0) {
+			return false;
+		}
 	}
 	return number > 1;
 }

@@ -16,10 +16,14 @@ module.exports = () => {
 
 function sameDigits(a, b) {
 	for (const d of a) {
-		if (b.indexOf(d) < 0) return false;
+		if (b.indexOf(d) < 0) {
+			return false;
+		}
 	}
 	for (const d of b) {
-		if (a.indexOf(d) < 0) return false;
+		if (a.indexOf(d) < 0) {
+			return false;
+		}
 	}
 	return a.length === b.length;
 }

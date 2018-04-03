@@ -7,7 +7,9 @@ module.exports = () => {
 		let number = i ** 2;
 		for (let j = i + 1; j <= sqrtLimit; j += 1) {
 			number += j ** 2;
-			if (number > limit) break;
+			if (number > limit) {
+				break;
+			}
 			if (isPalindrome(number.toString()) && !list.includes(number)) {
 				sum += number;
 				list.push(number);

@@ -8,12 +8,16 @@ module.exports = () => {
 			tmp = parseInt(tmp / 10, 10);
 			sum += factorial(d);
 		}
-		if (sum === i) result += i;
+		if (sum === i) {
+			result += i;
+		}
 	}
 	return console.log(`Problem 34 solution is: ${result}`);
 };
 
 function factorial(n) {
-	if (n === 0 || n === 1) return 1;
+	if (n === 0 || n === 1) {
+		return 1;
+	}
 	return n * factorial(n - 1);
 }

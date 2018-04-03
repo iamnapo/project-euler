@@ -9,14 +9,20 @@ module.exports = () => {
 
 	backtrack(1, 0);
 
-	for (let i = 1; i <= limit; i += 1) result += cost[i];
+	for (let i = 1; i <= limit; i += 1) {
+		result += cost[i];
+	}
 
 	return console.log(`Problem 122 solution is: ${result}`);
 };
 
 function backtrack(power, depth) {
-	if (power > limit || depth > cost[power]) return;
+	if (power > limit || depth > cost[power]) {
+		return;
+	}
 	cost[power] = depth;
 	path[depth] = power;
-	for (let i = depth; i >= 0; i -= 1) backtrack(power + path[i], depth + 1);
+	for (let i = depth; i >= 0; i -= 1) {
+backtrack(power + path[i], depth + 1);
+	}
 }

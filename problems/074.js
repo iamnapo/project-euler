@@ -10,7 +10,9 @@ module.exports = () => {
 			n = factorialSum(n);
 			count += 1;
 		}
-		if (count === 57 && [169, 363601, 1454].indexOf(n) > -1) result += 1;
+		if (count === 57 && [169, 363601, 1454].indexOf(n) > -1) {
+			result += 1;
+		}
 	}
 
 	return console.log(`Problem 74 solution is: ${result}`);

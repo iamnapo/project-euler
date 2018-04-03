@@ -999,13 +999,12 @@ function getCards() {
 		['AD', '3D', 'TS', 'KS', '7H', 'JH', '2D', 'JS', 'QD', 'AC'],
 		['9C', 'JD', '7C', '6D', 'TC', '6H', '6C', 'JC', '3D', '3S'],
 		['QC', 'KC', '3S', 'JC', 'KD', '2C', '8D', 'AH', 'QS', 'TS'],
-		['AS', 'KD', '3D', 'JD', '8H', '7C', '8C', '5C', 'QD', '6C'],
+		['AS', 'KD', '3D', 'JD', '8H', '7C', '8C', '5C', 'QD', '6C']
 	];
 	for (let i = 0; i < cards.length; i += 1) {
 		cards[i] = cards[i].map(hand => ({
-			// eslint-disable-next-line no-nested-ternary
 			value: hand[0] === 'T' ? '10' : (hand[0] === 'J' ? '11' : (hand[0] === 'Q' ? '12' : (hand[0] === 'K' ? '13' : (hand[0] === 'A' ? '14' : hand[0])))),
-			suit: hand[1],
+			suit: hand[1]
 		}));
 	}
 	return cards;
@@ -1036,7 +1035,9 @@ module.exports = () => {
 					break;
 				}
 			}
-			if (won) count += 1;
+			if (won) {
+				count += 1;
+			}
 		}
 	}
 	return console.log(`Problem 54 solution is: ${count}`);
@@ -1045,33 +1046,57 @@ module.exports = () => {
 function score(h) {
 	let sc = {};
 	const hand = h.sort((a, b) => b.value - a.value);
-	sc = { category: 0, tiebraker: hand.map(el => el.value) };
+	sc = {category: 0, tiebraker: hand.map(el => el.value)};
 	const values = hand.map(el => el.value);
 	const pairs = [];
-	values.forEach((el) => {
+	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
-		if (tmp === 2 && pairs.indexOf(el) < 0) pairs.push(el);
+		if (tmp === 2 && pairs.indexOf(el) < 0) {
+pairs.push(el);
+		}
 	});
-	if (pairs.length === 1) sc = { category: 1, tiebraker: [].concat(pairs[0], values) };
-	if (pairs.length === 2) sc = { category: 2, tiebraker: [].concat(pairs[0], pairs[1], values) };
+	if (pairs.length === 1) {
+		sc = {category: 1, tiebraker: [].concat(pairs[0], values)};
+	}
+	if (pairs.length === 2) {
+		sc = {category: 2, tiebraker: [].concat(pairs[0], pairs[1], values)};
+	}
 	const triplets = [];
-	values.forEach((el) => {
+	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
-		if (tmp === 3 && triplets.indexOf(el) < 0) triplets.push(el);
+		if (tmp === 3 && triplets.indexOf(el) < 0) {
+triplets.push(el);
+		}
 	});
-	if (triplets.length === 1) sc = { category: 3, tiebraker: [triplets[0]] };
+	if (triplets.length === 1) {
+		sc = {category: 3, tiebraker: [triplets[0]]};
+	}
 	const inOrder = (values[0] - values[1] === 1) && (values[1] - values[2] === 1) && (values[2] - values[3] === 1) && (values[3] - values[4] === 1);
-	if (inOrder) sc = { category: 4, tiebraker: [values[0]] };
-	const inSuit = !!hand.map(el => el.suit).reduce((a, b) => ((a === b) ? a : NaN));
-	if (inSuit) sc = { category: 4, tiebraker: values[0] };
-	if (pairs.length === 1 && triplets.length === 1) sc = { category: 5, tiebraker: [triplets[0]] };
+	if (inOrder) {
+		sc = {category: 4, tiebraker: [values[0]]};
+	}
+	const inSuit = Boolean(hand.map(el => el.suit).reduce((a, b) => ((a === b) ? a : NaN)));
+	if (inSuit) {
+		sc = {category: 4, tiebraker: values[0]};
+	}
+	if (pairs.length === 1 && triplets.length === 1) {
+		sc = {category: 5, tiebraker: [triplets[0]]};
+	}
 	const quads = [];
-	values.forEach((el) => {
+	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
-		if (tmp === 4 && quads.indexOf(el) < 0) quads.push(el);
+		if (tmp === 4 && quads.indexOf(el) < 0) {
+quads.push(el);
+		}
 	});
-	if (quads.length === 1) sc = { category: 6, tiebraker: [quads[0]] };
-	if (inSuit && inOrder) sc = { category: 7, tiebraker: [values[0]] };
-	if (inSuit && inOrder && values[0] === '14') sc = { category: 8, tiebraker: [] };
+	if (quads.length === 1) {
+		sc = {category: 6, tiebraker: [quads[0]]};
+	}
+	if (inSuit && inOrder) {
+		sc = {category: 7, tiebraker: [values[0]]};
+	}
+	if (inSuit && inOrder && values[0] === '14') {
+		sc = {category: 8, tiebraker: []};
+	}
 	return sc;
 }

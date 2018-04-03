@@ -13,15 +13,29 @@ module.exports = () => {
 };
 
 function isPrime(n) {
-	if (n <= 1) return false;
-	if (n === 2) return true;
-	if (n % 2 === 0) return false;
-	if (n < 9) return true;
-	if (n % 3 === 0) return false;
+	if (n <= 1) {
+		return false;
+	}
+	if (n === 2) {
+		return true;
+	}
+	if (n % 2 === 0) {
+		return false;
+	}
+	if (n < 9) {
+		return true;
+	}
+	if (n % 3 === 0) {
+		return false;
+	}
 	let counter = 5;
 	while ((counter * counter) <= n) {
-		if (n % counter === 0) return false;
-		if (n % (counter + 2) === 0) return false;
+		if (n % counter === 0) {
+			return false;
+		}
+		if (n % (counter + 2) === 0) {
+			return false;
+		}
 		counter += 6;
 	}
 	return true;
@@ -31,7 +45,9 @@ function lton(l) {
 	const s = 10;
 	let n = 0;
 	l.reverse();
-	for (const d of l) n = (n * s) + d;
+	for (const d of l) {
+		n = (n * s) + d;
+	}
 	return n;
 }
 
@@ -49,11 +65,7 @@ function gen(d, k, l, n) {
 		res = res.concat(gen(d, k, l.concat(d), n - 1));
 	} else {
 		for (let i = 0; i < 10; i += 1) {
-			if (d !== i) {
-				res = res.concat(gen(d, k - 1, l.concat(i), n - 1));
-			} else {
-				res = res.concat(gen(d, k, l.concat(d), n - 1));
-			}
+			res = d === i ? res.concat(gen(d, k, l.concat(d), n - 1)) : res.concat(gen(d, k - 1, l.concat(i), n - 1));
 		}
 	}
 	return res;

@@ -998,7 +998,7 @@ const pairs = [
 	[672276, 515708],
 	[325361, 545187],
 	[172115, 573985],
-	[13846, 725685],
+	[13846, 725685]
 ];
 
 module.exports = () => {
@@ -1006,7 +1006,9 @@ module.exports = () => {
 	let maxPair = [1, 1];
 	for (const pair of pairs) {
 		const tmp = Math.log(pair[0]) * pair[1];
-		if (tmp > max) [max, maxPair] = [tmp, pair];
+		if (tmp > max) {
+			[max, maxPair] = [tmp, pair];
+		}
 	}
 	return console.log(`Problem 99 solution is: ${pairs.indexOf(maxPair) + 1}`);
 };

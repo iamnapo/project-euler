@@ -3,7 +3,7 @@ module.exports = () => {
 	const maxNumber = 2 * maxK;
 	const numFactors = Math.trunc(Math.log10(maxNumber) / Math.log10(2));
 	const factors = new Array(numFactors).fill(0);
-	const k = (n => [...Array(n).keys()])(maxK + 1).slice().map(el => 2 * el);
+	const k = (n => [...new Array(n).keys()])(maxK + 1).slice().map(el => 2 * el);
 	k[1] = 0;
 	factors[0] = 1;
 	let curMaxFactor = 1;
@@ -11,7 +11,9 @@ module.exports = () => {
 
 	for (; ;) {
 		if (j === 0) {
-			if (curMaxFactor === numFactors) break;
+			if (curMaxFactor === numFactors) {
+				break;
+			}
 			if (factors[0] < factors[1]) {
 				factors[0] += 1;
 			} else {

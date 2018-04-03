@@ -5,11 +5,17 @@ module.exports = () => {
 		let k = -1;
 		let l = -1;
 		for (let i = 0; i < a.length; i += 1) {
-			if (a[i] < a[i + 1]) k = i;
+			if (a[i] < a[i + 1]) {
+				k = i;
+			}
 		}
-		if (k === -1) break;
+		if (k === -1) {
+			break;
+		}
 		for (let i = 0; i < a.length; i += 1) {
-			if (a[k] < a[i]) l = i;
+			if (a[k] < a[i]) {
+				l = i;
+			}
 		}
 		[a[k], a[l]] = [a[l], a[k]];
 		a = [].concat(a.slice(0, k + 1), a.slice(k + 1).reverse());

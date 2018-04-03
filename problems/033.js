@@ -3,7 +3,9 @@ module.exports = () => {
 	for (let b = 2; b < 100; b += 1) {
 		for (let a = 1; a < b; a += 1) {
 			const pair = [a, b];
-			if (isCurious(pair)) pairs.push(pair);
+			if (isCurious(pair)) {
+pairs.push(pair);
+			}
 		}
 	}
 	let num = 1;
@@ -23,6 +25,8 @@ function isCurious(pair) {
 }
 
 function gcd(a, b) {
-	if (b) return gcd(b, a % b);
+	if (b) {
+		return gcd(b, a % b);
+	}
 	return Math.abs(a);
 }

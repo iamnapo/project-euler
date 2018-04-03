@@ -3,22 +3,24 @@ const cipher = [79, 59, 12, 2, 79, 35, 8, 28, 20, 2, 3, 68, 8, 9, 68, 45, 0, 12,
 module.exports = () => {
 	const keyLength = 3;
 	const maxSize = Math.max(...cipher);
-	const aMessage = Array(keyLength);
-	for (let i = 0; i < aMessage.length; i += 1) aMessage[i] = Array(maxSize + 1).fill(0);
-	const key = Array(keyLength).fill(0);
+	const aMessage = new Array(keyLength);
+	for (let i = 0; i < aMessage.length; i += 1) {
+		aMessage[i] = new Array(maxSize + 1).fill(0);
+	}
+	const key = new Array(keyLength).fill(0);
 	for (let i = 0; i < cipher.length; i += 1) {
 		const j = i % keyLength;
 		aMessage[j][cipher[i]] += 1;
-		if (aMessage[j][cipher[i]] > aMessage[j][key[j]]) key[j] = cipher[i];
+		if (aMessage[j][cipher[i]] > aMessage[j][key[j]]) {
+			key[j] = cipher[i];
+		}
 	}
 	const spaceASCII = 32;
 	for (let i = 0; i < keyLength; i += 1) {
-		// eslint-disable-next-line no-bitwise
 		key[i] ^= spaceASCII;
 	}
-	const encryptedMessage = Array(cipher.length);
+	const encryptedMessage = new Array(cipher.length);
 	for (let i = 0; i < cipher.length; i += 1) {
-		// eslint-disable-next-line no-bitwise
 		encryptedMessage[i] = cipher[i] ^ key[i % key.length];
 	}
 	return console.log(`Problem 59 solution is: ${encryptedMessage.reduce((a, b) => a + b)}`);

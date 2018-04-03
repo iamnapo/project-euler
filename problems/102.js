@@ -998,7 +998,7 @@ const triangles = [
 	[777, -947, -57, 990, 74, 19],
 	[971, 626, -496, -781, -602, -239],
 	[-651, 433, 11, -339, 939, 294],
-	[-965, -728, 560, 569, -708, -247],
+	[-965, -728, 560, 569, -708, -247]
 ];
 
 module.exports = () => {
@@ -1008,7 +1008,9 @@ module.exports = () => {
 		const tmp1 = (xA * yB) - (yA * xB);
 		const tmp2 = (xB * yC) - (yB * xC);
 		const tmp3 = (xC * yA) - (yC * xA);
-		if (Math.sign(tmp1) === Math.sign(tmp2) && Math.sign(tmp1) === Math.sign(tmp3)) result += 1;
+		if (Math.sign(tmp1) === Math.sign(tmp2) && Math.sign(tmp1) === Math.sign(tmp3)) {
+			result += 1;
+		}
 	}
 	return console.log(`Problem 102 solution is: ${result}`);
 };

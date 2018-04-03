@@ -9,7 +9,9 @@ module.exports = () => {
 	let n = 1;
 	for (const [a, b] of potentialNumbers) {
 		if (digitSum(a) === b) {
-			if (n === 30) return console.log(`Problem 119 solution is: ${a}`);
+			if (n === 30) {
+				return console.log(`Problem 119 solution is: ${a}`);
+			}
 			n += 1;
 		}
 	}

@@ -7,18 +7,22 @@ module.exports = () => {
 	while (solutions < 1e06) {
 		m += 1;
 		cache = new Array(m + 1).fill(0);
-		solutions = F(m, n);
+		solutions = f(m, n);
 	}
 	return console.log(`Problem 115 solution is: ${m}`);
 };
 
-function F(m, n) {
+function f(m, n) {
 	let solutions = 1;
-	if (n > m) return solutions;
-	if (cache[m] !== 0) return cache[m];
+	if (n > m) {
+		return solutions;
+	}
+	if (cache[m] !== 0) {
+		return cache[m];
+	}
 	for (let startpos = 0; startpos <= m - n; startpos += 1) {
 		for (let blocklength = n; blocklength <= m - startpos; blocklength += 1) {
-			solutions += F(m - startpos - blocklength - 1, n);
+			solutions += f(m - startpos - blocklength - 1, n);
 		}
 	}
 	cache[m] = solutions;

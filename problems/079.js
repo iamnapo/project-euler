@@ -12,6 +12,8 @@ module.exports = () => {
 				break;
 			}
 		}
-		if (found) return console.log(`Problem 79 solution is: ${i}`);
+		if (found) {
+			return console.log(`Problem 79 solution is: ${i}`);
+		}
 	}
 };

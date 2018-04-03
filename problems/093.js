@@ -18,8 +18,8 @@ module.exports = () => {
 function testLen(...a) {
 	const r = [];
 	let s = [];
-	let [i0, i1, i2, i3, o1, o2, o3, p] = Array(8).fill(0);
-	const calc = (o) => {
+	let [i0, i1, i2, i3, o1, o2, o3, p] = new Array(8).fill(0);
+	const calc = o => {
 		const aa = s.pop();
 		const l = s.length - 1;
 		if (o) {
@@ -39,7 +39,9 @@ function testLen(...a) {
 	};
 	const ck = () => {
 		const x = calc(o3);
-		if (x > 0 && Math.floor(x) === x) r[x] = x;
+		if (x > 0 && Math.floor(x) === x) {
+			r[x] = x;
+		}
 	};
 	for (i0 = 0; i0 < 4; i0 += 1) {
 		for (i1 = 0; i1 < 4; i1 += 1) {
@@ -50,12 +52,38 @@ function testLen(...a) {
 						for (o1 = 0; o1 < 4; o1 += 1) {
 							for (o2 = 0; o2 < 4; o2 += 1) {
 								for (o3 = 0; o3 < 4; o3 += 1) {
-									s = [a[i0], a[i1]]; calc(o1); s[1] = a[i2]; calc(o2); s[1] = a[i3]; ck();
-									s = [a[i0], a[i1]]; calc(o1); s[1] = a[i2]; s[2] = a[i3]; calc(o2); ck();
-									s = [a[i0], a[i1]]; calc(o1); calc(o2); s[1] = a[i2]; s[2] = a[i3]; ck();
-									s = [a[i0], a[i1], a[i2]]; calc(o1); calc(o2); s[1] = a[i3]; ck();
-									s = [a[i0], a[i1], a[i2], a[i3]]; calc(o1); calc(o2); ck();
-									s = [a[i0], a[i1], a[i2]]; calc(o1); s[1] = a[i3]; calc(o2); ck();
+									s = [a[i0], a[i1]];
+									calc(o1);
+									s[1] = a[i2];
+									calc(o2);
+									s[1] = a[i3];
+									ck();
+									s = [a[i0], a[i1]];
+									calc(o1);
+									s[1] = a[i2];
+									s[2] = a[i3];
+									calc(o2);
+									ck();
+									s = [a[i0], a[i1]];
+									calc(o1);
+									calc(o2);
+									s[1] = a[i2];
+									s[2] = a[i3];
+									ck();
+									s = [a[i0], a[i1], a[i2]];
+									calc(o1);
+									calc(o2);
+									s[1] = a[i3];
+									ck();
+									s = [a[i0], a[i1], a[i2], a[i3]];
+									calc(o1);
+									calc(o2);
+									ck();
+									s = [a[i0], a[i1], a[i2]];
+									calc(o1);
+									s[1] = a[i3];
+									calc(o2);
+									ck();
 								}
 							}
 						}
@@ -65,7 +93,7 @@ function testLen(...a) {
 		}
 	}
 	p = 0;
-	r.every((v) => {
+	r.every(v => {
 		p += 1;
 		return v === p;
 	});

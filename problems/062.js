@@ -7,8 +7,8 @@ module.exports = () => {
 	while (!found) {
 		n += 1;
 		const smallestPerm = makeSmallestPerm(n ** 3);
-		if (cubes[smallestPerm] == null) {
-			cubes[smallestPerm] = { N: n, Perms: 0 };
+		if (!cubes[smallestPerm]) {
+			cubes[smallestPerm] = {N: n, Perms: 0};
 		}
 		cubes[smallestPerm].Perms += 1;
 		if (cubes[smallestPerm].Perms === 5) {

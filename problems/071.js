@@ -28,6 +28,8 @@ function gcd(a, b) {
 	let x;
 	let y;
 	[x, y] = a > b ? [a, b] : [b, a];
-	while (x % y !== 0) [x, y] = [y, x % y];
+	while (x % y !== 0) {
+		[x, y] = [y, x % y];
+	}
 	return y;
 }
