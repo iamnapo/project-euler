@@ -4,7 +4,7 @@ module.exports = () => {
 	const primeList = [];
 	for (let i = 0; primeList.length < 15; i += 1) {
 		if (isPrime(i)) {
-primeList.push(i);
+			primeList.push(i);
 		}
 	}
 	exponents = new Array(primeList.length).fill(0);

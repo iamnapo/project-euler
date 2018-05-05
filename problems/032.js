@@ -4,7 +4,7 @@ module.exports = () => {
 		for (let b = 1; b < 9876; b += 1) {
 			const tmp = a * b;
 			if (isPandigital(''.concat(a, b, tmp))) {
-products.add(tmp);
+				products.add(tmp);
 			}
 		}
 	}

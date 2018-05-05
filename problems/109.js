@@ -13,7 +13,7 @@ module.exports = () => {
 
 	const doubles = [];
 	for (let i = 1; i < 21; i += 1) {
-doubles.push(2 * i);
+		doubles.push(2 * i);
 	}
 	doubles.push(25 * 2);
 

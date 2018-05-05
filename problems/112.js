@@ -25,7 +25,7 @@ function isRight(n) {
 	const res = [];
 	tmp.reverse();
 	for (const i of tmp) {
-res.push(parseInt(i, 10));
+		res.push(parseInt(i, 10));
 	}
 	return isLeft(res.join(''));
 }

@@ -5,7 +5,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 module.exports = () => {
 	const triangles = [];
 	for (let i = 1; i < 79; i += 1) {
-triangles.push(0.5 * i * (i + 1));
+		triangles.push(0.5 * i * (i + 1));
 	}
 	let count = 0;
 	for (const w of words) {

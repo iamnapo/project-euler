@@ -52,7 +52,7 @@ module.exports = () => {
 		visited.push(vertex);
 		for (let r = 0; r < V; r += 1) {
 			if (graph[vertex][r] !== 0) {
-edges.push([vertex, r, graph[vertex][r]]);
+				edges.push([vertex, r, graph[vertex][r]]);
 			}
 		}
 		for (let e = 0; e < edges.length; e += 1) {
@@ -62,7 +62,7 @@ edges.push([vertex, r, graph[vertex][r]]);
 		}
 		edges.splice(edges.indexOf(minEdge), 1);
 		MST.push(minEdge);
-		vertex = minEdge[1];
+		[, vertex] = minEdge;
 		minEdge = [null, null, Infinity];
 	}
 	return console.log(`Problem 107 solution is: ${(graph.reduce((a, b) => a.concat(b), []).reduce((a, b) => a + b, 0) / 2) - MST.map(el => el[2]).reduce((a, b) => a + b, 0)}`);

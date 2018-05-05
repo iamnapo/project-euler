@@ -4,7 +4,7 @@ module.exports = () => {
 	const primeList = [];
 	for (let i = 1; primeList.length < 1e06; i += 1) {
 		if (isPrime(i)) {
-primeList.push(i);
+			primeList.push(i);
 		}
 	}
 	const primeSum = [];

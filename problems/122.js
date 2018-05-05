@@ -23,6 +23,6 @@ function backtrack(power, depth) {
 	cost[power] = depth;
 	path[depth] = power;
 	for (let i = depth; i >= 0; i -= 1) {
-backtrack(power + path[i], depth + 1);
+		backtrack(power + path[i], depth + 1);
 	}
 }

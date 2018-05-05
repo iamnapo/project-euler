@@ -24,7 +24,7 @@ module.exports = () => {
 					tmp = tmp.slice(0, -1);
 				}
 				if (goodRight) {
-sum.push(n);
+					sum.push(n);
 				}
 			}
 		}

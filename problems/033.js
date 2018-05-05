@@ -4,7 +4,7 @@ module.exports = () => {
 		for (let a = 1; a < b; a += 1) {
 			const pair = [a, b];
 			if (isCurious(pair)) {
-pairs.push(pair);
+				pairs.push(pair);
 			}
 		}
 	}

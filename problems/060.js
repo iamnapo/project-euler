@@ -1,7 +1,7 @@
 const primeList = [];
 for (let i = 1; primeList.length < 10000; i += 1) { // 10000 LGTM
 	if (isPrime(i)) {
-primeList.push(i);
+		primeList.push(i);
 	}
 }
 

@@ -3,9 +3,9 @@ module.exports = () => {
 	const carres = [4, 9, 16, 25, 36, 49, 64, 81];
 	for (let n = 2; n < 100; n += 1) {
 		if (!(carres.includes(n))) {
-lsqrt(n).forEach(el => {
-	sum += el;
-});
+			lsqrt(n).forEach(el => {
+				sum += el;
+			});
 		}
 	}
 	return console.log(`Problem 80 solution is: ${sum}`);

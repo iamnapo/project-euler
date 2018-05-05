@@ -16,10 +16,10 @@ module.exports = () => {
 		} else {
 			cPos = (cPos + dice1 + dice2) % 40;
 			if (cPos === 7 || cPos === 22 || cPos === 36) {
-chance();
+				chance();
 			}
 			if (cPos === 2 || cPos === 17 || cPos === 33) {
-cc();
+				cc();
 			}
 			if (cPos === 30) {
 				cPos = 10;

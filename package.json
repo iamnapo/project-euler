@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/iamnapo/ProjectEuler#readme",
   "devDependencies": {
-    "xo": "^0.20.3"
+    "xo": "^0.21.0"
   },
   "keywords": [
     "projecteuler",

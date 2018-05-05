@@ -153,7 +153,7 @@ function verifyRule1(a) {
 }
 
 function verifyRule2(a) {
-	let sum1 = a[0];
+	let [sum1] = a;
 	let sum2 = 0;
 	for (let i = 0; i < a.length / 2; i += 1) {
 		sum1 += a[i + 1];

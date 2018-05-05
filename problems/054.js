@@ -1052,7 +1052,7 @@ function score(h) {
 	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
 		if (tmp === 2 && pairs.indexOf(el) < 0) {
-pairs.push(el);
+			pairs.push(el);
 		}
 	});
 	if (pairs.length === 1) {
@@ -1065,7 +1065,7 @@ pairs.push(el);
 	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
 		if (tmp === 3 && triplets.indexOf(el) < 0) {
-triplets.push(el);
+			triplets.push(el);
 		}
 	});
 	if (triplets.length === 1) {
@@ -1086,7 +1086,7 @@ triplets.push(el);
 	values.forEach(el => {
 		const tmp = values.filter(i => i === el).length;
 		if (tmp === 4 && quads.indexOf(el) < 0) {
-quads.push(el);
+			quads.push(el);
 		}
 	});
 	if (quads.length === 1) {

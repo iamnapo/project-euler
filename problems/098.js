@@ -24,8 +24,7 @@ module.exports = () => {
 	}
 	let mq = 0;
 	pairs.forEach(w => {
-		const w0 = w[0];
-		const w1 = w[1];
+		const [w0, w1] = w;
 		l = w0.length;
 		squares[l].forEach(q0 => {
 			let a;

@@ -5,7 +5,7 @@ module.exports = () => {
 	const primeList = [];
 	for (let i = 0; primeList.length < 1e05; i += 1) {
 		if (isPrime(i)) {
-primeList.push(i);
+			primeList.push(i);
 		}
 	}
 	const numbers = new Array(limit + 1).fill(false);
@@ -76,7 +76,7 @@ function isPrime(n) {
 function sumOfFactors(number, primeList) {
 	let n = number;
 	let sum = 1;
-	let p = primeList[0];
+	let [p] = primeList;
 	let j;
 	let i = 0;
 	while (p * p <= n && n > 1) {

@@ -18,7 +18,7 @@ function allCombination(k, n) {
 	const combs = [];
 	let comb = [];
 	for (let i = 0; i < k; i += 1) {
-comb.push(i);
+		comb.push(i);
 	}
 	for (; ;) {
 		combs.push(comb);

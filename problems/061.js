@@ -44,7 +44,7 @@ function generateNumbers(type) {
 				break;
 		}
 		if (number > 999) {
-newNumbers.push(number);
+			newNumbers.push(number);
 		}
 	}
 	return newNumbers;

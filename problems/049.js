@@ -2,7 +2,7 @@ module.exports = () => {
 	const primeList = [];
 	for (let i = 1490; primeList.length < 10000; i += 1) {
 		if (isPrime(i)) {
-primeList.push(i);
+			primeList.push(i);
 		}
 	}
 	for (let i = 0; i < primeList.length; i += 1) {
