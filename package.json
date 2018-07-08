@@ -19,7 +19,12 @@
   },
   "homepage": "https://github.com/iamnapo/ProjectEuler#readme",
   "devDependencies": {
-    "xo": "^0.21.0"
+    "xo": "^0.21.1"
+  },
+  "xo" : {
+    "ignore" : [
+      "problems/146.js"
+    ]
   },
   "keywords": [
     "projecteuler",
