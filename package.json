@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test": "xo"
   },
-  "repository": "github:iamnapo/ProjectEuler",
+  "repository": "github:iamnapo/project-euler",
   "author": {
     "name": "Napoleon-Christos Oikonomou",
     "email": "napoleonoikon@gmail.com",
@@ -15,9 +15,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamnapo/ProjectEuler/issues"
+    "url": "https://github.com/iamnapo/project-euler/issues"
   },
-  "homepage": "https://github.com/iamnapo/ProjectEuler#readme",
+  "homepage": "https://github.com/iamnapo/project-euler#readme",
   "devDependencies": {
     "xo": "^0.21.1"
   },
@@ -28,6 +28,7 @@
   },
   "keywords": [
     "projecteuler",
+    "project-euler",
     "euler",
     "javascript",
     "mathematics",
