@@ -1,38 +1,42 @@
 {
   "name": "project-euler",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "description": "Solutions for Project Euler problems, in JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "xo"
+  "keywords": [
+    "euler",
+    "javascript",
+    "mathematics",
+    "project-euler",
+    "projecteuler",
+    "solvers"
+  ],
+  "homepage": "https://github.com/iamnapo/project-euler#readme",
+  "bugs": {
+    "url": "https://github.com/iamnapo/project-euler/issues"
   },
   "repository": "github:iamnapo/project-euler",
+  "license": "MIT",
   "author": {
     "name": "Napoleon-Christos Oikonomou",
     "email": "napoleonoikon@gmail.com",
     "url": "https://iamnapo.me"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iamnapo/project-euler/issues"
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "eslint ."
   },
-  "homepage": "https://github.com/iamnapo/project-euler#readme",
-  "devDependencies": {
-    "xo": "^0.21.1"
-  },
-  "xo" : {
-    "ignore" : [
-      "problems/146.js"
-    ]
-  },
-  "keywords": [
-    "projecteuler",
-    "project-euler",
-    "euler",
-    "javascript",
-    "mathematics",
-    "solvers"
+  "eslintIgnore": [
+    "problems/146.js"
   ],
-  "private": true
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-iamnapo": "^1.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "iamnapo",
+  "rules": {
+    "max-len": "off",
+    "no-restricted-syntax": ["error", "WithStatement", "BinaryExpression[operator='in']"],
+    "no-continue": "off",
+    "no-bitwise": "off"
+  }
+}
