@@ -28,11 +28,12 @@
     "test": "eslint ."
   },
   "eslintIgnore": [
-    "problems/146.js"
+    "problems/146.js",
+    "problems/153.js"
   ],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.15.1",
+    "eslint": "^5.15.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-iamnapo": "^1.0.2",
     "eslint-plugin-import": "^2.16.0",
