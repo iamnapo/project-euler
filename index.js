@@ -159,3 +159,4 @@ require('./problems/158')();
 require('./problems/159')();
 require('./problems/160')();
 require('./problems/161')();
+require('./problems/162')();
