@@ -27,10 +27,6 @@
     "start": "node index.js",
     "test": "eslint ."
   },
-  "eslintIgnore": [
-    "problems/146.js",
-    "problems/153.js"
-  ],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.2",
