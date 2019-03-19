@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = () => {
   const end = 2e4 + 1;
   const mod = 1000000007n;
