@@ -164,6 +164,7 @@ require('./problems/163')();
 require('./problems/164')();
 require('./problems/205')();
 require('./problems/206')();
+require('./problems/243')();
 require('./problems/301')();
 require('./problems/345')();
 require('./problems/346')();
