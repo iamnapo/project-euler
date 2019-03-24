@@ -173,3 +173,4 @@ require('./problems/381')();
 require('./problems/387')();
 require('./problems/493')();
 require('./problems/650')();
+require('./problems/655')();
