@@ -25,7 +25,7 @@ module.exports = () => {
   };
   let sum = 0n;
   for (let k = 1; k < end; k += 1) sum += D(k);
-  console.log(`Problem 650 solution is: ${sum % mod}`);
+  return console.log(`Problem 650 solution is: ${sum % mod}`);
 };
 
 function inverseMod2(p, q) {

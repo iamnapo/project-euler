@@ -3,7 +3,7 @@ module.exports = () => {
   const colin = distribution(6, 6);
   let t = 0;
   for (let j = 0; j < colin.length; j += 1) t += colin.slice(0, j).reduce((a, b) => a + b, 0) * peter[j];
-  console.log(`Problem 205 solution is: ${t.toFixed(7)}`);
+  return console.log(`Problem 205 solution is: ${t.toFixed(7)}`);
 };
 
 function distribution(sides, number) {
