@@ -25,10 +25,10 @@ module.exports = () => {
     }
     const head = Math.trunc(10 ** Math.ceil(Math.log10(p1)));
     const val = (head * (((p2 - p1) * inverseMod2(head, p2)) % p2)) + p1;
-    sum = add(sum, val.toString().split('').map(el => parseInt(el, 10)));
+    sum = add(sum, val.toString().split("").map((el) => parseInt(el, 10)));
     p1 = p2;
   }
-  return console.log(`Problem 134 solution is: ${sum.join('')}`);
+  return console.log(`Problem 134 solution is: ${sum.join("")}`);
 };
 
 function add(a, b) {

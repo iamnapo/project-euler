@@ -35,11 +35,11 @@ module.exports = () => {
       return 0;
     }
     return -1;
-  }).map(el => el.ind);
-  let modalstring = '';
+  }).map((el) => el.ind);
+  let modalstring = "";
   for (let i = 0; i < 3; i += 1) {
     if (index[i] < 10) {
-      modalstring += '0';
+      modalstring += "0";
     }
     modalstring += index[i].toString();
   }

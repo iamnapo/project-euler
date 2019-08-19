@@ -1,7 +1,7 @@
 module.exports = () => {
   const n = 18;
   const sets = [[], [[60, 1]]];
-  const setsFract = new Set(['60|1']);
+  const setsFract = new Set(["60|1"]);
 
   function addFract(x, y, i) {
     const z = gcd(x, y);

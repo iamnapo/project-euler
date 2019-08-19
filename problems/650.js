@@ -4,7 +4,7 @@ module.exports = () => {
   const pf = [new Map(), new Map()];
   for (let i = 2; i < end; i += 1) {
     pf[i] = new Map();
-    primeFactors(i).forEach(factor => pf[i].set(factor, (pf[i].get(factor) || 0) + 1));
+    primeFactors(i).forEach((factor) => pf[i].set(factor, (pf[i].get(factor) || 0) + 1));
   }
   const inv = new Map([[0, 0n], [1, 1n]]);
   const D = (N) => {

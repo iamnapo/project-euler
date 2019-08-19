@@ -1,19 +1,19 @@
 module.exports = () => {
   let count = 0;
-  const array = (n => [...new Array(n).keys()])(81).slice(2).filter(el => primeFactors(el).every(factor => [2, 3, 5, 7, 13].includes(factor)));
-  const lcm = lcmOfMany(array.map(el => el ** 2));
-  const invSquare = array.map(el => lcm / el / el);
+  const array = ((n) => [...new Array(n).keys()])(81).slice(2).filter((el) => primeFactors(el).every((factor) => [2, 3, 5, 7, 13].includes(factor)));
+  const lcm = lcmOfMany(array.map((el) => el ** 2));
+  const invSquare = array.map((el) => lcm / el / el);
   const sum1 = [];
   const sum2 = [];
   for (const subset of subsets(invSquare.slice(0, invSquare.length / 2))) sum1.push(lcm / 2 - subset.reduce((a, b) => a + b, 0));
   for (const subset of subsets(invSquare.slice(invSquare.length / 2))) sum2.push(subset.reduce((a, b) => a + b, 0));
   const y1 = new Map();
   const y2 = new Map();
-  sum1.forEach(el => y1.set(el, (y1.get(el) || 0) + 1));
-  sum2.forEach(el => y2.set(el, (y2.get(el) || 0) + 1));
+  sum1.forEach((el) => y1.set(el, (y1.get(el) || 0) + 1));
+  sum2.forEach((el) => y2.set(el, (y2.get(el) || 0) + 1));
   const tmp = new Set(Array.from(y2.keys()));
-  const commonKeys = [...new Set(Array.from(y1.keys()))].filter(x => tmp.has(x));
-  commonKeys.forEach(key => count += (y1.get(key) * y2.get(key)));
+  const commonKeys = [...new Set(Array.from(y1.keys()))].filter((x) => tmp.has(x));
+  commonKeys.forEach((key) => count += (y1.get(key) * y2.get(key)));
   return console.log(`Problem 152 solution is: ${count}`);
 };
 

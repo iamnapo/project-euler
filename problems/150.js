@@ -7,7 +7,7 @@ module.exports = () => {
     s.push(tmp - 524288);
   }
   for (let i = 0; i < 1000; i += 1) {
-    triangular.push((i + 1) * i / 2);
+    triangular.push(((i + 1) * i) / 2);
   }
   const rowSum = new Array(1000).fill([]);
   for (let i = 0; i < 1000; i += 1) {

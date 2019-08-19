@@ -20,5 +20,5 @@ module.exports = () => {
     [a[k], a[l]] = [a[l], a[k]];
     a = [].concat(a.slice(0, k + 1), a.slice(k + 1).reverse());
   }
-  return console.log(`Problem 24 solution is: ${a.join('')}`);
+  return console.log(`Problem 24 solution is: ${a.join("")}`);
 };

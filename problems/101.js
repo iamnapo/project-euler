@@ -19,7 +19,7 @@ module.exports = () => {
           [num, den] = [num * (k - j + 1), den * (i - j)];
         }
       }
-      potFit += seq[i - 1] * num / den;
+      potFit += seq[i - 1] * (num / den);
     }
     if (potFit !== seq[k]) {
       sum += potFit;

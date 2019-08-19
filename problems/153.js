@@ -19,7 +19,7 @@ function isqrt(n) {
 }
 
 function triangular(n) {
-  return Math.trunc((n + 1) * n / 2);
+  return Math.trunc(((n + 1) * n) / 2);
 }
 
 function sumOfDivisors(n) {

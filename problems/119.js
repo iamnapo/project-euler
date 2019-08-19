@@ -15,6 +15,6 @@ module.exports = () => {
 };
 
 function digitSum(number) {
-  const tmp = number.toString().split('').map(a => parseInt(a, 10));
+  const tmp = number.toString().split("").map((a) => parseInt(a, 10));
   return tmp.reduce((a, b) => a + b);
 }

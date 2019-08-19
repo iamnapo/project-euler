@@ -65,5 +65,5 @@ module.exports = () => {
     [, vertex] = minEdge;
     minEdge = [null, null, Infinity];
   }
-  return console.log(`Problem 107 solution is: ${(graph.reduce((a, b) => a.concat(b), []).reduce((a, b) => a + b, 0) / 2) - MST.map(el => el[2]).reduce((a, b) => a + b, 0)}`);
+  return console.log(`Problem 107 solution is: ${(graph.reduce((a, b) => a.concat(b), []).reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`);
 };

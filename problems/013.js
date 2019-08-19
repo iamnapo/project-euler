@@ -101,4 +101,4 @@ const numbers = [
   53503534226472524250874054075591789781264330331690,
 ];
 
-module.exports = () => console.log(`Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString().replace(/,/g, '').slice(0, 10)}`);
+module.exports = () => console.log(`Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString().replace(/,/g, "").slice(0, 10)}`);

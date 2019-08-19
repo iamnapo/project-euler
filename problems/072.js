@@ -1,5 +1,5 @@
 module.exports = () => {
-  const phi = (n => [...new Array(n).keys()])(1e06 + 1);
+  const phi = ((n) => [...new Array(n).keys()])(1e06 + 1);
   let result = 0;
   for (let i = 2; i <= 1e06; i += 1) {
     if (phi[i] === i) {

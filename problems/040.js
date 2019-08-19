@@ -1,5 +1,5 @@
 module.exports = () => {
-  let fraction = '';
+  let fraction = "";
   for (let i = 0; i < 1000001; i += 1) {
     fraction += i;
   }

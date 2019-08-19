@@ -8,5 +8,5 @@ module.exports = () => {
       }
     }
   }
-  return console.log(`Problem 136 solution is: ${solutions.filter(el => el === 1).length}`);
+  return console.log(`Problem 136 solution is: ${solutions.filter((el) => el === 1).length}`);
 };

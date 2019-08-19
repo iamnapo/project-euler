@@ -5,7 +5,7 @@ module.exports = () => {
       let goodLeft = true;
       let tmp = n.toString();
       tmp = tmp.slice(1);
-      while (tmp !== '') {
+      while (tmp !== "") {
         if (!isPrime(parseInt(tmp, 10))) {
           goodLeft = false;
           break;
@@ -16,7 +16,7 @@ module.exports = () => {
         let goodRight = true;
         tmp = n.toString();
         tmp = tmp.slice(0, -1);
-        while (tmp !== '') {
+        while (tmp !== "") {
           if (!isPrime(parseInt(tmp, 10))) {
             goodRight = false;
             break;

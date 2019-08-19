@@ -3,7 +3,7 @@ module.exports = () => {
   for (let i = 0; i < 6; i += 1) {
     v = next(v);
   }
-  return console.log(`Problem 103 solution is: ${v.map(el => el.toString()).join('')}`);
+  return console.log(`Problem 103 solution is: ${v.map((el) => el.toString()).join("")}`);
 };
 
 function next(v) {

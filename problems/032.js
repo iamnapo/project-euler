@@ -3,7 +3,7 @@ module.exports = () => {
   for (let a = 1; a < 9876; a += 1) {
     for (let b = 1; b < 9876; b += 1) {
       const tmp = a * b;
-      if (isPandigital(''.concat(a, b, tmp))) {
+      if (isPandigital("".concat(a, b, tmp))) {
         products.add(tmp);
       }
     }
@@ -12,7 +12,7 @@ module.exports = () => {
 };
 
 function isPandigital(n) {
-  const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   for (const d of digits) {
     if (n.indexOf(d) < 0) {
       return false;

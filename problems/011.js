@@ -24,7 +24,7 @@ const grid = [
 module.exports = () => {
   let max = 0;
   for (let i = 0; i < 20; i += 1) {
-    const col = grid.map(x => x[i]);
+    const col = grid.map((x) => x[i]);
     for (let j = 0; j < 16; j += 1) {
       let product = grid[i].slice(j, j + 4).reduce((a, b) => a * b);
       max = product > max ? product : max;

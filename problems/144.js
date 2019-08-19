@@ -9,7 +9,7 @@ module.exports = () => {
 
   while (xO > 0.01 || xO < -0.01 || yO < 0) {
     const slopeA = (yO - yA) / (xO - xA);
-    const slopeO = -4 * xO / yO;
+    const slopeO = -4 * (xO / yO);
     const tanA = (slopeA - slopeO) / (1 + (slopeA * slopeO));
     const slopeB = (slopeO - tanA) / (1 + (tanA * slopeO));
     const interceptB = yO - (slopeB * xO);

@@ -11,7 +11,7 @@ module.exports = () => {
 };
 
 function isLeft(n) {
-  const tmp = n.toString().split('');
+  const tmp = n.toString().split("");
   for (const [index, el] of tmp.entries()) {
     if (tmp[index + 1] && parseInt(el, 10) > parseInt(tmp[index + 1], 10)) {
       return false;
@@ -21,11 +21,11 @@ function isLeft(n) {
 }
 
 function isRight(n) {
-  const tmp = n.toString().split('');
+  const tmp = n.toString().split("");
   const res = [];
   tmp.reverse();
   for (const i of tmp) {
     res.push(parseInt(i, 10));
   }
-  return isLeft(res.join(''));
+  return isLeft(res.join(""));
 }

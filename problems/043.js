@@ -1,5 +1,5 @@
 module.exports = () => {
-  const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   let sum = 0;
   for (let sub17 = 17; sub17 < 1000; sub17 += 17) {
     for (let sub13 = 13; sub13 < 1000; sub13 += 13) {
@@ -41,7 +41,7 @@ module.exports = () => {
 };
 
 function isPandigital(n) {
-  const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   for (const d of digits) {
     if (n.indexOf(d) < 0) {
       return false;
