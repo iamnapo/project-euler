@@ -1,12 +1,12 @@
 module.exports = () => {
-  let result = 0;
-  const limit = 1e8;
-  let [x, y] = [1, 1];
+	let result = 0;
+	const limit = 1e8;
+	let [x, y] = [1, 1];
 
-  while (x + y < limit) {
-    [x, y] = [(3 * x) + (4 * y), (2 * x) + (3 * y)];
-    result += Math.trunc(limit / (x + y));
-  }
+	while (x + y < limit) {
+		[x, y] = [(3 * x) + (4 * y), (2 * x) + (3 * y)];
+		result += Math.trunc(limit / (x + y));
+	}
 
-  return console.log(`Problem 139 solution is: ${result}`);
+	return console.log(`Problem 139 solution is: ${result}`);
 };
