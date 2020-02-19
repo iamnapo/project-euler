@@ -8,11 +8,11 @@ module.exports = () => {
 		aMessage[i] = new Array(maxSize + 1).fill(0);
 	}
 	const key = new Array(keyLength).fill(0);
-	for (let i = 0; i < cipher.length; i += 1) {
+	for (const [i, element] of cipher.entries()) {
 		const j = i % keyLength;
-		aMessage[j][cipher[i]] += 1;
-		if (aMessage[j][cipher[i]] > aMessage[j][key[j]]) {
-			key[j] = cipher[i];
+		aMessage[j][element] += 1;
+		if (aMessage[j][element] > aMessage[j][key[j]]) {
+			key[j] = element;
 		}
 	}
 	const spaceASCII = 32;
@@ -20,8 +20,8 @@ module.exports = () => {
 		key[i] ^= spaceASCII;
 	}
 	const encryptedMessage = new Array(cipher.length);
-	for (let i = 0; i < cipher.length; i += 1) {
-		encryptedMessage[i] = cipher[i] ^ key[i % key.length];
+	for (const [i, element] of cipher.entries()) {
+		encryptedMessage[i] = element ^ key[i % key.length];
 	}
 	return console.log(`Problem 59 solution is: ${encryptedMessage.reduce((a, b) => a + b)}`);
 };

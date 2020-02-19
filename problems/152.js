@@ -11,8 +11,8 @@ module.exports = () => {
 	const y2 = new Map();
 	sum1.forEach((el) => y1.set(el, (y1.get(el) || 0) + 1));
 	sum2.forEach((el) => y2.set(el, (y2.get(el) || 0) + 1));
-	const tmp = new Set(Array.from(y2.keys()));
-	const commonKeys = [...new Set(Array.from(y1.keys()))].filter((x) => tmp.has(x));
+	const tmp = new Set([...y2.keys()]);
+	const commonKeys = [...new Set([...y1.keys()])].filter((x) => tmp.has(x));
 	commonKeys.forEach((key) => count += (y1.get(key) * y2.get(key)));
 	return console.log(`Problem 152 solution is: ${count}`);
 };
@@ -48,7 +48,7 @@ function primeFactors(num) {
 	for (let i = 2; i < num; i += 1) {
 		if (num % i === 0 && isPrime(i)) arr.push(i);
 	}
-	return arr.length ? arr : [num];
+	return arr.length > 0 ? arr : [num];
 }
 
 function gcd(a, b) {

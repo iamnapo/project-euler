@@ -31,14 +31,14 @@ function numberOfPrimeFacors(number, primeList) {
 	let nod = 0;
 	let pf;
 	let remain = number;
-	for (let i = 0; i < primeList.length; i += 1) {
-		if (primeList[i] ** 2 > number) {
+	for (const element of primeList) {
+		if (element ** 2 > number) {
 			return nod + 1;
 		}
 		pf = false;
-		while (remain % primeList[i] === 0) {
+		while (remain % element === 0) {
 			pf = true;
-			remain = Math.trunc(remain / primeList[i]);
+			remain = Math.trunc(remain / element);
 		}
 		if (pf) {
 			nod += 1;

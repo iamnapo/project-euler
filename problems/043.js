@@ -16,7 +16,7 @@ module.exports = () => {
 													if (sub2.toString().padStart(3, 0).slice(1) === sub3.toString().padStart(3, 0).slice(0, 2)) {
 														const tmp = sub2.toString().padStart(3, 0).concat(sub7.toString().padStart(3, 0), sub17.toString().padStart(3, 0));
 														for (const d of digits) {
-															if (tmp.indexOf(d) < 0) {
+															if (!tmp.includes(d)) {
 																let tmp2 = [];
 																tmp2 = d.concat(tmp);
 																if (isPandigital(tmp2)) {
@@ -43,7 +43,7 @@ module.exports = () => {
 function isPandigital(n) {
 	const digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 	for (const d of digits) {
-		if (n.indexOf(d) < 0) {
+		if (!n.includes(d)) {
 			return false;
 		}
 	}

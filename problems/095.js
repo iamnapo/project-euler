@@ -36,8 +36,8 @@ module.exports = () => {
 					result = smallest;
 				}
 			}
-			for (let j = 0; j < chain.length; j += 1) {
-				numbers[chain[j]] = true;
+			for (const element of chain) {
+				numbers[element] = true;
 			}
 		}
 	}

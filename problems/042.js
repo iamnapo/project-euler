@@ -13,7 +13,7 @@ module.exports = () => {
 		for (const letter of w) {
 			score += alphabet.indexOf(letter) + 1;
 		}
-		if (triangles.indexOf(score) > -1) {
+		if (triangles.includes(score)) {
 			count += 1;
 		}
 	}

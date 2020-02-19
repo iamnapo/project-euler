@@ -9,8 +9,8 @@ module.exports = () => {
 	const target = 5e07;
 	const tmpList = primeList.slice();
 	for (let j = 0; j < 3; j += 1) {
-		for (let i = 0; i < primeList.length; i += 1) {
-			tmpList[i] *= primeList[i];
+		for (const [i, element] of primeList.entries()) {
+			tmpList[i] *= element;
 		}
 		powers[j] = tmpList.slice();
 	}

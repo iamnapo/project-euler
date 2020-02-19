@@ -27,12 +27,12 @@ function isPermutation(numA, numB) {
 	const tmpA = numA.toString().length === 4 ? numA.toString() : numA.toString().padStart(4, 0);
 	const tmpB = numB.toString().length === 4 ? numB.toString() : numB.toString().padStart(4, 0);
 	for (const c of tmpA) {
-		if (tmpB.indexOf(c) < 0) {
+		if (!tmpB.includes(c)) {
 			return false;
 		}
 	}
 	for (const c of tmpB) {
-		if (tmpA.indexOf(c) < 0) {
+		if (!tmpA.includes(c)) {
 			return false;
 		}
 	}

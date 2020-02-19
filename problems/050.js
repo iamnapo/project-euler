@@ -9,15 +9,15 @@ module.exports = () => {
 	}
 	const primeSum = [];
 	primeSum[0] = 0;
-	for (let i = 0; i < primeList.length; i += 1) {
-		primeSum[i + 1] = primeSum[i] + primeList[i];
+	for (const [i, element] of primeList.entries()) {
+		primeSum[i + 1] = primeSum[i] + element;
 	}
 	for (let i = numberOfPrimes; i < primeSum.length; i += 1) {
 		for (let j = i - (numberOfPrimes + 1); j > -11; j -= 1) {
 			if (primeSum[i] - primeSum[j] > 1e06) {
 				break;
 			}
-			if (primeList.indexOf(primeSum[i] - primeSum[j]) > -1) {
+			if (primeList.includes(primeSum[i] - primeSum[j])) {
 				numberOfPrimes = i - j;
 				result = primeSum[i] - primeSum[j];
 			}

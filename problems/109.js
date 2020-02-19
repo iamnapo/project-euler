@@ -22,9 +22,9 @@ module.exports = () => {
 			result += 1;
 		}
 	}
-	for (let i = 0; i < scores.length; i += 1) {
+	for (const element of scores) {
 		for (const third of doubles) {
-			if (scores[i] + third < limit) {
+			if (element + third < limit) {
 				result += 1;
 			}
 		}

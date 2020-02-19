@@ -26,9 +26,9 @@ module.exports = () => {
 	pairs.sort((a, b) => a[0] - b[0]);
 	const index = new Array(limit).fill(-1);
 
-	for (let i = 0; i < pairs.length; i += 1) {
-		if (index[pairs[i][0]] === -1) {
-			index[pairs[i][0]] = i;
+	for (const [i, element] of pairs.entries()) {
+		if (index[element[0]] === -1) {
+			index[element[0]] = i;
 		}
 	}
 	const sums = new Array(limit).fill(false);
@@ -53,9 +53,9 @@ module.exports = () => {
 			vb.push(next[1]);
 		}
 
-		for (let ja = 0; ja < va.length; ja += 1) {
-			if (vb.indexOf(va[ja]) !== -1 && a + b + va[ja] < limit) {
-				sums[a + b + va[ja]] = true;
+		for (const element of va) {
+			if (vb.includes(element) && a + b + element < limit) {
+				sums[a + b + element] = true;
 			}
 		}
 	}

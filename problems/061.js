@@ -55,8 +55,8 @@ function findNext(last, length) {
 		if (solution[i] === 0) {
 			for (let j = 0; j < numbers[i].length; j += 1) {
 				let unique = true;
-				for (let k = 0; k < solution.length; k += 1) {
-					if (numbers[i][j] === solution[k]) {
+				for (const element of solution) {
+					if (numbers[i][j] === element) {
 						unique = false;
 						break;
 					}

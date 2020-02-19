@@ -55,9 +55,9 @@ module.exports = () => {
 				edges.push([vertex, r, graph[vertex][r]]);
 			}
 		}
-		for (let e = 0; e < edges.length; e += 1) {
-			if (edges[e][2] < minEdge[2] && visited.indexOf(edges[e][1]) === -1) {
-				minEdge = edges[e];
+		for (const element of edges) {
+			if (element[2] < minEdge[2] && !visited.includes(element[1])) {
+				minEdge = element;
 			}
 		}
 		edges.splice(edges.indexOf(minEdge), 1);

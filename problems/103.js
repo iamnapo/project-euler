@@ -24,8 +24,8 @@ function next(v) {
 
 	o2.push(v[l]);
 	o2.push(v[l] + d.reduce((a, b) => a + b, 0));
-	for (let i = 0; i < d.length; i += 1) {
-		o2.push(o2[1 + i] + d[i]);
+	for (const [i, element] of d.entries()) {
+		o2.push(o2[1 + i] + element);
 	}
 
 	return (o1.reduce((a, b) => a + b, 0) <= o2.reduce((a, b) => a + b, 0)) ? o1 : o2;

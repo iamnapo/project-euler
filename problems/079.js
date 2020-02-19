@@ -7,7 +7,7 @@ module.exports = () => {
 		for (const attempt of passwords) {
 			const [a, b, c] = attempt.toString();
 			const tmp = i.toString();
-			if (tmp.indexOf(a) < 0 || tmp.indexOf(a) > tmp.indexOf(b) || tmp.indexOf(b) > tmp.indexOf(c)) {
+			if (!tmp.includes(a) || tmp.indexOf(a) > tmp.indexOf(b) || tmp.indexOf(b) > tmp.indexOf(c)) {
 				found = false;
 				break;
 			}

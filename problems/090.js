@@ -45,8 +45,8 @@ function allCombination(k, n) {
 function isValidCombinations(d1, d2) {
 	const combs = [[0, 1], [0, 4], [0, 6], [1, 6], [2, 5], [3, 6], [4, 6], [6, 4], [8, 1]];
 	let valid = true;
-	for (let i = 0; i < combs.length; i += 1) {
-		if (!((d1.includes(combs[i][0]) && d2.includes(combs[i][1])) || (d2.includes(combs[i][0]) && d1.includes(combs[i][1])))) {
+	for (const element of combs) {
+		if (!((d1.includes(element[0]) && d2.includes(element[1])) || (d2.includes(element[0]) && d1.includes(element[1])))) {
 			valid = false;
 			break;
 		}

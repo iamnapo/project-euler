@@ -1051,7 +1051,7 @@ function score(h) {
 	const pairs = [];
 	values.forEach((el) => {
 		const tmp = values.filter((i) => i === el).length;
-		if (tmp === 2 && pairs.indexOf(el) < 0) {
+		if (tmp === 2 && !pairs.includes(el)) {
 			pairs.push(el);
 		}
 	});
@@ -1064,7 +1064,7 @@ function score(h) {
 	const triplets = [];
 	values.forEach((el) => {
 		const tmp = values.filter((i) => i === el).length;
-		if (tmp === 3 && triplets.indexOf(el) < 0) {
+		if (tmp === 3 && !triplets.includes(el)) {
 			triplets.push(el);
 		}
 	});
@@ -1085,7 +1085,7 @@ function score(h) {
 	const quads = [];
 	values.forEach((el) => {
 		const tmp = values.filter((i) => i === el).length;
-		if (tmp === 4 && quads.indexOf(el) < 0) {
+		if (tmp === 4 && !quads.includes(el)) {
 			quads.push(el);
 		}
 	});

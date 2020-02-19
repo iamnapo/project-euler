@@ -1,7 +1,7 @@
 module.exports = () => {
 	let result = 0;
 
-	let xA = 0.0;
+	let xA = 0;
 	let yA = 10.1;
 
 	let xO = 1.4;

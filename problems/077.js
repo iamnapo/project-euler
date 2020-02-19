@@ -10,9 +10,10 @@ module.exports = () => {
 	for (;;) {
 		const ways = new Array(target + 1).fill(0);
 		ways[0] = 1;
-		for (let i = 0; i < primeList.length; i += 1) {
-			for (let j = primeList[i]; j <= target; j += 1) {
-				ways[j] += ways[j - primeList[i]];
+
+		for (const prime of primeList) {
+			for (let j = prime; j <= target; j += 1) {
+				ways[j] += ways[j - prime];
 			}
 		}
 		if (ways[target] > 5000) {

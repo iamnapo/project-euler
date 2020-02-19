@@ -5,12 +5,12 @@ module.exports = () => {
 		let n = i;
 		let last = 0;
 		let count = 0;
-		while ([last, 169, 363601, 1454, 871, 45361, 872, 45362].indexOf(n) < 0) {
+		while (![last, 169, 363601, 1454, 871, 45361, 872, 45362].includes(n)) {
 			last = n;
 			n = factorialSum(n);
 			count += 1;
 		}
-		if (count === 57 && [169, 363601, 1454].indexOf(n) > -1) {
+		if (count === 57 && [169, 363601, 1454].includes(n)) {
 			result += 1;
 		}
 	}

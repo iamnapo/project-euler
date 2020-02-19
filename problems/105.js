@@ -126,9 +126,9 @@ function makeSubsetSums(a) {
 function makeSubsetSum(a, mm) {
 	let sum = 0;
 	let m = mm;
-	for (let i = 0; i < a.length; i += 1) {
+	for (const element of a) {
 		if ((m & 1) === 1) {
-			sum += a[i];
+			sum += element;
 		}
 		m >>= 1;
 	}

@@ -10,7 +10,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 23 solution is: ${((n) => [...new Array(n).keys()])(28123).filter((a) => canBeWritten.indexOf(a) === -1).reduce((a, b) => a + b)}`);
+	return console.log(`Problem 23 solution is: ${((n) => [...new Array(n).keys()])(28123).filter((a) => !canBeWritten.includes(a)).reduce((a, b) => a + b)}`);
 };
 
 function isAbundant(n) {

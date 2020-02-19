@@ -7,10 +7,10 @@ module.exports = () => {
 		if (i % 5 !== 0) {
 			const patterns = (i < 100) ? fiveDigitPattern : sixDigitPattern;
 
-			for (let j = 0; j < patterns.length; j += 1) {
+			for (const element of patterns) {
 				for (let k = 0; k < 3; k += 1) {
-					if (!(patterns[j][0] === 0 && k === 0)) {
-						const pattern = fillPattern(patterns[j], i);
+					if (!(element[0] === 0 && k === 0)) {
+						const pattern = fillPattern(element, i);
 						const candidate = generateNumber(k, pattern);
 						if (candidate < result && isPrime(candidate)) {
 							if (familySize(k, pattern) === 8) {
@@ -91,9 +91,9 @@ function familySize(repeatingNumber, pattern) {
 
 function generateNumber(repNumber, filledPattern) {
 	let temp = 0;
-	for (let i = 0; i < filledPattern.length; i += 1) {
+	for (const element of filledPattern) {
 		temp *= 10;
-		temp += (filledPattern[i] === -1) ? repNumber : filledPattern[i];
+		temp += (element === -1) ? repNumber : element;
 	}
 	return temp;
 }

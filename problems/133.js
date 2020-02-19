@@ -6,9 +6,9 @@ module.exports = () => {
 			primeList.push(i);
 		}
 	}
-	for (let i = 0; i < primeList.length; i += 1) {
-		if (otherFactor(a(primeList[i]))) {
-			result += primeList[i];
+	for (const element of primeList) {
+		if (otherFactor(a(element))) {
+			result += element;
 		}
 	}
 	return console.log(`Problem 133 solution is: ${result}`);

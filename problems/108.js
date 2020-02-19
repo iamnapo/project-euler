@@ -46,14 +46,14 @@ function noDSquared(number, primelist) {
 	let nod = 1;
 	let exponent;
 	let remain = number;
-	for (let i = 0; i < primelist.length; i += 1) {
-		if (primelist[i] * primelist[i] > number) {
+	for (const element of primelist) {
+		if (element * element > number) {
 			return nod * 2;
 		}
 		exponent = 1;
-		while (remain % primelist[i] === 0) {
+		while (remain % element === 0) {
 			exponent += 2;
-			remain /= primelist[i];
+			remain /= element;
 		}
 		nod *= exponent;
 		if (remain === 1) {

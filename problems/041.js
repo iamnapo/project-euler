@@ -11,7 +11,7 @@ function isPandigital(n) {
 	let digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 	digits = digits.slice(0, n.length);
 	for (const [i, d] of digits.entries()) {
-		if (n.indexOf(d) < 0) {
+		if (!n.includes(d)) {
 			return false;
 		}
 		digits[i] = "-";

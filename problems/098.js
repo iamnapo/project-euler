@@ -40,7 +40,7 @@ module.exports = () => {
 			});
 			if (ok) {
 				q1 = [...w1].reduce((q, aa) => q + e[aa], "");
-				if (squares[l].indexOf(q1) >= 0) {
+				if (squares[l].includes(q1)) {
 					if (mq < Number(q0)) {
 						mq = Number(q0);
 					}
