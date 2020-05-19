@@ -89,7 +89,7 @@ function isPrime(n) {
 function makePairs(a) {
 	const pairs = new Set();
 	for (let b = a + 1; b < primeList.length; b += 1) {
-		if (isPrime(parseInt(primeList[a].toString().concat(primeList[b].toString()), 10)) && isPrime(parseInt(primeList[b].toString().concat(primeList[a].toString()), 10))) {
+		if (isPrime(Number.parseInt(primeList[a].toString().concat(primeList[b].toString()), 10)) && isPrime(Number.parseInt(primeList[b].toString().concat(primeList[a].toString()), 10))) {
 			pairs.add(primeList[b]);
 		}
 	}

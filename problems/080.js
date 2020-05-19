@@ -1,8 +1,8 @@
 module.exports = () => {
 	let sum = 0;
-	const carres = [4, 9, 16, 25, 36, 49, 64, 81];
+	const carres = new Set([4, 9, 16, 25, 36, 49, 64, 81]);
 	for (let n = 2; n < 100; n += 1) {
-		if (!(carres.includes(n))) {
+		if (!(carres.has(n))) {
 			for (const el of lsqrt(n)) sum += el;
 		}
 	}

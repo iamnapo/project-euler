@@ -16,6 +16,6 @@ module.exports = () => {
 };
 
 function squareDigitSum(number) {
-	const tmp = number.toString().split("").map((a) => parseInt(a, 10) ** 2);
+	const tmp = number.toString().split("").map((a) => Number.parseInt(a, 10) ** 2);
 	return tmp.reduce((a, b) => a + b);
 }

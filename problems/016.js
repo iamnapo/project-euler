@@ -19,5 +19,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 16 solution is: ${big.reduce((a, b) => parseInt(a, 10) + parseInt(b, 10))}`);
+	return console.log(`Problem 16 solution is: ${big.reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`);
 };

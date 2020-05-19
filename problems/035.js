@@ -3,7 +3,7 @@ module.exports = () => {
 	for (let n = 2; n < 1e06; n += 1) {
 		if (isPrime(n)) {
 			let tmp = n.toString();
-			tmp = parseInt(tmp[tmp.length - 1] + tmp.slice(0, -1), 10);
+			tmp = Number.parseInt(tmp[tmp.length - 1] + tmp.slice(0, -1), 10);
 			let allGood = true;
 			while (tmp !== n) {
 				if (!isPrime(tmp)) {
@@ -11,7 +11,7 @@ module.exports = () => {
 					break;
 				}
 				tmp = tmp.toString();
-				tmp = parseInt(tmp[tmp.length - 1] + tmp.slice(0, -1), 10);
+				tmp = Number.parseInt(tmp[tmp.length - 1] + tmp.slice(0, -1), 10);
 			}
 			if (allGood) {
 				count += 1;

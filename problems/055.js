@@ -11,7 +11,7 @@ module.exports = () => {
 function isLychrel(num) {
 	let tmp = num;
 	for (let i = 0; i < 50; i += 1) {
-		tmp += parseInt(tmp.toString().split("").reverse().join(""), 10);
+		tmp += Number.parseInt(tmp.toString().split("").reverse().join(""), 10);
 		if (isPalindrome(tmp.toString())) {
 			return false;
 		}

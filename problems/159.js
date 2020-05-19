@@ -2,7 +2,7 @@ module.exports = () => {
 	const mdrs = [0];
 	const N = 1e6;
 	const range = ((n) => [...new Array(n).keys()])(10).slice(1);
-	for (let i = 0; i < parseInt((N - 1).toString().split("").map(() => "1").join(""), 10); i += 1) {
+	for (let i = 0; i < Number.parseInt((N - 1).toString().split("").map(() => "1").join(""), 10); i += 1) {
 		for (const el of range) mdrs.push(el);
 	}
 

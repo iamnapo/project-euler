@@ -1025,7 +1025,7 @@ module.exports = () => {
 			const tie1 = score1.tiebraker;
 			const tie2 = score2.tiebraker;
 			while (tie1.length > 0) {
-				if (parseInt(tie1[0], 10) > parseInt(tie2[0], 10)) {
+				if (Number.parseInt(tie1[0], 10) > Number.parseInt(tie2[0], 10)) {
 					won = true;
 					break;
 				} else if (tie1[0] === tie2[0]) {
@@ -1075,7 +1075,7 @@ function score(h) {
 	if (inOrder) {
 		sc = { category: 4, tiebraker: [values[0]] };
 	}
-	const inSuit = Boolean(hand.map((el) => el.suit).reduce((a, b) => ((a === b) ? a : NaN)));
+	const inSuit = Boolean(hand.map((el) => el.suit).reduce((a, b) => ((a === b) ? a : Number.NaN)));
 	if (inSuit) {
 		sc = { category: 4, tiebraker: values[0] };
 	}

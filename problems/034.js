@@ -5,7 +5,7 @@ module.exports = () => {
 		let tmp = i;
 		while (tmp > 0) {
 			const d = tmp % 10;
-			tmp = parseInt(tmp / 10, 10);
+			tmp = Number.parseInt(tmp / 10, 10);
 			sum += factorial(d);
 		}
 		if (sum === i) {

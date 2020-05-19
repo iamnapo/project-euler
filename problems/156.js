@@ -20,8 +20,8 @@ module.exports = () => {
 function f(n, d) {
 	if (n < 10) return n >= d;
 	const nString = n.toString();
-	const firstDigit = parseInt(nString[0], 10);
-	const otherDigits = parseInt(nString.slice(1), 10);
+	const firstDigit = Number.parseInt(nString[0], 10);
+	const otherDigits = Number.parseInt(nString.slice(1), 10);
 	const numOfOtherDigits = nString.slice(1).length;
 	const tmp = firstDigit * numOfOtherDigits * (10 ** (numOfOtherDigits - 1)) + f(otherDigits, d);
 	if (firstDigit < d) return tmp;

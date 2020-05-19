@@ -20,7 +20,7 @@ module.exports = () => {
 																let tmp2 = [];
 																tmp2 = d.concat(tmp);
 																if (isPandigital(tmp2)) {
-																	sum += parseInt(tmp2, 10);
+																	sum += Number.parseInt(tmp2, 10);
 																}
 															}
 														}

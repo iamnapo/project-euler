@@ -7,7 +7,7 @@ module.exports = () => {
 	let sum = 0;
 	for (const puzzle of sudoku) {
 		const tmp = solve(puzzle);
-		sum += parseInt(tmp.slice(0, 3), 10);
+		sum += Number.parseInt(tmp.slice(0, 3), 10);
 	}
 	return console.log(`Problem 96 solution is: ${sum}`);
 };
