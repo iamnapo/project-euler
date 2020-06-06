@@ -4,14 +4,8 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    paths-ignore:
-      - "*.md"
-      - "docs/**"
-      - "media/**"
 jobs:
   ci:
-    name: Install & Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

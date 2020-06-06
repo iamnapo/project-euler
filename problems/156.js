@@ -16,7 +16,6 @@ module.exports = () => {
 	return console.log(`Problem 156 solution is: ${count - 21295121502550}`);
 };
 
-
 function f(n, d) {
 	if (n < 10) return n >= d;
 	const nString = n.toString();
