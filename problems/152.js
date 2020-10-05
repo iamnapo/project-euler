@@ -13,7 +13,7 @@ module.exports = () => {
 	sum2.forEach((el) => y2.set(el, (y2.get(el) || 0) + 1));
 	const tmp = new Set([...y2.keys()]);
 	const commonKeys = [...new Set([...y1.keys()])].filter((x) => tmp.has(x));
-	commonKeys.forEach((key) => count += (y1.get(key) * y2.get(key)));
+	commonKeys.forEach((key) => { count += (y1.get(key) * y2.get(key)); });
 	return console.log(`Problem 152 solution is: ${count}`);
 };
 

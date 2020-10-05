@@ -26,13 +26,13 @@
 	"scripts": {
 		"lint": "eslint . --cache",
 		"start": "node index.js",
-		"test": "yarn lint"
+		"test": "npm run lint"
 	},
 	"devDependencies": {
-		"eslint": "^7.5.0",
-		"eslint-config-iamnapo": "^6.0.3",
-		"eslint-plugin-import": "^2.22.0",
-		"eslint-plugin-unicorn": "^21.0.0"
+		"eslint": "^7.10.0",
+		"eslint-config-iamnapo": "^9.0.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-unicorn": "^22.0.0"
 	},
 	"engines": {
 		"node": ">=10.4.0"
