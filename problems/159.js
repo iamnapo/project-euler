@@ -6,9 +6,9 @@ module.exports = () => {
 		for (const el of range) mdrs.push(el);
 	}
 
-	for (let i = 2; i < ~~(N / 2); i += 1) {
+	for (let i = 2; i < Math.trunc(N / 2); i += 1) {
 		const x = mdrs[i];
-		for (let j = i; j < ~~((N - 1) / i) + 1; j += 1) {
+		for (let j = i; j < Math.trunc((N - 1) / i) + 1; j += 1) {
 			if (mdrs[i * j] < x + mdrs[j]) mdrs[i * j] = x + mdrs[j];
 		}
 	}

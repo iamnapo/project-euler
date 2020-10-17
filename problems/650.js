@@ -34,7 +34,7 @@ function inverseMod2(p, q) {
 
 function inverseMod(p, q, lastS, lastT, s, t) {
 	if (q === 0) return lastS;
-	return inverseMod(q, p % q, s, t, lastS - (s * ~~(p / q)), lastT - (t * ~~(p / q)));
+	return inverseMod(q, p % q, s, t, lastS - (s * Math.trunc(p / q)), lastT - (t * Math.trunc(p / q)));
 }
 
 function powMod(base, exp, mod) {

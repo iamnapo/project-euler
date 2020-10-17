@@ -6,8 +6,8 @@ module.exports = () => {
 	let w = new Array(M).fill(0);
 	for (let L = M.toString().length; L < N + 1; L += 1) {
 		const cc = [];
-		for (let i = 0; i < ~~(L / 2); i += 1) cc.push((powMod(10, i, M) + powMod(10, L - 1 - i, M)) % M);
-		if (L % 2) cc.push(powMod(10, ~~(L / 2), M));
+		for (let i = 0; i < Math.trunc(L / 2); i += 1) cc.push((powMod(10, i, M) + powMod(10, L - 1 - i, M)) % M);
+		if (L % 2) cc.push(powMod(10, Math.trunc(L / 2), M));
 		v = new Array(M).fill(0);
 		let c = cc[0];
 		for (let d = 1; d < 10; d += 1) v[(c * d) % M] += 1;

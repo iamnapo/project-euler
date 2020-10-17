@@ -15,7 +15,7 @@ module.exports = () => {
 };
 
 function isqrt(n) {
-	return ~~Math.sqrt(n + 0.5);
+	return Math.trunc(Math.sqrt(n + 0.5));
 }
 
 function triangular(n) {

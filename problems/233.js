@@ -1,7 +1,7 @@
 module.exports = () => {
 	const limit = 1e11;
-	const limit2 = ~~(limit / ((5 ** 3) * (13 ** 2)));
-	const limit3 = ~~(limit2 / 17 + 1);
+	const limit2 = Math.trunc(limit / ((5 ** 3) * (13 ** 2)));
+	const limit3 = Math.trunc(limit2 / 17 + 1);
 	const s = new Array(limit3).fill(0);
 	for (let p = 0; p < limit3; p += 1) s[p] = p;
 	for (let p = 5; p < limit3; p += 4) {
@@ -26,7 +26,7 @@ module.exports = () => {
 				if (isPrime(q) && (q !== p)) {
 					for (let r = 5; (b * r) < limit; r += 4) {
 						const c = b * r;
-						if (isPrime(r) && (r !== p) && (r !== q)) sum += BigInt(c * s[~~(limit / c)]);
+						if (isPrime(r) && (r !== p) && (r !== q)) sum += BigInt(c * s[Math.trunc(limit / c)]);
 					}
 				}
 			}
@@ -37,7 +37,7 @@ module.exports = () => {
 		if (isPrime(p)) {
 			for (let q = 5; (q * q * q) < limit; q += 4) {
 				const b = a * q * q * q;
-				if (isPrime(q) && (q !== p)) sum += BigInt(b * s[~~(limit / b)]);
+				if (isPrime(q) && (q !== p)) sum += BigInt(b * s[Math.trunc(limit / b)]);
 			}
 		}
 	}
@@ -46,7 +46,7 @@ module.exports = () => {
 		if (isPrime(p)) {
 			for (let q = 5; (a * q * q) < limit; q += 4) {
 				const b = a * q * q;
-				if (isPrime(q) && (q !== p)) sum += BigInt(b * s[~~(limit / b)]);
+				if (isPrime(q) && (q !== p)) sum += BigInt(b * s[Math.trunc(limit / b)]);
 			}
 		}
 	}

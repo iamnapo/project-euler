@@ -29,10 +29,10 @@
 		"test": "npm run lint"
 	},
 	"devDependencies": {
-		"eslint": "^7.10.0",
+		"eslint": "^7.11.0",
 		"eslint-config-iamnapo": "^9.0.0",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-unicorn": "^22.0.0"
+		"eslint-plugin-unicorn": "^23.0.0"
 	},
 	"engines": {
 		"node": ">=10.4.0"
