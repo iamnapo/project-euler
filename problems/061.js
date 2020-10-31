@@ -22,26 +22,26 @@ function generateNumbers(type) {
 	while (number < 10000) {
 		n += 1;
 		switch (type) {
-		case 0:
-			number = (n * (n + 1)) / 2;
-			break;
-		case 1:
-			number = n * n;
-			break;
-		case 2:
-			number = (n * ((3 * n) - 1)) / 2;
-			break;
-		case 3:
-			number = n * ((2 * n) - 1);
-			break;
-		case 4:
-			number = (n * ((5 * n) - 3)) / 2;
-			break;
-		case 5:
-			number = n * ((3 * n) - 2);
-			break;
-		default:
-			break;
+			case 0:
+				number = (n * (n + 1)) / 2;
+				break;
+			case 1:
+				number = n * n;
+				break;
+			case 2:
+				number = (n * ((3 * n) - 1)) / 2;
+				break;
+			case 3:
+				number = n * ((2 * n) - 1);
+				break;
+			case 4:
+				number = (n * ((5 * n) - 3)) / 2;
+				break;
+			case 5:
+				number = n * ((3 * n) - 2);
+				break;
+			default:
+				break;
 		}
 		if (number > 999) {
 			newNumbers.push(number);
