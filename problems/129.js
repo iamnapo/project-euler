@@ -1,5 +1,5 @@
 module.exports = () => {
-	const limit = 1000001;
+	const limit = 1_000_001;
 	let n = limit;
 	while (aa(n) < limit) {
 		n += 2;

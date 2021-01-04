@@ -1,7 +1,7 @@
 module.exports = () => {
 	let max = 0;
 	let maxNum = 1;
-	for (let i = 1; i < 1000000; i += 1) {
+	for (let i = 1; i < 1_000_000; i += 1) {
 		let num = i;
 		let count = 1;
 		for (; ;) {

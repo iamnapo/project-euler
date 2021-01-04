@@ -17,10 +17,10 @@ const matrix = [
 ];
 
 module.exports = () => {
-	const sum = new Array(32768).fill(0);
-	const bc = new Array(32768).fill(0);
-	for (let i = 1; i < 32768; i += 1) bc[i] = (i & 1) + bc[i >> 1];
-	for (let i = 0; i < 32768; i += 1) {
+	const sum = new Array(32_768).fill(0);
+	const bc = new Array(32_768).fill(0);
+	for (let i = 1; i < 32_768; i += 1) bc[i] = (i & 1) + bc[i >> 1];
+	for (let i = 0; i < 32_768; i += 1) {
 		for (let k = 0; k < 15; k += 1) {
 			if (!(i & (1 << k))) {
 				const cur = sum[i] + matrix[bc[i]][k];
@@ -28,5 +28,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 345 solution is: ${sum[32767]}`);
+	return console.log(`Problem 345 solution is: ${sum[32_767]}`);
 };

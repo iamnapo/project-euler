@@ -1,5 +1,5 @@
 module.exports = () => {
-	const maxK = 12000;
+	const maxK = 12_000;
 	const maxNumber = 2 * maxK;
 	const numFactors = Math.trunc(Math.log10(maxNumber) / Math.log10(2));
 	const factors = new Array(numFactors).fill(0);

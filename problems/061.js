@@ -19,7 +19,7 @@ function generateNumbers(type) {
 	const newNumbers = [];
 	let n = 0;
 	let number = 0;
-	while (number < 10000) {
+	while (number < 10_000) {
 		n += 1;
 		switch (type) {
 			case 0:

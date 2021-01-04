@@ -1,12 +1,12 @@
 module.exports = () => {
 	const primeList = [];
-	for (let i = 1490; primeList.length < 10000; i += 1) {
+	for (let i = 1490; primeList.length < 10_000; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
 	for (let i = 0; i < primeList.length; i += 1) {
 		for (let j = i + 1; j < primeList.length; j += 1) {
 			const k = (2 * primeList[j]) - primeList[i];
-			if (k < 10000 && isPrime(k) && isPermutation(primeList[i], primeList[j]) && isPermutation(primeList[i], k)) {
+			if (k < 10_000 && isPrime(k) && isPermutation(primeList[i], primeList[j]) && isPermutation(primeList[i], k)) {
 				return console.log(`Problem 49 solution is: ${primeList[i].toString().concat(primeList[j].toString(), k.toString())}`);
 			}
 		}

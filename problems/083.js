@@ -9,7 +9,7 @@ module.exports = () => {
 	const explored = new Set();
 	while (frontier.length > 0) {
 		let path = null;
-		let min = Infinity;
+		let min = Number.POSITIVE_INFINITY;
 		let index = -1;
 		frontier.forEach(([score, candidate], i) => {
 			if (score < min) {

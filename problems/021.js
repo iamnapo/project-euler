@@ -1,6 +1,6 @@
 module.exports = () => {
 	let sum = 0;
-	for (let i = 0; i < 10000; i += 1) {
+	for (let i = 0; i < 10_000; i += 1) {
 		const b = d(i);
 		if (d(i) !== i && d(b) === i) {
 			sum += i;

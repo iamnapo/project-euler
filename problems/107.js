@@ -47,7 +47,7 @@ module.exports = () => {
 	const MST = [];
 	const edges = [];
 	const visited = [];
-	let minEdge = [null, null, Infinity];
+	let minEdge = [null, null, Number.POSITIVE_INFINITY];
 	while (MST.length !== V - 1) {
 		visited.push(vertex);
 		for (let r = 0; r < V; r += 1) {
@@ -63,7 +63,7 @@ module.exports = () => {
 		edges.splice(edges.indexOf(minEdge), 1);
 		MST.push(minEdge);
 		[, vertex] = minEdge;
-		minEdge = [null, null, Infinity];
+		minEdge = [null, null, Number.POSITIVE_INFINITY];
 	}
 	return console.log(`Problem 107 solution is: ${(graph.reduce((a, b) => a.concat(b), []).reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`);
 };

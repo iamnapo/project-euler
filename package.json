@@ -28,11 +28,19 @@
 		"start": "node index.js",
 		"test": "npm run lint"
 	},
+	"eslintConfig": {
+		"extends": "iamnapo",
+		"rules": {
+			"max-len": "off",
+			"no-bitwise": "off",
+			"no-continue": "off"
+		}
+	},
 	"devDependencies": {
-		"eslint": "^7.12.1",
-		"eslint-config-iamnapo": "^10.1.0",
+		"eslint": "^7.17.0",
+		"eslint-config-iamnapo": "^12.0.0",
 		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-unicorn": "^23.0.0"
+		"eslint-plugin-unicorn": "^25.0.1"
 	},
 	"engines": {
 		"node": ">=10.4.0"

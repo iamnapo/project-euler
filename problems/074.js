@@ -5,12 +5,12 @@ module.exports = () => {
 		let n = i;
 		let last = 0;
 		let count = 0;
-		while (![last, 169, 363601, 1454, 871, 45361, 872, 45362].includes(n)) {
+		while (![last, 169, 363_601, 1454, 871, 45_361, 872, 45_362].includes(n)) {
 			last = n;
 			n = factorialSum(n);
 			count += 1;
 		}
-		if (count === 57 && [169, 363601, 1454].includes(n)) {
+		if (count === 57 && [169, 363_601, 1454].includes(n)) {
 			result += 1;
 		}
 	}
@@ -19,7 +19,7 @@ module.exports = () => {
 };
 
 function factorialSum(n) {
-	const f = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880];
+	const f = [1, 1, 2, 6, 24, 120, 720, 5040, 40_320, 362_880];
 	let tmp = n;
 	let res = 0;
 

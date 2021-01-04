@@ -9,7 +9,7 @@ module.exports = () => {
 		while (penta <= n) {
 			const sign = (i % 4 > 1) ? -1 : 1;
 			p[n] += sign * p[n - penta];
-			p[n] %= 1000000;
+			p[n] %= 1_000_000;
 			i += 1;
 
 			const j = (i % 2 === 0) ? Math.trunc(i / 2) + 1 : -(Math.trunc(i / 2) + 1);

@@ -1,5 +1,5 @@
 module.exports = () => {
-	const limit = 120000;
+	const limit = 120_000;
 	const limitSQ = 347;
 	const pairs = [];
 	for (let u = 1; u < limitSQ; u += 1) {

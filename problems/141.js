@@ -2,7 +2,7 @@ module.exports = () => {
 	const limit = 1e12;
 	const progressiveSquares = [];
 
-	for (let a = 2; a < 10000; a += 1) {
+	for (let a = 2; a < 10_000; a += 1) {
 		for (let b = 1; b < a; b += 1) {
 			if ((a ** 3) * 2 * (b ** 2) >= limit) {
 				break;

@@ -13,7 +13,7 @@ module.exports = () => {
 		result *= element;
 	}
 
-	const limit = (2 * 4000000) - 1;
+	const limit = (2 * 4_000_000) - 1;
 	let counter = 1;
 
 	for (;;) {

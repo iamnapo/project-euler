@@ -1,6 +1,6 @@
 module.exports = () => {
-	const limit = 12000;
-	let [a, b, c, d] = [1, 3, 4000, 11999];
+	const limit = 12_000;
+	let [a, b, c, d] = [1, 3, 4000, 11_999];
 	let result = 0;
 
 	while (!(c === 1 && d === 2)) {

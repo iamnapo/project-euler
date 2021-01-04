@@ -1,7 +1,7 @@
 module.exports = () => {
-	const N = 200000;
-	const V5N12 = 49998 - 12;
-	const V2N12 = 199994 - 12;
+	const N = 200_000;
+	const V5N12 = 49_998 - 12;
+	const V2N12 = 199_994 - 12;
 	const v5 = new Array(N).fill(0);
 	const v2 = new Array(N).fill(0);
 	for (let n = 0; n < N; n += 1) {
@@ -17,7 +17,7 @@ module.exports = () => {
 		[v2[n], v5[n]] = [d2, d5];
 	}
 	let count = 0;
-	for (let i = 0; i <= 66664; i += 1) {
+	for (let i = 0; i <= 66_664; i += 1) {
 		for (let j = i; j <= (N - i) / 2; j += 1) {
 			const k = N - i - j;
 			if ((V5N12 >= v5[i] + v5[j] + v5[k]) && (V2N12 >= v2[i] + v2[j] + v2[k])) count += (i === j || j === k) ? 3 : 6;

@@ -1,6 +1,6 @@
 module.exports = () => {
 	let result = 0;
-	for (let n = 2; n < 10001; n += 1) {
+	for (let n = 2; n < 10_001; n += 1) {
 		const limit = Math.trunc(Math.sqrt(n));
 		if (limit ** 2 !== n) {
 			let period = 0;

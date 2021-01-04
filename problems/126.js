@@ -1,5 +1,5 @@
 module.exports = () => {
-	const limit = 30000;
+	const limit = 30_000;
 	const count = new Array(limit + 1).fill(0);
 	for (let z = 1; cubes(z, z, z, 1) <= limit; z += 1) {
 		for (let y = z; cubes(z, y, z, 1) <= limit; y += 1) {

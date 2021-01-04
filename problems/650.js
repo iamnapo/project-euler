@@ -1,6 +1,6 @@
 module.exports = () => {
 	const end = 2e4 + 1;
-	const mod = 1000000007n;
+	const mod = 1_000_000_007n;
 	const pf = [new Map(), new Map()];
 	for (let i = 2; i < end; i += 1) {
 		pf[i] = new Map();
@@ -16,7 +16,7 @@ module.exports = () => {
 		for (const k of res.keys()) {
 			let invK = inv.get(k - 1);
 			if (invK === undefined) {
-				invK = BigInt(inverseMod2(k - 1, 1000000007));
+				invK = BigInt(inverseMod2(k - 1, 1_000_000_007));
 				inv.set(k - 1, invK);
 			}
 			ans = (ans * (powMod(BigInt(k), res.get(k) + 1, mod) - 1n) * invK) % mod;

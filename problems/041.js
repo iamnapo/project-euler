@@ -1,6 +1,6 @@
 module.exports = () => {
 	// 8 and 9 digit pandigitals are always divisable by 3
-	for (let i = 7654321; ; i -= 1) {
+	for (let i = 7_654_321; ; i -= 1) {
 		if (isPandigital(i.toString()) && isPrime(i)) {
 			return console.log(`Problem 41 solution is: ${i}`);
 		}

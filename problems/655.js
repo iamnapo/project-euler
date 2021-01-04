@@ -1,6 +1,6 @@
 
 module.exports = () => {
-	const [M, N] = [10000019, 32];
+	const [M, N] = [10_000_019, 32];
 	let sum = 0;
 	let v = new Array(M).fill(0);
 	let w = new Array(M).fill(0);

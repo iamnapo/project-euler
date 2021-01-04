@@ -1,6 +1,6 @@
 module.exports = () => {
 	let count = 0;
-	for (let i = 10; i < 10000; i += 1) {
+	for (let i = 10; i < 10_000; i += 1) {
 		if (isLychrel(i)) {
 			count += 1;
 		}

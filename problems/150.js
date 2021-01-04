@@ -2,9 +2,9 @@ module.exports = () => {
 	const s = [];
 	const triangular = [];
 	let tmp = 0;
-	for (let i = 0; i < 500500; i += 1) {
-		tmp = ((615949 * tmp) + 797807) % 1048576;
-		s.push(tmp - 524288);
+	for (let i = 0; i < 500_500; i += 1) {
+		tmp = ((615_949 * tmp) + 797_807) % 1_048_576;
+		s.push(tmp - 524_288);
 	}
 	for (let i = 0; i < 1000; i += 1) {
 		triangular.push(((i + 1) * i) / 2);

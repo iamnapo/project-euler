@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 243 solution is: ${R(15499 / 94744)}`);
+module.exports = () => console.log(`Problem 243 solution is: ${R(15_499 / 94_744)}`);
 
 function R(goal) {
 	let [r, d] = [1, 1];

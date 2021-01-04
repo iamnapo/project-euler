@@ -3,7 +3,7 @@ module.exports = () => {
 	const d1 = 7;
 	let nbest = 0;
 	let dbest = 1;
-	const limit = 1000000;
+	const limit = 1_000_000;
 	let lowerbound = 2;
 	let d2 = limit;
 

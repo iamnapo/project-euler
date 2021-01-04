@@ -1,6 +1,6 @@
 module.exports = () => {
 	let factor;
-	let start = 600851475143;
+	let start = 600_851_475_143;
 	for (let i = 3; i < start + 1; i += 1) {
 		if (start % i === 0 && isPrime(i)) {
 			start /= i;

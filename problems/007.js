@@ -4,7 +4,7 @@ module.exports = () => {
 		if (isPrime(i)) {
 			count += 1;
 		}
-		if (count === 10001) {
+		if (count === 10_001) {
 			return console.log(`Problem 7 solution is: ${i}`);
 		}
 	}

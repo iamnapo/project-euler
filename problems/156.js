@@ -13,7 +13,7 @@ module.exports = () => {
 		}
 	};
 	for (let i = 1; i < 10; i += 1) graduallyDecrease(i, 10 ** 11);
-	return console.log(`Problem 156 solution is: ${count - 21295121502550}`);
+	return console.log(`Problem 156 solution is: ${count - 21_295_121_502_550}`);
 };
 
 function f(n, d) {

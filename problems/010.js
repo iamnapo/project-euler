@@ -1,6 +1,6 @@
 module.exports = () => {
 	let sum = 0;
-	for (let i = 1; i < 2000000; i += 1) {
+	for (let i = 1; i < 2_000_000; i += 1) {
 		if (isPrime(i)) {
 			sum += i;
 		}

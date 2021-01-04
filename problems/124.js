@@ -6,8 +6,8 @@ class Radical {
 }
 
 module.exports = () => {
-	const target = 10000;
-	const limit = 100000 + 1;
+	const target = 10_000;
+	const limit = 100_000 + 1;
 
 	const radicals = new Array(limit);
 	for (let i = 0; i < radicals.length; i += 1) {

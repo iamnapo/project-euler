@@ -5,10 +5,8 @@ module.exports = () => {
 		for (let k = 1; k <= LIMIT; k += 1) {
 			const pj = (j * ((3 * j) - 1)) / 2;
 			const pk = (k * ((3 * k) - 1)) / 2;
-			if (isPentagonal(Math.abs(pj - pk)) && isPentagonal(pj + pk)) {
-				if (Math.abs(pj - pk) < D) {
-					D = Math.abs(pj - pk);
-				}
+			if (isPentagonal(Math.abs(pj - pk)) && isPentagonal(pj + pk) && Math.abs(pj - pk) < D) {
+				D = Math.abs(pj - pk);
 			}
 		}
 	}

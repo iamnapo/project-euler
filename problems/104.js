@@ -3,7 +3,7 @@ module.exports = () => {
 	for (let n = 3; ; n += 1) {
 		[fn1, fn2] = [(fn1 + fn2) % 1e9, fn1];
 		if (isPandigital(fn1.toString())) {
-			const tmp = (n * 0.20898764024997873) - 0.3494850021680094;
+			const tmp = (n * 0.208_987_640_249_978_73) - 0.349_485_002_168_009_4;
 			if (isPandigital((Math.trunc(10 ** (tmp - Math.trunc(tmp) + 8))).toString())) {
 				return console.log(`Problem 104 solution is: ${n}`);
 			}
