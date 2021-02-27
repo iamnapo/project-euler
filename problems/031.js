@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const TARGET = 200;
 	let ways = 0;
 	for (let a = TARGET; a > -1; a -= 200) {
@@ -16,5 +16,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 31 solution is: ${ways}`);
+	return `Problem 31 solution is: ${ways}`;
 };

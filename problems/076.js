@@ -1,5 +1,5 @@
-module.exports = () => {
-	const ways = new Array(101).fill(0);
+export default () => {
+	const ways = Array.from({ length: 101 }, () => 0);
 	ways[0] = 1;
 
 	for (let i = 1; i < 100; i += 1) {
@@ -8,5 +8,5 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 76 solution is: ${ways.pop(-1)}`);
+	return `Problem 76 solution is: ${ways.pop(-1)}`;
 };

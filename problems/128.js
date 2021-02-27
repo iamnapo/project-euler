@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 1;
 	const limit = 2000;
 	let n = 0;
@@ -18,7 +18,7 @@ module.exports = () => {
 			number = (((3 * n) * n) + (3 * n) + 1);
 		}
 	}
-	return console.log(`Problem 128 solution is: ${number}`);
+	return `Problem 128 solution is: ${number}`;
 };
 
 function isPrime(n) {

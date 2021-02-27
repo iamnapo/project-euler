@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	let n = [3];
 	let d = [2];
@@ -9,7 +9,7 @@ module.exports = () => {
 			count += 1;
 		}
 	}
-	return console.log(`Problem 57 solution is: ${count}`);
+	return `Problem 57 solution is: ${count}`;
 };
 
 function multiply(a, b) {

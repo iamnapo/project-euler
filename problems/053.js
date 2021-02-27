@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	for (let n = 1; n < 101; n += 1) {
 		for (let r = 0; r <= n; r += 1) {
@@ -8,7 +8,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 53 solution is: ${count}`);
+	return `Problem 53 solution is: ${count}`;
 };
 
 function factorial(n) {

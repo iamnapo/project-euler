@@ -101,7 +101,7 @@ const sets = [
 	[681, 603, 638, 611, 584, 303, 454, 607, 606, 605, 596],
 ];
 
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	for (const set of sets) {
 		set.sort();
@@ -112,15 +112,11 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 105 solution is: ${sum}`);
+	return `Problem 105 solution is: ${sum}`;
 };
 
 function makeSubsetSums(a) {
-	const b = new Array(2 ** a.length);
-	for (let i = 1; i < b.length; i += 1) {
-		b[i] = makeSubsetSum(a, i);
-	}
-	return b;
+	return Array.from({ length: 2 ** a.length }, (_, ind) => makeSubsetSum(a, ind));
 }
 
 function makeSubsetSum(a, mm) {

@@ -1,7 +1,7 @@
 const cache = new Map();
-module.exports = () => {
+export default () => {
 	const [W, H] = [9, 12];
-	return console.log(`Problem 161 solution is: ${f(0, new Array(W * H).fill(-1), W, H)}`);
+	return `Problem 161 solution is: ${f(0, Array.from({ length: W * H }, () => -1), W, H)}`;
 };
 
 const piece = [

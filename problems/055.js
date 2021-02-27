@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	for (let i = 10; i < 10_000; i += 1) {
 		if (isLychrel(i)) {
 			count += 1;
 		}
 	}
-	return console.log(`Problem 55 solution is: ${count}`);
+	return `Problem 55 solution is: ${count}`;
 };
 
 function isLychrel(num) {

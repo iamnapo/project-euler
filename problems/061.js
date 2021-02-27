@@ -1,7 +1,7 @@
-const solution = new Array(6).fill(0);
-const numbers = new Array(6);
+const solution = Array.from({ length: 6 }, () => 0);
+const numbers = Array.from({ length: 6 });
 
-module.exports = () => {
+export default () => {
 	for (let i = 0; i < 6; i += 1) {
 		numbers[i] = generateNumbers(i);
 	}
@@ -12,7 +12,7 @@ module.exports = () => {
 			break;
 		}
 	}
-	return console.log(`Problem 61 solution is: ${solution.reduce((a, b) => a + b)}`);
+	return `Problem 61 solution is: ${solution.reduce((a, b) => a + b)}`;
 };
 
 function generateNumbers(type) {

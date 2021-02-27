@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 5;
 	let xMax = 9;
 	for (let D = 8; D < 1001; D += 1) {
@@ -7,7 +7,7 @@ module.exports = () => {
 			[xMax, result] = [x, D];
 		}
 	}
-	return console.log(`Problem 66 solution is: ${result}`);
+	return `Problem 66 solution is: ${result}`;
 };
 
 function chakravala(N) {

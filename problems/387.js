@@ -1,7 +1,7 @@
-module.exports = () => {
-	let total = 0;
-	for (let i = 1; i < 10; i += 1) total = Harshad(i, i, 0, 0);
-	return console.log(`Problem 387 solution is: ${total}`);
+let total = 0;
+export default () => {
+	for (let i = 1; i < 10; i += 1) Harshad(i, i, 0);
+	return `Problem 387 solution is: ${total}`;
 };
 
 function isPrime(n) {
@@ -19,15 +19,14 @@ function isPrime(n) {
 }
 
 function Harshad(n, s, strong) {
-	let sum = 0;
 	for (let i = 0; i < 10; i += 1) {
 		const a = n * 10 + i;
 		const b = s + i;
 		if (a % b === 0) {
 			if (a < 1e13) Harshad(a, b, isPrime(a / b));
 		} else if (strong && isPrime(a)) {
-			sum += a;
+			total += a;
 		}
 	}
-	return sum;
+	return total;
 }

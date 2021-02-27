@@ -1,16 +1,16 @@
-module.exports = () => {
-	const canBeWritten = [];
-	const abundants = ((n) => [...new Array(n).keys()])(28_123).filter((a) => isAbundant(a));
+export default () => {
+	const canBeWritten = new Set();
+	const abundants = Array.from({ length: 28_123 }, (_, ind) => ind).filter(isAbundant);
 	for (let i = 12; i < 28_123; i += 1) {
 		for (const num of abundants) {
 			if (num >= i) break;
 			if (isAbundant(i - num)) {
-				canBeWritten.push(i);
+				canBeWritten.add(i);
 				break;
 			}
 		}
 	}
-	return console.log(`Problem 23 solution is: ${((n) => [...new Array(n).keys()])(28_123).filter((a) => !canBeWritten.includes(a)).reduce((a, b) => a + b)}`);
+	return `Problem 23 solution is: ${Array.from({ length: 28_123 }, (_, ind) => ind).filter((a) => !canBeWritten.has(a)).reduce((a, b) => a + b)}`;
 };
 
 function isAbundant(n) {

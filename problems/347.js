@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 2; i < 1e7; i += 1) {
 		if (isPrime(i)) primeList.push(i);
@@ -10,7 +10,7 @@ module.exports = () => {
 			total += best(primeList[i], primeList[j]);
 		}
 	}
-	return console.log(`Problem 347 solution is: ${total}`);
+	return `Problem 347 solution is: ${total}`;
 };
 
 function isPrime(n) {

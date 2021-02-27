@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 162 solution is: ${f(16n).toString(16).toUpperCase()}`);
+export default () => `Problem 162 solution is: ${f(16n).toString(16).toUpperCase()}`;
 
 function g(n, r) {
 	if (r === 0n) return 16n ** n;

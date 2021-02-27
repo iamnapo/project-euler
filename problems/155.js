@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const n = 18;
 	const sets = [[], [[60, 1]]];
 	const setsFract = new Set(["60|1"]);
@@ -25,7 +25,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 155 solution is: ${setsFract.size}`);
+	return `Problem 155 solution is: ${setsFract.size}`;
 };
 
 function gcd(a, b) {

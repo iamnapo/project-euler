@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 
 	let xA = 0;
@@ -24,5 +24,5 @@ module.exports = () => {
 		yO = (slopeB * xO) + interceptB;
 		result += 1;
 	}
-	return console.log(`Problem 144 solution is: ${result}`);
+	return `Problem 144 solution is: ${result}`;
 };

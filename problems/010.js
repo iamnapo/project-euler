@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	for (let i = 1; i < 2_000_000; i += 1) {
 		if (isPrime(i)) {
 			sum += i;
 		}
 	}
-	return console.log(`Problem 10 solution is: ${sum}`);
+	return `Problem 10 solution is: ${sum}`;
 };
 
 function isPrime(number) {

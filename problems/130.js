@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 25;
 	let found = 0;
 	let n = 1;
@@ -15,7 +15,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 130 solution is: ${result}`);
+	return `Problem 130 solution is: ${result}`;
 };
 
 function aa(n) {

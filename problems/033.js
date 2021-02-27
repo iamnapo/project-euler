@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const pairs = [];
 	for (let b = 2; b < 100; b += 1) {
 		for (let a = 1; a < b; a += 1) {
@@ -14,7 +14,7 @@ module.exports = () => {
 		num *= pair[0];
 		den *= pair[1];
 	}
-	return console.log(`Problem 33 solution is: ${den / gcd(num, den)}`);
+	return `Problem 33 solution is: ${den / gcd(num, den)}`;
 };
 
 function isCurious(pair) {

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const p = [];
 	p.push(1);
 	let n = 1;
@@ -22,5 +22,5 @@ module.exports = () => {
 		n += 1;
 	}
 
-	return console.log(`Problem 78 solution is: ${n}`);
+	return `Problem 78 solution is: ${n}`;
 };

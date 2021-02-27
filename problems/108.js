@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 0; primeList.length < 10; i += 1) {
 		if (isPrime(i)) {
@@ -8,7 +8,7 @@ module.exports = () => {
 	const limit = 1000;
 	for (let n = 1; ;n += 1) {
 		if ((noDSquared(n, primeList) + 1) / 2 > limit) {
-			return console.log(`Problem 108 solution is: ${n}`);
+			return `Problem 108 solution is: ${n}`;
 		}
 	}
 };

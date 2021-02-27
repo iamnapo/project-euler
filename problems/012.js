@@ -1,9 +1,9 @@
-module.exports = () => {
+export default () => {
 	let triangle = 1;
 	for (let i = 2; ; i += 1) {
 		triangle += i;
 		if (countdivisors(triangle) > 500) {
-			return console.log(`Problem 12 solution is: ${triangle}`);
+			return `Problem 12 solution is: ${triangle}`;
 		}
 	}
 };

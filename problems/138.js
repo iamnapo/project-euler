@@ -1,14 +1,18 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 
-	for (let i = 0; i < 12; i += 1) {
-		result += fibonacci(((i + 1) * 6) + 3) / 2;
-	}
+	for (let i = 0; i < 12; i += 1) result += fibonacci(((i + 1) * 6) + 3) / 2;
 
-	return console.log(`Problem 138 solution is: ${Math.ceil(result)}`);
+	return `Problem 138 solution is: ${Math.ceil(result)}`;
 };
 
 function fibonacci(n) {
-	const tmp = Math.sqrt(5);
-	return ((((1 + tmp) / 2) ** n) - (((1 - tmp) / 2) ** n)) / tmp;
+	let [a, b] = [0, 1];
+	let sum = 0;
+	while (n > 1) {
+		sum = a + b;
+		[a, b] = [b, sum];
+		n -= 1;
+	}
+	return sum;
 }

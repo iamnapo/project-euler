@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let [a, r, x, y] = [2, 0, -1, -1];
 
 	for (let i = 0; i < 15; i += 1) {
@@ -10,5 +10,5 @@ module.exports = () => {
 		y = 14 + (19 * x) - (y + y);
 	}
 
-	return console.log(`Problem 140 solution is: ${r}`);
+	return `Problem 140 solution is: ${r}`;
 };

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let l = 2;
 	let count = 0;
 	const target = 1e06;
@@ -11,5 +11,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 86 solution is: ${l}`);
+	return `Problem 86 solution is: ${l}`;
 };

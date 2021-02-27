@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	for (let i = 0; ; i += 1) {
 		const temp = new Date(1901, i, 2);
@@ -9,5 +9,5 @@ module.exports = () => {
 			count += 1;
 		}
 	}
-	return console.log(`Problem 19 solution is: ${count}`);
+	return `Problem 19 solution is: ${count}`;
 };

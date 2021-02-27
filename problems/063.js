@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	let lower = 0;
 	let n = 1;
@@ -7,5 +7,5 @@ module.exports = () => {
 		result += 10 - lower;
 		n += 1;
 	}
-	return console.log(`Problem 63 solution is: ${result}`);
+	return `Problem 63 solution is: ${result}`;
 };

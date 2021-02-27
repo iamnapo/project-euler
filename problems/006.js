@@ -1,6 +1,6 @@
-module.exports = () => {
+export default () => {
 	const squareOfSums = ((1 + 100) * 50) ** 2; // Gauss in Elementary school
-	return console.log(`Problem 6 solution is: ${squareOfSums - sumOfSquares(100)}`);
+	return `Problem 6 solution is: ${squareOfSums - sumOfSquares(100)}`;
 };
 
 function sumOfSquares(n) {

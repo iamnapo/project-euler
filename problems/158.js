@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let max = 0;
 	for (let n = 2; n < 26; n += 1) {
 		let s = 0;
@@ -6,7 +6,7 @@ module.exports = () => {
 		if (s < max) break;
 		max = s;
 	}
-	return console.log(`Problem 158 solution is: ${max}`);
+	return `Problem 158 solution is: ${max}`;
 };
 
 function combinations(n, r) {

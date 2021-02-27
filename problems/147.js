@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	const [M, N] = [47, 43];
 	for (let pX = 0; pX < N; pX += 1) {
@@ -25,5 +25,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 147 solution is: ${count}`);
+	return `Problem 147 solution is: ${count}`;
 };

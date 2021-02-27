@@ -1,8 +1,8 @@
-module.exports = () => {
+export default () => {
 	const limit = 1e11;
 	const limit2 = Math.trunc(limit / ((5 ** 3) * (13 ** 2)));
 	const limit3 = Math.trunc(limit2 / 17 + 1);
-	const s = new Array(limit3).fill(0);
+	const s = Array.from({ length: limit3 }, () => 0);
 	for (let p = 0; p < limit3; p += 1) s[p] = p;
 	for (let p = 5; p < limit3; p += 4) {
 		let q = p;
@@ -50,7 +50,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 233 solution is: ${sum}`);
+	return `Problem 233 solution is: ${sum}`;
 };
 
 function isPrime(n) {

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 12_000;
 	let [a, b, c, d] = [1, 3, 4000, 11_999];
 	let result = 0;
@@ -11,5 +11,5 @@ module.exports = () => {
 		[a, b, c, d] = [c, d, e, f];
 	}
 
-	return console.log(`Problem 73 solution is: ${result}`);
+	return `Problem 73 solution is: ${result}`;
 };

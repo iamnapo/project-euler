@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let res = [];
 	for (let i = 0; i < 10; i += 1) {
 		let l = gen(i, 0, [], 10);
@@ -7,9 +7,9 @@ module.exports = () => {
 			k += 1;
 			l = gen(i, k, [], 10);
 		}
-		res = res.concat(l);
+		res = [...res, ...l];
 	}
-	return console.log(`Problem 111 solution is: ${res.reduce((a, b) => a + b, 0)}`);
+	return `Problem 111 solution is: ${res.reduce((a, b) => a + b, 0)}`;
 };
 
 function isPrime(n) {
@@ -62,10 +62,10 @@ function gen(d, k, l, n) {
 	}
 	let res = [];
 	if (k === 0) {
-		res = res.concat(gen(d, k, l.concat(d), n - 1));
+		res = [...res, ...gen(d, k, [...l, d], n - 1)];
 	} else {
 		for (let i = 0; i < 10; i += 1) {
-			res = d === i ? res.concat(gen(d, k, l.concat(d), n - 1)) : res.concat(gen(d, k - 1, l.concat(i), n - 1));
+			res = d === i ? [...res, ...gen(d, k, [...l, d], n - 1)] : [...res, ...gen(d, k - 1, [...l, i], n - 1)];
 		}
 	}
 	return res;

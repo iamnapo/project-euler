@@ -1,12 +1,12 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let i = 9387; i > 9233; i -= 1) {
-		result = [].concat(i, 2 * i).join("");
+		result = [i, 2 * i].join("");
 		if (isPandigital(result)) {
 			break;
 		}
 	}
-	return console.log(`Problem 38 solution is: ${result}`);
+	return `Problem 38 solution is: ${result}`;
 };
 
 function isPandigital(n) {

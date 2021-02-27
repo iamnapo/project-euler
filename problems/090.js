@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	const combs = allCombination(6, 10);
 	for (let i = 0; i < combs.length; i += 1) {
@@ -11,7 +11,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 90 solution is: ${result}`);
+	return `Problem 90 solution is: ${result}`;
 };
 
 function allCombination(k, n) {

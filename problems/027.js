@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let prod = 0;
 	let maxN = 0;
 	for (let a = -999; a < 1000; a += 1) {
@@ -15,7 +15,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 27 solution is: ${prod}`);
+	return `Problem 27 solution is: ${prod}`;
 };
 
 function isPrime(number) {

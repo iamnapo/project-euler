@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 0; primeList.length < 5000; i += 1) {
 		if (isPrime(i)) {
 			primeList.push(i);
 		}
 	}
-	const powers = new Array(3).fill([]);
+	const powers = Array.from({ length: 3 }, () => []);
 	const target = 5e07;
 	const tmpList = primeList.slice();
 	for (let j = 0; j < 3; j += 1) {
@@ -35,7 +35,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 87 solution is: ${numbers.size}`);
+	return `Problem 87 solution is: ${numbers.size}`;
 };
 
 function isPrime(n) {

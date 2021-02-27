@@ -16,9 +16,9 @@ const matrix = [
 	[813, 883, 451, 509, 615, 77, 281, 613, 459, 205, 380, 274, 302, 35, 805],
 ];
 
-module.exports = () => {
-	const sum = new Array(32_768).fill(0);
-	const bc = new Array(32_768).fill(0);
+export default () => {
+	const sum = Array.from({ length: 32_768 }, () => 0);
+	const bc = Array.from({ length: 32_768 }, () => 0);
 	for (let i = 1; i < 32_768; i += 1) bc[i] = (i & 1) + bc[i >> 1];
 	for (let i = 0; i < 32_768; i += 1) {
 		for (let k = 0; k < 15; k += 1) {
@@ -28,5 +28,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 345 solution is: ${sum[32_767]}`);
+	return `Problem 345 solution is: ${sum[32_767]}`;
 };

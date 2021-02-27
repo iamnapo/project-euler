@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 2; primeList.length < 1000; i += 1) { // 1000 LGTM
 		if (isPrime(i)) {
@@ -15,7 +15,7 @@ module.exports = () => {
 			consec = 0;
 		}
 	}
-	return console.log(`Problem 47 solution is: ${result - 3}`);
+	return `Problem 47 solution is: ${result - 3}`;
 };
 
 function isPrime(number) {

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 2; i < 1e8; i += 1) {
 		if (isPrime(i)) primeList.push(i);
@@ -6,18 +6,17 @@ module.exports = () => {
 	let pcount = 0;
 	for (let i = 2; i < primeList.length; i += 1) {
 		const s = primeList[i];
-		let count = s + ((s - 1) / 2);
+		const count = s + ((s - 1) / 2);
 		let y = 0;
 		for (let k = 1; ; k += 1) {
-			if ((k * primeList[i] + 1) % 8 === 0) {
-				y = (k * primeList[i] + 1) / 8;
+			if ((k * s + 1) % 8 === 0) {
+				y = (k * s + 1) / 8;
 				break;
 			}
 		}
-		count = (count + y) % s;
-		pcount += count;
+		pcount += (count + y) % s;
 	}
-	return console.log(`Problem 381 solution is: ${pcount}`);
+	return `Problem 381 solution is: ${pcount}`;
 };
 
 function isPrime(n) {

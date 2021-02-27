@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 1e12;
 	const d = new Set();
 	let b = 2;
@@ -18,5 +18,5 @@ module.exports = () => {
 		b2 = b * (b + 1) + 1;
 		if (b2 >= limit) break;
 	}
-	return console.log(`Problem 346 solution is: ${s}`);
+	return `Problem 346 solution is: ${s}`;
 };

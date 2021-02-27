@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 1e06;
 	let result = 0;
 	let chainLength = 0;
@@ -8,7 +8,7 @@ module.exports = () => {
 			primeList.push(i);
 		}
 	}
-	const numbers = new Array(limit + 1).fill(false);
+	const numbers = Array.from({ length: limit + 1 }, () => false);
 	for (let i = 2; i < limit + 1; i += 1) {
 		if (!(numbers[i])) {
 			const chain = [];
@@ -41,7 +41,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 95 solution is: ${result}`);
+	return `Problem 95 solution is: ${result}`;
 };
 
 function isPrime(n) {

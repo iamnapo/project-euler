@@ -1,21 +1,19 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
-	for (let i = 2; i < 1e07; i += 1) {
-		let tmp = i;
-		for (;;) {
-			if (tmp === 89) {
+	for (let i = 1; i < 1e07; i += 1) {
+		let str = i.toString();
+		let j = 0;
+		const r = 1;
+		while (r === 1) {
+			for (let k = 0; k < str.length; k++) j += Number.parseInt(str[k], 10) ** 2;
+			if (j === 89) {
 				result += 1;
-			}
-			if ([1, 89].includes(tmp)) {
 				break;
 			}
-			tmp = squareDigitSum(tmp);
+			if (j === 1) break;
+			str = j.toString();
+			j = 0;
 		}
 	}
-	return console.log(`Problem 92 solution is: ${result}`);
+	return `Problem 92 solution is: ${result}`;
 };
-
-function squareDigitSum(number) {
-	const tmp = number.toString().split("").map((a) => Number.parseInt(a, 10) ** 2);
-	return tmp.reduce((a, b) => a + b);
-}

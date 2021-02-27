@@ -2,8 +2,8 @@ let cPos = 0;
 let ccPos = 0;
 let chancePos = 0;
 
-module.exports = () => {
-	const board = new Array(40).fill(0);
+export default () => {
+	const board = Array.from({ length: 40 }, () => 0);
 	const samples = 1e06;
 	let doubles = 0;
 	for (let i = 0; i < samples; i += 1) {
@@ -43,7 +43,7 @@ module.exports = () => {
 		}
 		modalstring += index[i].toString();
 	}
-	return console.log(`Problem 84 solution is: ${modalstring}`);
+	return `Problem 84 solution is: ${modalstring}`;
 };
 
 function cc() {

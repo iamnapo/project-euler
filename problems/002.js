@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let a = 1;
 	let b = 2;
 	let sum = 0;
@@ -10,5 +10,5 @@ module.exports = () => {
 		a = b;
 		b += temp;
 	}
-	return console.log(`Problem 2 solution is: ${sum}`);
+	return `Problem 2 solution is: ${sum}`;
 };

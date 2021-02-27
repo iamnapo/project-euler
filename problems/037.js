@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const sum = [];
 	for (let n = 11; sum.length < 11; n += 1) {
 		if (isPrime(n)) {
@@ -29,7 +29,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 37 solution is: ${sum.reduce((a, b) => a + b)}`);
+	return `Problem 37 solution is: ${sum.reduce((a, b) => a + b)}`;
 };
 
 function isPrime(number) {

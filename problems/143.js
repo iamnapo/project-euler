@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 120_000;
 	const limitSQ = 347;
 	const pairs = [];
@@ -18,20 +18,19 @@ module.exports = () => {
 				break;
 			}
 			for (let k = 1; k * (a + b) < limit; k += 1) {
-				pairs.push([k * a, k * b]);
-				pairs.push([k * b, k * a]);
+				pairs.push([k * a, k * b], [k * b, k * a]);
 			}
 		}
 	}
 	pairs.sort((a, b) => a[0] - b[0]);
-	const index = new Array(limit).fill(-1);
+	const index = Array.from({ length: limit }, () => -1);
 
 	for (const [i, element] of pairs.entries()) {
 		if (index[element[0]] === -1) {
 			index[element[0]] = i;
 		}
 	}
-	const sums = new Array(limit).fill(false);
+	const sums = Array.from({ length: limit }, () => false);
 	for (let i = 0; i < pairs.length; i += 1) {
 		const [a, b] = pairs[i];
 		const va = [];
@@ -66,7 +65,7 @@ module.exports = () => {
 			result += i;
 		}
 	}
-	return console.log(`Problem 143 solution is: ${result}`);
+	return `Problem 143 solution is: ${result}`;
 };
 
 function gcd(a, b) {

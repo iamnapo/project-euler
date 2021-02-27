@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 163 solution is: ${T(36)}`);
+export default () => `Problem 163 solution is: ${T(36)}`;
 
 function T60(n) {
 	let t = 0;

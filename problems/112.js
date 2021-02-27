@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	let bouncy = 0;
 	for (let n = 1; ; n += 1) {
 		if (!isLeft(n) && !isRight(n)) {
 			bouncy += 1;
 		}
 		if (bouncy / n >= 0.99) {
-			return console.log(`Problem 112 solution is: ${n}`);
+			return `Problem 112 solution is: ${n}`;
 		}
 	}
 };

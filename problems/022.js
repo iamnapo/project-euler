@@ -4,7 +4,7 @@ const names = [
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-module.exports = () => {
+export default () => {
 	names.sort();
 	let total = 0;
 	for (const [index, name] of names.entries()) {
@@ -14,5 +14,5 @@ module.exports = () => {
 		}
 		total += (index + 1) * score;
 	}
-	return console.log(`Problem 22 solution is: ${total}`);
+	return `Problem 22 solution is: ${total}`;
 };

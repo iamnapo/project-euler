@@ -1,10 +1,10 @@
-module.exports = () => {
+export default () => {
 	const number = 1e12;
 	let res = mulNot5(1e5);
 	for (let num = number; num > 0; num /= 5) {
 		res = (res * mulNot5(num % 1e5) * (num % 10 === 4 || num % 10 > 8 ? 2 : 1)) % 1e5;
 	}
-	return console.log(`Problem 160 solution is: ${res}`);
+	return `Problem 160 solution is: ${res}`;
 };
 
 function mulNot5(number) {

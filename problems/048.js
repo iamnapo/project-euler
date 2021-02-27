@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let i = 1; i < 1001; i += 1) {
 		let temp = i;
@@ -9,5 +9,5 @@ module.exports = () => {
 		result += temp;
 		result %= 1e10;
 	}
-	return console.log(`Problem 48 solution is: ${result}`);
+	return `Problem 48 solution is: ${result}`;
 };

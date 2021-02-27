@@ -1,5 +1,5 @@
-module.exports = () => {
-	const p = new Array(1001).fill(0);
+export default () => {
+	const p = Array.from({ length: 1001 }, () => 0);
 	for (let i = 1; i < 999; i += 1) {
 		for (let j = 1; i + j < 1000; j += 1) {
 			for (let k = 1; i + j + k < 1001; k += 1) {
@@ -9,5 +9,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 39 solution is: ${p.indexOf(Math.max(...p))}`);
+	return `Problem 39 solution is: ${p.indexOf(Math.max(...p))}`;
 };

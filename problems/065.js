@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let d = [1];
 	let n = [2];
 
@@ -6,7 +6,7 @@ module.exports = () => {
 		const c = (i % 3 === 0) ? 2 * (i / 3) : 1;
 		[d, n] = [n, add(multiply(n, c), d)];
 	}
-	return console.log(`Problem 65 solution is: ${n.reduce((a, b) => a + b)}`);
+	return `Problem 65 solution is: ${n.reduce((a, b) => a + b)}`;
 };
 
 function multiply(a, b) {

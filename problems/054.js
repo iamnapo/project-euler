@@ -1010,7 +1010,7 @@ function getCards() {
 	return cards;
 }
 
-module.exports = () => {
+export default () => {
 	let count = 0;
 	const cards = getCards();
 	for (const play of cards) {
@@ -1040,7 +1040,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 54 solution is: ${count}`);
+	return `Problem 54 solution is: ${count}`;
 };
 
 function score(h) {
@@ -1049,25 +1049,25 @@ function score(h) {
 	sc = { category: 0, tiebraker: hand.map((el) => el.value) };
 	const values = hand.map((el) => el.value);
 	const pairs = [];
-	values.forEach((el) => {
+	for (const el of values) {
 		const tmp = values.filter((i) => i === el).length;
 		if (tmp === 2 && !pairs.includes(el)) {
 			pairs.push(el);
 		}
-	});
+	}
 	if (pairs.length === 1) {
-		sc = { category: 1, tiebraker: [].concat(pairs[0], values) };
+		sc = { category: 1, tiebraker: [pairs[0], ...values] };
 	}
 	if (pairs.length === 2) {
-		sc = { category: 2, tiebraker: [].concat(pairs[0], pairs[1], values) };
+		sc = { category: 2, tiebraker: [pairs[0], pairs[1], ...values] };
 	}
 	const triplets = [];
-	values.forEach((el) => {
+	for (const el of values) {
 		const tmp = values.filter((i) => i === el).length;
 		if (tmp === 3 && !triplets.includes(el)) {
 			triplets.push(el);
 		}
-	});
+	}
 	if (triplets.length === 1) {
 		sc = { category: 3, tiebraker: [triplets[0]] };
 	}
@@ -1083,12 +1083,12 @@ function score(h) {
 		sc = { category: 5, tiebraker: [triplets[0]] };
 	}
 	const quads = [];
-	values.forEach((el) => {
+	for (const el of values) {
 		const tmp = values.filter((i) => i === el).length;
 		if (tmp === 4 && !quads.includes(el)) {
 			quads.push(el);
 		}
-	});
+	}
 	if (quads.length === 1) {
 		sc = { category: 6, tiebraker: [quads[0]] };
 	}

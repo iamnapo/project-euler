@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const singleDigit = [
 		0, // Zero
 		3, // One
@@ -48,5 +48,5 @@ module.exports = () => {
 			sum += temp + (third > 0 ? 3 : 0);
 		} // "and"
 	}
-	return console.log(`Problem 17 solution is: ${sum}`);
+	return `Problem 17 solution is: ${sum}`;
 };

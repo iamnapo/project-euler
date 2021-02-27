@@ -1,12 +1,12 @@
 const perm = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-module.exports = () => {
+export default () => {
 	let count = 0;
 	do {
 		count += checkPartitions(0, 0);
 	} while (nextPermuation());
 
-	return console.log(`Problem 118 solution is: ${count}`);
+	return `Problem 118 solution is: ${count}`;
 };
 
 function nextPermuation() {

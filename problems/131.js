@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let i = 1; i < 577; i += 1) {
 		if (isPrime(((i + 1) ** 3) - (i ** 3))) {
@@ -6,7 +6,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 131 solution is: ${result}`);
+	return `Problem 131 solution is: ${result}`;
 };
 
 function isPrime(n) {

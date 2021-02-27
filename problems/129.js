@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	const limit = 1_000_001;
 	let n = limit;
 	while (aa(n) < limit) {
 		n += 2;
 	}
 
-	return console.log(`Problem 129 solution is: ${n}`);
+	return `Problem 129 solution is: ${n}`;
 };
 
 function aa(n) {

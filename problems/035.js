@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	for (let n = 2; n < 1e06; n += 1) {
 		if (isPrime(n)) {
@@ -18,7 +18,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 35 solution is: ${count}`);
+	return `Problem 35 solution is: ${count}`;
 };
 
 function isPrime(number) {

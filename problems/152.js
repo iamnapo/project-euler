@@ -1,6 +1,6 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
-	const array = ((n) => [...new Array(n).keys()])(81).slice(2).filter((el) => primeFactors(el).every((factor) => [2, 3, 5, 7, 13].includes(factor)));
+	const array = Array.from({ length: 79 }, (_, ind) => ind + 2).filter((el) => primeFactors(el).every((factor) => [2, 3, 5, 7, 13].includes(factor)));
 	const lcm = lcmOfMany(array.map((el) => el ** 2));
 	const invSquare = array.map((el) => lcm / el / el);
 	const sum1 = [];
@@ -9,12 +9,12 @@ module.exports = () => {
 	for (const subset of subsets(invSquare.slice(invSquare.length / 2))) sum2.push(subset.reduce((a, b) => a + b, 0));
 	const y1 = new Map();
 	const y2 = new Map();
-	sum1.forEach((el) => y1.set(el, (y1.get(el) || 0) + 1));
-	sum2.forEach((el) => y2.set(el, (y2.get(el) || 0) + 1));
+	for (const el of sum1) y1.set(el, (y1.get(el) || 0) + 1);
+	for (const el of sum2) y2.set(el, (y2.get(el) || 0) + 1);
 	const tmp = new Set([...y2.keys()]);
 	const commonKeys = [...new Set([...y1.keys()])].filter((x) => tmp.has(x));
-	commonKeys.forEach((key) => { count += (y1.get(key) * y2.get(key)); });
-	return console.log(`Problem 152 solution is: ${count}`);
+	for (const key of commonKeys) count += (y1.get(key) * y2.get(key));
+	return `Problem 152 solution is: ${count}`;
 };
 
 function* subsets(array, offset = 0) {

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 	let sum = 0;
 	for (let sub17 = 17; sub17 < 1000; sub17 += 17) {
@@ -14,11 +14,11 @@ module.exports = () => {
 											if (sub3.toString().padStart(3, 0).slice(1) === sub5.toString().padStart(3, 0).slice(0, 2)) {
 												for (let sub2 = 2; sub2 < 1000; sub2 += 2) {
 													if (sub2.toString().padStart(3, 0).slice(1) === sub3.toString().padStart(3, 0).slice(0, 2)) {
-														const tmp = sub2.toString().padStart(3, 0).concat(sub7.toString().padStart(3, 0), sub17.toString().padStart(3, 0));
+														const tmp = sub2.toString().padStart(3, 0) + sub7.toString().padStart(3, 0) + sub17.toString().padStart(3, 0);
 														for (const d of digits) {
 															if (!tmp.includes(d)) {
 																let tmp2 = [];
-																tmp2 = d.concat(tmp);
+																tmp2 = d + tmp;
 																if (isPandigital(tmp2)) {
 																	sum += Number.parseInt(tmp2, 10);
 																}
@@ -37,7 +37,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 43 solution is: ${sum}`);
+	return `Problem 43 solution is: ${sum}`;
 };
 
 function isPandigital(n) {

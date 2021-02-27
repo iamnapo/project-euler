@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const s = [];
 	const triangular = [];
 	let tmp = 0;
@@ -9,9 +9,9 @@ module.exports = () => {
 	for (let i = 0; i < 1000; i += 1) {
 		triangular.push(((i + 1) * i) / 2);
 	}
-	const rowSum = new Array(1000).fill([]);
+	const rowSum = Array.from({ length: 1000 }, () => []);
 	for (let i = 0; i < 1000; i += 1) {
-		rowSum[i] = new Array(i + 2).fill(0);
+		rowSum[i] = Array.from({ length: i + 2 }, () => 0);
 		for (let j = 1; j <= i + 1; j += 1) {
 			rowSum[i][j] = rowSum[i][j - 1] + s[triangular[i] + j - 1];
 		}
@@ -28,5 +28,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 150 solution is: ${min}`);
+	return `Problem 150 solution is: ${min}`;
 };

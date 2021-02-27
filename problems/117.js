@@ -1,10 +1,10 @@
 let cache;
 
-module.exports = () => {
+export default () => {
 	const m = 50;
 	const [nmax, nmin] = [4, 2];
-	cache = new Array(m + 1).fill(0);
-	return console.log(`Problem 117 solution is: ${f(m, nmin, nmax)}`);
+	cache = Array.from({ length: m + 1 }, () => 0);
+	return `Problem 117 solution is: ${f(m, nmin, nmax)}`;
 };
 
 function f(m, nmin, nmax) {

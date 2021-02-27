@@ -1,15 +1,12 @@
-module.exports = () => {
+export default () => {
 	const limit = 100;
 	let result = 0;
 	const scores = [];
 
 	for (let i = 1; i < 21; i += 1) {
-		scores.push(i);
-		scores.push(2 * i);
-		scores.push(3 * i);
+		scores.push(i, 2 * i, 3 * i);
 	}
-	scores.push(25);
-	scores.push(50);
+	scores.push(25, 50);
 
 	const doubles = [];
 	for (let i = 1; i < 21; i += 1) {
@@ -38,5 +35,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 109 solution is: ${result}`);
+	return `Problem 109 solution is: ${result}`;
 };

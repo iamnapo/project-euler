@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	let numberOfPrimes = 0;
 	const primeList = [];
@@ -23,7 +23,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 50 solution is: ${result}`);
+	return `Problem 50 solution is: ${result}`;
 };
 
 function isPrime(number) {

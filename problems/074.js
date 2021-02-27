@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 
 	for (let i = 1; i <= 1e06; i += 1) {
@@ -15,7 +15,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 74 solution is: ${result}`);
+	return `Problem 74 solution is: ${result}`;
 };
 
 function factorialSum(n) {

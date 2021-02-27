@@ -5,11 +5,11 @@ class Radical {
 	}
 }
 
-module.exports = () => {
+export default () => {
 	const target = 10_000;
 	const limit = 100_000 + 1;
 
-	const radicals = new Array(limit);
+	const radicals = Array.from({ length: limit });
 	for (let i = 0; i < radicals.length; i += 1) {
 		radicals[i] = new Radical(1, i);
 	}
@@ -30,5 +30,5 @@ module.exports = () => {
 		}
 		return a.number > b.number ? 1 : -1;
 	});
-	return console.log(`Problem 124 solution is: ${radicals[target].number}`);
+	return `Problem 124 solution is: ${radicals[target].number}`;
 };

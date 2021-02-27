@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const list = [];
 	let [a, b, c, d, r] = [0, 0, 0, 0, 0];
 	for (a = 1; a < 10; a += 1) {
@@ -12,13 +12,13 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 93 solution is: ${list.pop()}`);
+	return `Problem 93 solution is: ${list.pop()}`;
 };
 
 function testLen(...a) {
 	const r = [];
 	let s = [];
-	let [i0, i1, i2, i3, o1, o2, o3, p] = new Array(8).fill(0);
+	let [i0, i1, i2, i3, o1, o2, o3, p] = Array.from({ length: 8 }, () => 0);
 	const calc = (o) => {
 		const aa = s.pop();
 		const l = s.length - 1;

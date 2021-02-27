@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	const carres = new Set([4, 9, 16, 25, 36, 49, 64, 81]);
 	for (let n = 2; n < 100; n += 1) {
@@ -6,11 +6,11 @@ module.exports = () => {
 			for (const el of lsqrt(n)) sum += el;
 		}
 	}
-	return console.log(`Problem 80 solution is: ${sum}`);
+	return `Problem 80 solution is: ${sum}`;
 };
 
 function carre(l) {
-	const rep = new Array(110).fill(0);
+	const rep = Array.from({ length: 110 }, () => 0);
 	for (let i = 0; i < 100; i += 1) {
 		for (let j = 0; j < Math.min(100, 110 - i); j += 1) rep[i + j] += l[i] * l[j];
 	}
@@ -25,7 +25,7 @@ function carre(l) {
 }
 
 function lsqrt(n) {
-	const l = new Array(100).fill(0);
+	const l = Array.from({ length: 100 }, () => 0);
 	let d = 0;
 	while (d < 100) {
 		const carr = carre(l);

@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	let a = [1];
 	let b = [1];
 	for (let count = 2; ;) {
 		[a, b] = [b, add(a, b)];
 		count += 1;
 		if (b.length === 1000) {
-			return console.log(`Problem 25 solution is: ${count}`);
+			return `Problem 25 solution is: ${count}`;
 		}
 	}
 };

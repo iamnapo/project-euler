@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let error = Number.MAX_SAFE_INTEGER;
 	let closestArea = 0;
 	const target = 2e06;
@@ -16,5 +16,5 @@ module.exports = () => {
 			y += 1;
 		}
 	}
-	return console.log(`Problem 85 solution is: ${closestArea}`);
+	return `Problem 85 solution is: ${closestArea}`;
 };

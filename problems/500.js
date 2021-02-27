@@ -1,6 +1,6 @@
-module.exports = () => {
+export default () => {
 	const N = 8_000_000;
-	const primeList = new Array(N).fill(true);
+	const primeList = Array.from({ length: N }, () => true);
 	const factors = [];
 	for (let i = 2; i < N; i += 1) {
 		if (primeList[i]) {
@@ -13,5 +13,5 @@ module.exports = () => {
 		}
 	}
 	factors.sort((a, b) => a - b);
-	return console.log(`Problem 500 solution is: ${factors.slice(0, 500_500).reduce((a, b) => (a * b) % 500_500_507, 1)}`);
+	return `Problem 500 solution is: ${factors.slice(0, 500_500).reduce((a, b) => (a * b) % 500_500_507, 1)}`;
 };

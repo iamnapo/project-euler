@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	const limit = 1e8;
 	let [x, y] = [1, 1];
@@ -8,5 +8,5 @@ module.exports = () => {
 		result += Math.trunc(limit / (x + y));
 	}
 
-	return console.log(`Problem 139 solution is: ${result}`);
+	return `Problem 139 solution is: ${result}`;
 };

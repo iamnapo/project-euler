@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 10;
 	const primeList = [];
 	for (let i = 6; i < 1e05; i += 1) {
@@ -11,7 +11,7 @@ module.exports = () => {
 			result += element;
 		}
 	}
-	return console.log(`Problem 133 solution is: ${result}`);
+	return `Problem 133 solution is: ${result}`;
 };
 
 function isPrime(n) {

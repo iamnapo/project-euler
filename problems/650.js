@@ -1,10 +1,10 @@
-module.exports = () => {
+export default () => {
 	const end = 2e4 + 1;
 	const mod = 1_000_000_007n;
 	const pf = [new Map(), new Map()];
 	for (let i = 2; i < end; i += 1) {
 		pf[i] = new Map();
-		primeFactors(i).forEach((factor) => pf[i].set(factor, (pf[i].get(factor) || 0) + 1));
+		for (const factor of primeFactors(i)) pf[i].set(factor, (pf[i].get(factor) || 0) + 1);
 	}
 	const inv = new Map([[0, 0n], [1, 1n]]);
 	const D = (N) => {
@@ -25,7 +25,7 @@ module.exports = () => {
 	};
 	let sum = 0n;
 	for (let k = 1; k < end; k += 1) sum += D(k);
-	return console.log(`Problem 650 solution is: ${sum % mod}`);
+	return `Problem 650 solution is: ${sum % mod}`;
 };
 
 function inverseMod2(p, q) {
@@ -38,9 +38,14 @@ function inverseMod(p, q, lastS, lastT, s, t) {
 }
 
 function powMod(base, exp, mod) {
-	if (exp === 1) return base % mod;
-	if (exp % 2 === 0) return (powMod(base, (exp / 2), mod) ** 2n) % mod;
-	return (base * powMod(base, (exp - 1), mod)) % mod;
+	let r = 1n;
+	let t = base;
+	while (exp) {
+		if (exp & 1) r = (r * t) % mod;
+		t = (t ** 2n) % mod;
+		exp >>= 1;
+	}
+	return r;
 }
 
 function primeFactors(n) {

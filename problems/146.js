@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	const limit = 15e07;
 	const step = 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19;
@@ -40,7 +40,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 146 solution is: ${sum}`);
+	return `Problem 146 solution is: ${sum}`;
 };
 
 function powMod(a, p, m) {

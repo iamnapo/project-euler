@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let max = 0;
 	let maxNum = 1;
 	for (let i = 1; i < 1_000_000; i += 1) {
@@ -16,5 +16,5 @@ module.exports = () => {
 			maxNum = i;
 		}
 	}
-	return console.log(`Problem 14 solution is: ${maxNum}`);
+	return `Problem 14 solution is: ${maxNum}`;
 };

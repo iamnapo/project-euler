@@ -1,8 +1,8 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let a = 99; a > 0; a -= 1) {
 		for (let b = 99; b > 0; b -= 1) {
-			if (9 * b * Math.ceil(Math.log10(a + 1)) < result) return console.log(`Problem 56 solution is: ${result}`);
+			if (9 * b * Math.ceil(Math.log10(a + 1)) < result) return `Problem 56 solution is: ${result}`;
 			let tmp = [1];
 			for (let i = 0; i < b; i += 1) tmp = multiply(tmp, a);
 			tmp = tmp.reduce((i, j) => i + j);

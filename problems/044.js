@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const LIMIT = 1e04; // LGTM!
 	let D = Number.MAX_SAFE_INTEGER;
 	for (let j = 1; j <= LIMIT; j += 1) {
@@ -10,7 +10,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 44 solution is: ${D}`);
+	return `Problem 44 solution is: ${D}`;
 };
 
 function isPentagonal(num) {

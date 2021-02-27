@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 1e12;
 	const progressiveSquares = [];
 
@@ -24,7 +24,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 141 solution is: ${progressiveSquares.reduce((a, b) => a + b, 0)}`);
+	return `Problem 141 solution is: ${progressiveSquares.reduce((a, b) => a + b, 0)}`;
 };
 
 function isSquare(n) {

@@ -1,9 +1,9 @@
-module.exports = () => {
+export default () => {
 	let v = [1];
 	for (let i = 0; i < 6; i += 1) {
 		v = next(v);
 	}
-	return console.log(`Problem 103 solution is: ${v.map((el) => el.toString()).join("")}`);
+	return `Problem 103 solution is: ${v.map((el) => el.toString()).join("")}`;
 };
 
 function next(v) {
@@ -22,8 +22,7 @@ function next(v) {
 
 	d.reverse();
 
-	o2.push(v[l]);
-	o2.push(v[l] + d.reduce((a, b) => a + b, 0));
+	o2.push(v[l], v[l] + d.reduce((a, b) => a + b, 0));
 	for (const [i, element] of d.entries()) {
 		o2.push(o2[1 + i] + element);
 	}

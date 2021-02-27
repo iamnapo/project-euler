@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let i = 10; i < 2_540_161; i += 1) {
 		let sum = 0;
@@ -12,7 +12,7 @@ module.exports = () => {
 			result += i;
 		}
 	}
-	return console.log(`Problem 34 solution is: ${result}`);
+	return `Problem 34 solution is: ${result}`;
 };
 
 function factorial(n) {

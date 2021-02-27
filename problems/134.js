@@ -1,8 +1,8 @@
-module.exports = () => {
+export default () => {
 	const max = 1e6;
 	let p1 = 5;
 	let sum = [0];
-	const sieve = new Array(1 + nextPrime(max - 1)).fill(true);
+	const sieve = Array.from({ length: 1 + nextPrime(max - 1) }, () => true);
 	for (let a = 0; a < sieve.length; a += 1) {
 		sieve[a] = (a % 2 === 0) ? a === 2 : a % 3 !== 0;
 	}
@@ -28,7 +28,7 @@ module.exports = () => {
 		sum = add(sum, val.toString().split("").map((el) => Number.parseInt(el, 10)));
 		p1 = p2;
 	}
-	return console.log(`Problem 134 solution is: ${sum.join("")}`);
+	return `Problem 134 solution is: ${sum.join("")}`;
 };
 
 function add(a, b) {

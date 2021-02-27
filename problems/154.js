@@ -1,9 +1,9 @@
-module.exports = () => {
+export default () => {
 	const N = 200_000;
 	const V5N12 = 49_998 - 12;
 	const V2N12 = 199_994 - 12;
-	const v5 = new Array(N).fill(0);
-	const v2 = new Array(N).fill(0);
+	const v5 = Array.from({ length: N }, () => 0);
+	const v2 = Array.from({ length: N }, () => 0);
 	for (let n = 0; n < N; n += 1) {
 		let [d2, d5, p2, p5] = [0, 0, 2, 5];
 		while (p2 <= n) {
@@ -23,5 +23,5 @@ module.exports = () => {
 			if ((V5N12 >= v5[i] + v5[j] + v5[k]) && (V2N12 >= v2[i] + v2[j] + v2[k])) count += (i === j || j === k) ? 3 : 6;
 		}
 	}
-	return console.log(`Problem 154 solution is: ${count}`);
+	return `Problem 154 solution is: ${count}`;
 };

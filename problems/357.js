@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let sum = 1;
 	for (let n = 2; n < 1e8; n += 4) {
 		if (!isPrime(n / 2 + 2)) continue;
@@ -10,7 +10,7 @@ module.exports = () => {
 		}
 		if (shouldInclude) sum += n;
 	}
-	return console.log(`Problem 357 solution is: ${sum}`);
+	return `Problem 357 solution is: ${sum}`;
 };
 
 function isPrime(n) {

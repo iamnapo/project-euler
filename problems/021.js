@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	for (let i = 0; i < 10_000; i += 1) {
 		const b = d(i);
@@ -6,7 +6,7 @@ module.exports = () => {
 			sum += i;
 		}
 	}
-	return console.log(`Problem 21 solution is: ${sum}`);
+	return `Problem 21 solution is: ${sum}`;
 };
 
 function d(n) {

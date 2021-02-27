@@ -1,14 +1,14 @@
 let cache;
 
-module.exports = () => {
+export default () => {
 	let solutions = 0;
 	const m = 50;
 	const [nmax, nmin] = [4, 2];
 	for (let i = nmin; i <= nmax; i += 1) {
-		cache = new Array(m + 1).fill(0);
+		cache = Array.from({ length: m + 1 }, () => 0);
 		solutions += g(m, i);
 	}
-	return console.log(`Problem 116 solution is: ${solutions}`);
+	return `Problem 116 solution is: ${solutions}`;
 };
 
 function g(m, n) {

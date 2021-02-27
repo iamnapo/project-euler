@@ -2,9 +2,9 @@ const limit = 200;
 let cost;
 let path;
 
-module.exports = () => {
-	cost = new Array(limit + 1).fill(Number.MAX_SAFE_INTEGER);
-	path = new Array(limit + 1).fill(0);
+export default () => {
+	cost = Array.from({ length: limit + 1 }, () => Number.MAX_SAFE_INTEGER);
+	path = Array.from({ length: limit + 1 }, () => 0);
 	let result = 0;
 
 	backtrack(1, 0);
@@ -13,7 +13,7 @@ module.exports = () => {
 		result += cost[i];
 	}
 
-	return console.log(`Problem 122 solution is: ${result}`);
+	return `Problem 122 solution is: ${result}`;
 };
 
 function backtrack(power, depth) {

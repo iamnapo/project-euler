@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 1;
 	let bestRatio = Number.POSITIVE_INFINITY;
 	const limit = 1e07;
@@ -24,7 +24,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 70 solution is: ${result}`);
+	return `Problem 70 solution is: ${result}`;
 };
 
 function isPrime(n) {
@@ -57,7 +57,7 @@ function isPrime(n) {
 }
 
 function isPerm(m, n) {
-	const arr = new Array(10).fill(0);
+	const arr = Array.from({ length: 10 }, () => 0);
 
 	let temp = n;
 	while (temp > 0) {

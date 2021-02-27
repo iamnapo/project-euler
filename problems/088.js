@@ -1,9 +1,9 @@
-module.exports = () => {
+export default () => {
 	const maxK = 12_000;
 	const maxNumber = 2 * maxK;
 	const numFactors = Math.trunc(Math.log10(maxNumber) / Math.log10(2));
-	const factors = new Array(numFactors).fill(0);
-	const k = ((n) => [...new Array(n).keys()])(maxK + 1).slice().map((el) => 2 * el);
+	const factors = Array.from({ length: numFactors }, () => 0);
+	const k = Array.from({ length: maxK + 1 }, (_, ind) => 2 * ind);
 	k[1] = 0;
 	factors[0] = 1;
 	let curMaxFactor = 1;
@@ -47,5 +47,5 @@ module.exports = () => {
 			j -= 1;
 		}
 	}
-	return console.log(`Problem 88 solution is: ${[...new Set(k)].reduce((a, b) => a + b)}`);
+	return `Problem 88 solution is: ${[...new Set(k)].reduce((a, b) => a + b)}`;
 };

@@ -1,11 +1,11 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	for (let n = 1; n < 10; n += 1) {
 		let D = divisors(100 ** n);
 		D = D.slice(0, Math.trunc(D.length / 2) + 1);
 		for (let i = 0; i < D.length; i += 1) sum += divisors(gcd((10 ** n) + D[i], (10 ** n) + (100 ** n) / D[i])).length;
 	}
-	return console.log(`Problem 157 solution is: ${sum}`);
+	return `Problem 157 solution is: ${sum}`;
 };
 
 function gcd(a, b) {
@@ -25,5 +25,5 @@ function divisors(n) {
 		}
 	}
 	back.reverse();
-	return front.concat(back);
+	return [...front, ...back];
 }

@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 0;
 	for (let n = 2; n < 10_001; n += 1) {
 		const limit = Math.trunc(Math.sqrt(n));
@@ -18,5 +18,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 64 solution is: ${result}`);
+	return `Problem 64 solution is: ${result}`;
 };

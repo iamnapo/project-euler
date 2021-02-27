@@ -1,6 +1,6 @@
 const p = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-module.exports = () => {
+export default () => {
 	let result = "";
 	for (;;) {
 		if (!nextPerm()) {
@@ -13,7 +13,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 68 solution is: ${result}`);
+	return `Problem 68 solution is: ${result}`;
 };
 
 function nextPerm() {

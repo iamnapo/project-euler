@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let sum = 0;
 	const seq = [];
 	for (let n = 1; n < 12; n += 1) {
@@ -25,5 +25,5 @@ module.exports = () => {
 			sum += potFit;
 		}
 	}
-	return console.log(`Problem 101 solution is: ${sum}`);
+	return `Problem 101 solution is: ${sum}`;
 };

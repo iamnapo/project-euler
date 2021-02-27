@@ -101,4 +101,4 @@ const numbers = [
 	53_503_534_226_472_524_250_874_054_075_591_789_781_264_330_331_690,
 ];
 
-module.exports = () => console.log(`Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString().replace(/,/g, "").slice(0, 10)}`);
+export default () => `Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString().replace(/,/g, "").slice(0, 10)}`;

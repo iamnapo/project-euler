@@ -1,8 +1,8 @@
-module.exports = () => {
+export default () => {
 	for (let n = 286; ; n += 1) {
 		const tn = (n * (n + 1)) / 2;
 		if (isPentagonal(tn) && isHexagonal(tn)) {
-			return console.log(`Problem 45 solution is: ${tn}`);
+			return `Problem 45 solution is: ${tn}`;
 		}
 	}
 };

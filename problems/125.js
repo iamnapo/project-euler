@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const limit = 1e8;
 	const sqrtLimit = Math.sqrt(limit);
 	let sum = 0;
@@ -16,7 +16,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 125 solution is: ${sum}`);
+	return `Problem 125 solution is: ${sum}`;
 };
 
 function isPalindrome(string) {

@@ -1,5 +1,5 @@
-module.exports = () => {
-	let [a, b, c, d, e, f] = new Array(6).fill(0);
+export default () => {
+	let [a, b, c, d, e, f] = Array.from({ length: 6 }, () => 0);
 	let solved = false;
 	let result = 0;
 
@@ -29,7 +29,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 142 solution is: ${result}`);
+	return `Problem 142 solution is: ${result}`;
 };
 
 function isSquare(n) {

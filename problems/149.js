@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const grid = generateGrid();
 	const n = grid[0].length;
 	let ans = 0;
@@ -8,7 +8,7 @@ module.exports = () => {
 		ans = Math.max(ans, maxSubSum(grid, i, 0, 1, -1));
 		ans = Math.max(ans, maxSubSum(grid, i, 0, -1, 1));
 	}
-	return console.log(`Problem 149 solution is: ${ans}`);
+	return `Problem 149 solution is: ${ans}`;
 };
 
 function generateGrid() {

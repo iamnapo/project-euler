@@ -1,13 +1,13 @@
 let exponents;
 
-module.exports = () => {
+export default () => {
 	const primeList = [];
 	for (let i = 0; primeList.length < 15; i += 1) {
 		if (isPrime(i)) {
 			primeList.push(i);
 		}
 	}
-	exponents = new Array(primeList.length).fill(0);
+	exponents = Array.from({ length: primeList.length }, () => 0);
 	let result = 1;
 	for (const element of primeList) {
 		result *= element;
@@ -35,7 +35,7 @@ module.exports = () => {
 			exponents[i] = exponents[counter];
 		}
 	}
-	return console.log(`Problem 110 solution is: ${result}`);
+	return `Problem 110 solution is: ${result}`;
 };
 
 function isPrime(n) {

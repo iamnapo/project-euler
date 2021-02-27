@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 169 solution is: ${f(10n ** 25n)}`);
+export default () => `Problem 169 solution is: ${f(10n ** 25n)}`;
 
 const cache = new Map();
 function f(n) {

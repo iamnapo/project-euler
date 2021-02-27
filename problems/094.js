@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let [x, y] = [2, 1];
 	const limit = 1e09;
 	let result = 0;
@@ -21,5 +21,5 @@ module.exports = () => {
 		}
 		[x, y] = [(2 * x) + (y * 3), (y * 2) + x];
 	}
-	return console.log(`Problem 94 solution is: ${result}`);
+	return `Problem 94 solution is: ${result}`;
 };

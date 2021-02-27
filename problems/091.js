@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let result = 50 * 50 * 3;
 	for (let x = 1; x < 51; x += 1) {
 		for (let y = 1; y < 51; y += 1) {
@@ -6,7 +6,7 @@ module.exports = () => {
 			result += Math.min(Math.trunc((y * fact) / x), Math.trunc(((50 - x) * fact) / y)) * 2;
 		}
 	}
-	return console.log(`Problem 91 solution is: ${result}`);
+	return `Problem 91 solution is: ${result}`;
 };
 
 function gcd(a, b) {

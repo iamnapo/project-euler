@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let noOfPrimes = 3;
 	let sl = 2;
 	let c = 9;
@@ -13,7 +13,7 @@ module.exports = () => {
 		}
 		c += sl;
 	}
-	return console.log(`Problem 58 solution is: ${sl + 1}`);
+	return `Problem 58 solution is: ${sl + 1}`;
 };
 
 function isPrime(n) {

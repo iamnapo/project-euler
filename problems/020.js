@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const big = [1];
 	let c = 0;
 	for (let i = 2; i < 101; i += 1) {
@@ -19,5 +19,5 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 20 solution is: ${big.reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`);
+	return `Problem 20 solution is: ${big.reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`;
 };

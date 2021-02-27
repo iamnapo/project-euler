@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const n1 = 3;
 	const d1 = 7;
 	let nbest = 0;
@@ -21,7 +21,7 @@ module.exports = () => {
 	nbest = Math.trunc(nbest / factor);
 	dbest = Math.trunc(dbest / factor);
 
-	return console.log(`Problem 71 solution is: ${nbest}`);
+	return `Problem 71 solution is: ${nbest}`;
 };
 
 function gcd(a, b) {

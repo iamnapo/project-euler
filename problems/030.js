@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const POWER = 5;
 	let sum = 0;
 	for (let i = 2; i < 1e06; i += 1) { // 1e06 looks big enough to me
@@ -12,5 +12,5 @@ module.exports = () => {
 			sum += i;
 		}
 	}
-	return console.log(`Problem 30 solution is: ${sum}`);
+	return `Problem 30 solution is: ${sum}`;
 };

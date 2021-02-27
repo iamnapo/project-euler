@@ -1,7 +1,7 @@
-module.exports = () => {
+export default () => {
 	// https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
 	let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-	for (let count = -1; count < 1e06; count += 1) {
+	for (let count = 1; count < 1e06; count += 1) {
 		let k = -1;
 		let l = -1;
 		for (let i = 0; i < a.length; i += 1) {
@@ -18,7 +18,7 @@ module.exports = () => {
 			}
 		}
 		[a[k], a[l]] = [a[l], a[k]];
-		a = [].concat(a.slice(0, k + 1), a.slice(k + 1).reverse());
+		a = [...a.slice(0, k + 1), ...a.slice(k + 1).reverse()];
 	}
-	return console.log(`Problem 24 solution is: ${a.join("")}`);
+	return `Problem 24 solution is: ${a.join("")}`;
 };

@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 148 solution is: ${t(1e9)}`);
+export default () => `Problem 148 solution is: ${t(1e9)}`;
 
 function triangle(n) {
 	return (n * (n + 1) * 0.5);

@@ -1,6 +1,6 @@
-module.exports = () => {
+export default () => {
 	const limit = 30_000;
-	const count = new Array(limit + 1).fill(0);
+	const count = Array.from({ length: limit + 1 }, () => 0);
 	for (let z = 1; cubes(z, z, z, 1) <= limit; z += 1) {
 		for (let y = z; cubes(z, y, z, 1) <= limit; y += 1) {
 			for (let x = y; cubes(z, y, x, 1) <= limit; x += 1) {
@@ -10,7 +10,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 126 solution is: ${count.indexOf(1000)}`);
+	return `Problem 126 solution is: ${count.indexOf(1000)}`;
 };
 
 function cubes(x, y, z, n) {

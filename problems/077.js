@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let target = 2;
 	const primeList = [];
 	for (let i = 0; primeList.length < 2000; i += 1) {
@@ -8,7 +8,7 @@ module.exports = () => {
 	}
 
 	for (;;) {
-		const ways = new Array(target + 1).fill(0);
+		const ways = Array.from({ length: target + 1 }, () => 0);
 		ways[0] = 1;
 
 		for (const prime of primeList) {
@@ -22,7 +22,7 @@ module.exports = () => {
 		target += 1;
 	}
 
-	return console.log(`Problem 77 solution is: ${target}`);
+	return `Problem 77 solution is: ${target}`;
 };
 
 function isPrime(n) {

@@ -2,7 +2,7 @@ const words = ["A", "ABILITY", "ABLE", "ABOUT", "ABOVE", "ABSENCE", "ABSOLUTELY"
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-module.exports = () => {
+export default () => {
 	const triangles = [];
 	for (let i = 1; i < 79; i += 1) {
 		triangles.push(0.5 * i * (i + 1));
@@ -17,5 +17,5 @@ module.exports = () => {
 			count += 1;
 		}
 	}
-	return console.log(`Problem 42 solution is: ${count}`);
+	return `Problem 42 solution is: ${count}`;
 };

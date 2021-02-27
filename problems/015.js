@@ -1,7 +1,7 @@
 
-module.exports = () => {
+export default () => {
 	// https://en.wikipedia.org/wiki/Lattice_path
-	const a = ((n) => [...new Array(n).keys()])(41).slice(21).reduce((i, j) => i * j);
-	const b = ((n) => [...new Array(n).keys()])(21).slice(1).reduce((i, j) => i * j);
-	return console.log(`Problem 15 solution is: ${a / b}`);
+	const a = Array.from({ length: 20 }, (_, ind) => ind + 21).reduce((i, j) => i * j);
+	const b = Array.from({ length: 20 }, (_, ind) => ind + 1).reduce((i, j) => i * j);
+	return `Problem 15 solution is: ${a / b}`;
 };

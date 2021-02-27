@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const n = 1e8;
 	const cache = [];
 	const cacheSize = 10 ** 4;
@@ -11,7 +11,7 @@ module.exports = () => {
 			res += BigInt(2 * a * r);
 		}
 	}
-	return console.log(`Problem 153 solution is: ${res}`);
+	return `Problem 153 solution is: ${res}`;
 };
 
 function isqrt(n) {

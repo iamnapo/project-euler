@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	let count = 0;
 	const limit = 1e09;
 	for (let i = 1; i < limit; i += 2) {
@@ -6,7 +6,7 @@ module.exports = () => {
 			count += 2;
 		}
 	}
-	return console.log(`Problem 145 solution is: ${count}`);
+	return `Problem 145 solution is: ${count}`;
 };
 
 function isReversible(n) {

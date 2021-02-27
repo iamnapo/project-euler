@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const fiveDigitPattern = get5digitPatterns();
 	const sixDigitPattern = get6digitPatterns();
 	let result = Number.MAX_SAFE_INTEGER;
@@ -23,7 +23,7 @@ module.exports = () => {
 			}
 		}
 	}
-	return console.log(`Problem 51 solution is: ${result}`);
+	return `Problem 51 solution is: ${result}`;
 };
 
 function isPrime(n) {
@@ -56,7 +56,7 @@ function isPrime(n) {
 }
 
 function get5digitPatterns() {
-	const retVal = new Array(4);
+	const retVal = Array.from({ length: 4 });
 	retVal[0] = [1, 0, 0, 0, 1];
 	retVal[1] = [0, 1, 0, 0, 1];
 	retVal[2] = [0, 0, 1, 0, 1];
@@ -65,7 +65,7 @@ function get5digitPatterns() {
 }
 
 function get6digitPatterns() {
-	const retVal = new Array(10);
+	const retVal = Array.from({ length: 10 });
 	retVal[0] = [1, 1, 0, 0, 0, 1];
 	retVal[1] = [1, 0, 1, 0, 0, 1];
 	retVal[2] = [1, 0, 0, 1, 0, 1];
@@ -99,7 +99,7 @@ function generateNumber(repNumber, filledPattern) {
 }
 
 function fillPattern(pattern, number) {
-	const filledPattern = new Array(pattern.length);
+	const filledPattern = Array.from({ length: pattern.length });
 	let temp = number;
 	for (let i = filledPattern.length - 1; i > -1; i -= 1) {
 		if (pattern[i] === 1) {

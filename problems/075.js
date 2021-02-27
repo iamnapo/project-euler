@@ -1,5 +1,5 @@
-module.exports = () => {
-	const triangles = new Array(1_500_001).fill(0);
+export default () => {
+	const triangles = Array.from({ length: 1_500_001 }, () => 0);
 	let result = 0;
 	const limit = Math.trunc(Math.sqrt(1_500_000 / 2));
 
@@ -22,7 +22,7 @@ module.exports = () => {
 		}
 	}
 
-	return console.log(`Problem 75 solution is: ${result}`);
+	return `Problem 75 solution is: ${result}`;
 };
 
 function gcd(a, b) {

@@ -1,4 +1,4 @@
-module.exports = () => console.log(`Problem 151 solution is: ${calc().toFixed(6)}`);
+export default () => `Problem 151 solution is: ${calc().toFixed(6)}`;
 
 function calc(A1 = 1, A2 = 1, A3 = 1, A4 = 1, prob = 1) {
 	let numOfTimes = 0;

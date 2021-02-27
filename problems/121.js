@@ -1,5 +1,5 @@
-module.exports = () => {
-	const outcomes = new Array(16).fill(0);
+export default () => {
+	const outcomes = Array.from({ length: 16 }, () => 0);
 	outcomes[15] = 1;
 	outcomes[14] = 1;
 
@@ -21,5 +21,5 @@ module.exports = () => {
 		total *= i;
 	}
 
-	return console.log(`Problem 121 solution is: ${Math.trunc(total / positive)}`);
+	return `Problem 121 solution is: ${Math.trunc(total / positive)}`;
 };
