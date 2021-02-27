@@ -28,7 +28,7 @@
 		"ava": "ava",
 		"lint": "eslint . --cache",
 		"start": "node index.js",
-		"test": "npm run lint"
+		"test": "npm run lint && npm run ava"
 	},
 	"eslintConfig": {
 		"extends": "iamnapo",
