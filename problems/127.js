@@ -22,7 +22,7 @@ export default () => {
 		}
 	}
 
-	const sortedRadicals = radicals.slice();
+	const sortedRadicals = [...radicals];
 	sortedRadicals.shift();
 	sortedRadicals.sort((a, b) => {
 		if (a.rad > b.rad) {

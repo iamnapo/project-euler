@@ -65,5 +65,5 @@ export default () => {
 		[, vertex] = minEdge;
 		minEdge = [null, null, Number.POSITIVE_INFINITY];
 	}
-	return `Problem 107 solution is: ${(graph.reduce((a, b) => [...a, ...b], []).reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`;
+	return `Problem 107 solution is: ${(graph.flat().reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`;
 };

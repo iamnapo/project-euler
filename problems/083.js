@@ -24,7 +24,7 @@ export default () => {
 		if (node.toString() === target.toString()) return `Problem 83 solution is: ${min}`;
 		for (const neighbor of neighbors(node)) {
 			if (!explored.has(neighbor.toString())) {
-				const newPath = path.slice();
+				const newPath = [...path];
 				newPath.push(neighbor);
 				frontier.push([evaluate(newPath), newPath]);
 			}

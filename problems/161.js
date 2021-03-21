@@ -33,7 +33,7 @@ function f(n, grid, W, H) {
 			}
 		}
 		if (!found) {
-			const g = grid.slice();
+			const g = [...grid];
 			for (const [xx, yy] of p) g[(r + yy) * W + (c + xx)] = 1;
 			total += BigInt(f(n + 1, g, W, H));
 		}

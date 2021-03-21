@@ -7,12 +7,12 @@ export default () => {
 	}
 	const powers = Array.from({ length: 3 }, () => []);
 	const target = 5e07;
-	const tmpList = primeList.slice();
+	const tmpList = [...primeList];
 	for (let j = 0; j < 3; j += 1) {
 		for (const [i, element] of primeList.entries()) {
 			tmpList[i] *= element;
 		}
-		powers[j] = tmpList.slice();
+		powers[j] = [...tmpList];
 	}
 	const numbers = new Set();
 	for (let i = 0; i < primeList.length; i += 1) {

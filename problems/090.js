@@ -20,9 +20,9 @@ function allCombination(k, n) {
 	for (let i = 0; i < k; i += 1) {
 		comb.push(i);
 	}
-	for (; ;) {
+	for (;;) {
 		combs.push(comb);
-		comb = comb.slice();
+		comb = [...comb];
 		if (combs[combs.length - 1][k - 1] === 9) {
 			combs[combs.length - 1][k - 1] = 6;
 		}
