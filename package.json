@@ -23,19 +23,16 @@
 		"url": "https://iamnapo.me"
 	},
 	"type": "module",
-	"exports": "./index.js",
 	"scripts": {
 		"ava": "ava",
 		"lint": "eslint . --cache",
-		"start": "node index.js",
 		"test": "npm run lint && npm run ava"
 	},
 	"eslintConfig": {
 		"extends": "iamnapo",
 		"rules": {
 			"max-len": "off",
-			"no-bitwise": "off",
-			"no-continue": "off"
+			"no-bitwise": "off"
 		}
 	},
 	"ava": {
@@ -50,7 +47,7 @@
 		"ava": "^3.15.0",
 		"eslint": "^7.26.0",
 		"eslint-config-iamnapo": "^15.0.0",
-		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-import": "^2.23.2",
 		"eslint-plugin-unicorn": "^32.0.1"
 	},
 	"engines": {

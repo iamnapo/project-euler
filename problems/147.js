@@ -12,15 +12,12 @@ export default () => {
 	}
 	for (let pX = 0.5; pX < N; pX += 0.5) {
 		for (let pY = 0; pY < M; pY += 0.5) {
-			if ((pX + pY) % 1 !== 0) {
-				continue;
-			}
-			for (let sN = 0.5; pX + sN <= N; sN += 0.5) {
-				for (let sM = 0.5; pX - sM >= 0; sM += 0.5) {
-					if (pY + sN + sM > M) {
-						break;
+			if ((pX + pY) % 1 === 0) {
+				for (let sN = 0.5; pX + sN <= N; sN += 0.5) {
+					for (let sM = 0.5; pX - sM >= 0; sM += 0.5) {
+						if (pY + sN + sM > M) break;
+						count += (N - Math.round(pX + sN) + 1) * (M - Math.round(pY + sN + sM) + 1);
 					}
-					count += (N - Math.round(pX + sN) + 1) * (M - Math.round(pY + sN + sM) + 1);
 				}
 			}
 		}

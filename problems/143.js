@@ -4,21 +4,12 @@ export default () => {
 	const pairs = [];
 	for (let u = 1; u < limitSQ; u += 1) {
 		for (let v = 1; v < u; v += 1) {
-			if (gcd(u, v) !== 1) {
-				continue;
-			}
-			if ((u - v) % 3 === 0) {
-				continue;
-			}
+			if (gcd(u, v) === 1 && (u - v) % 3 !== 0) {
+				const a = (2 * u * v) + (v * v);
+				const b = (u * u) - (v * v);
 
-			const a = (2 * u * v) + (v * v);
-			const b = (u * u) - (v * v);
-
-			if (a + b > limit) {
-				break;
-			}
-			for (let k = 1; k * (a + b) < limit; k += 1) {
-				pairs.push([k * a, k * b], [k * b, k * a]);
+				if (a + b > limit) break;
+				for (let k = 1; k * (a + b) < limit; k += 1) pairs.push([k * a, k * b], [k * b, k * a]);
 			}
 		}
 	}
