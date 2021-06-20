@@ -2,6 +2,6 @@
 
 > Solutions for Project Euler problems, in JavaScript
 
-[![build](https://img.shields.io/github/workflow/status/iamnapo/project-euler/ci?style=for-the-badge&logo=github&label=)](https://github.com/iamnapo/project-euler/actions) [![dependencies](https://img.shields.io/david/iamnapo/project-euler.svg?style=for-the-badge)](./package.json)
+[![build](https://badges.iamnapo.me/ci/iamnapo/project-euler)](https://github.com/iamnapo/project-euler/actions) [![dependencies](https://badges.iamnapo.me/deps/iamnapo/project-euler)](./package.json)
 
 [![iamnapo](https://projecteuler.net/profile/iamnapo.png)](https://projecteuler.net/)
