@@ -11,8 +11,8 @@ export default () => {
 	const y2 = new Map();
 	for (const el of sum1) y1.set(el, (y1.get(el) || 0) + 1);
 	for (const el of sum2) y2.set(el, (y2.get(el) || 0) + 1);
-	const tmp = new Set([...y2.keys()]);
-	const commonKeys = [...new Set([...y1.keys()])].filter((x) => tmp.has(x));
+	const tmp = new Set(y2.keys());
+	const commonKeys = [...new Set(y1.keys())].filter((x) => tmp.has(x));
 	for (const key of commonKeys) count += (y1.get(key) * y2.get(key));
 	return `Problem 152 solution is: ${count}`;
 };

@@ -44,7 +44,7 @@ function checkResult() {
 	if ([p[1], p[2], p[4], p[6], p[8]].includes(10)) {
 		return false;
 	}
-	if (p[0] > Math.min(...[p[3], p[5], p[7], p[9]])) {
+	if (p[0] > Math.min(p[3], p[5], p[7], p[9])) {
 		return false;
 	}
 	if (p[0] + p[1] + p[2] !== p[3] + p[2] + p[4]) {
