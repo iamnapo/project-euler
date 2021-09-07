@@ -47,7 +47,7 @@
 		"ava": "^3.15.0",
 		"eslint": "^7.32.0",
 		"eslint-config-iamnapo": "^16.1.0",
-		"eslint-plugin-import": "^2.24.0",
+		"eslint-plugin-import": "^2.24.2",
 		"eslint-plugin-unicorn": "^35.0.0"
 	},
 	"engines": {
