@@ -15,6 +15,6 @@ export default () => {
 };
 
 function digitSum(number) {
-	const tmp = number.toString().split("").map((a) => Number.parseInt(a, 10));
+	const tmp = [...number.toString()].map((a) => Number.parseInt(a, 10));
 	return tmp.reduce((a, b) => a + b);
 }

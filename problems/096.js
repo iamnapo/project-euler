@@ -15,7 +15,7 @@ export default () => {
 let puzzleTable = [];
 
 function solve(puzzle) {
-	puzzleTable = puzzle.split("").map((v) => (Number.isNaN(v) ? 0 : Number(v)));
+	puzzleTable = [...puzzle].map((v) => (Number.isNaN(v) ? 0 : Number(v)));
 	return getCandidate(0) ? puzzleTable.join("") : "PROBLEM";
 }
 

@@ -9,5 +9,5 @@ export default () => {
 };
 
 function isPalindrome(string) {
-	return (string === string.split("").reverse().join("")) && string[0] !== "0";
+	return (string === [...string].reverse().join("")) && string[0] !== "0";
 }

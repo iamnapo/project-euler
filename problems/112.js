@@ -11,7 +11,7 @@ export default () => {
 };
 
 function isLeft(n) {
-	const tmp = n.toString().split("");
+	const tmp = [...n.toString()];
 	for (const [index, el] of tmp.entries()) {
 		if (tmp[index + 1] && Number.parseInt(el, 10) > Number.parseInt(tmp[index + 1], 10)) {
 			return false;
@@ -21,7 +21,7 @@ function isLeft(n) {
 }
 
 function isRight(n) {
-	const tmp = n.toString().split("");
+	const tmp = [...n.toString()];
 	const res = [];
 	tmp.reverse();
 	for (const i of tmp) {
