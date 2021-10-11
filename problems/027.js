@@ -11,12 +11,14 @@ export default () => {
 							maxN = n;
 							prod = a * b;
 						}
+
 						break;
 					}
 				}
 			}
 		}
 	}
+
 	return `Problem 27 solution is: ${prod}`;
 };
 
@@ -24,5 +26,6 @@ function isPrime(number) {
 	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
 		if (number % i === 0) return false;
 	}
+
 	return number > 1;
 }

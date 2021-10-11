@@ -20,6 +20,7 @@ function backtrack(power, depth) {
 	if (power > limit || depth > cost[power]) {
 		return;
 	}
+
 	cost[power] = depth;
 	path[depth] = power;
 	for (let i = depth; i >= 0; i -= 1) {

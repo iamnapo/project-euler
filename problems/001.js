@@ -5,5 +5,6 @@ export default () => {
 			sum += i;
 		}
 	}
+
 	return `Problem 1 solution is: ${sum}`;
 };

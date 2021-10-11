@@ -1012,5 +1012,6 @@ export default () => {
 			result += 1;
 		}
 	}
+
 	return `Problem 102 solution is: ${result}`;
 };

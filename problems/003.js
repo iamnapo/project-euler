@@ -7,6 +7,7 @@ export default () => {
 			factor = i;
 		}
 	}
+
 	return `Problem 3 solution is: ${factor}`;
 };
 
@@ -16,5 +17,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number !== 1;
 }

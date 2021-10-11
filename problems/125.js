@@ -10,12 +10,14 @@ export default () => {
 			if (number > limit) {
 				break;
 			}
+
 			if (isPalindrome(number.toString()) && !list.includes(number)) {
 				sum += number;
 				list.push(number);
 			}
 		}
 	}
+
 	return `Problem 125 solution is: ${sum}`;
 };
 

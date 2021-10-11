@@ -6,9 +6,11 @@ export default () => {
 		if (b % 2 === 0) {
 			sum += b;
 		}
+
 		const temp = a;
 		a = b;
 		b += temp;
 	}
+
 	return `Problem 2 solution is: ${sum}`;
 };

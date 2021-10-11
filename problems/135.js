@@ -8,5 +8,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 135 solution is: ${solutions.filter((el) => el === 10).length}`;
 };

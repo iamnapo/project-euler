@@ -18,6 +18,7 @@ export default () => {
 				index = i;
 			}
 		}
+
 		frontier.splice(index, 1);
 		const node = path[path.length - 1];
 		explored.add(node.toString());
@@ -30,6 +31,7 @@ export default () => {
 			}
 		}
 	}
+
 	return null;
 };
 

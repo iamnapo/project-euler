@@ -5,6 +5,7 @@ export default () => {
 			sum += i;
 		}
 	}
+
 	return `Problem 10 solution is: ${sum}`;
 };
 
@@ -14,5 +15,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number !== 1;
 }

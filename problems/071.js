@@ -14,6 +14,7 @@ export default () => {
 			nbest = n2;
 			lowerbound = dbest / ((n1 * dbest) - (d1 * nbest));
 		}
+
 		d2 -= 1;
 	}
 
@@ -31,5 +32,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

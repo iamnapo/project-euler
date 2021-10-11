@@ -13,9 +13,11 @@ export default () => {
 					if (triangles[p] === 1) {
 						result += 1;
 					}
+
 					if (triangles[p] === 2) {
 						result -= 1;
 					}
+
 					p += a + b + c;
 				}
 			}
@@ -32,5 +34,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

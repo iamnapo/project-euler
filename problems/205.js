@@ -15,6 +15,7 @@ function distribution(sides, number) {
 			for (let k = 0; k < sides; k += 1) t[i + 1][j + k + 1] += t[i][j];
 		}
 	}
+
 	const r = t[t.length - 1];
 	const s = r.reduce((a, b) => a + b, 0);
 	for (let j = 0; j < r.length; j += 1) r[j] /= s;

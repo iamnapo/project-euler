@@ -10,5 +10,6 @@ function choose(n, kk) {
 		res *= n - k + i;
 		res = Math.trunc(res / i);
 	}
+
 	return res;
 }

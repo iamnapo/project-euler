@@ -7,6 +7,7 @@ export default () => {
 			primeList.push(i);
 		}
 	}
+
 	exponents = Array.from({ length: primeList.length }, () => 0);
 	let result = 1;
 	for (const element of primeList) {
@@ -25,16 +26,20 @@ export default () => {
 			if (number < result) {
 				result = number;
 			}
+
 			counter = 1;
 		}
+
 		if (counter >= exponents.length) {
 			break;
 		}
+
 		exponents[counter] += 1;
 		for (let i = 0; i < counter; i += 1) {
 			exponents[i] = exponents[counter];
 		}
 	}
+
 	return `Problem 110 solution is: ${result}`;
 };
 
@@ -42,28 +47,36 @@ function isPrime(n) {
 	if (n <= 1) {
 		return false;
 	}
+
 	if (n === 2) {
 		return true;
 	}
+
 	if (n % 2 === 0) {
 		return false;
 	}
+
 	if (n < 9) {
 		return true;
 	}
+
 	if (n % 3 === 0) {
 		return false;
 	}
+
 	let counter = 5;
 	while ((counter * counter) <= n) {
 		if (n % counter === 0) {
 			return false;
 		}
+
 		if (n % (counter + 2) === 0) {
 			return false;
 		}
+
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -73,6 +86,7 @@ function twos(limit) {
 	for (const element of exponents) {
 		divisors *= (2 * element) + 1;
 	}
+
 	exponents[0] = Math.trunc(((limit / divisors) - 1) / 2);
 	while (divisors * ((2 * exponents[0]) + 1) < limit) {
 		exponents[0] += 1;
@@ -85,10 +99,12 @@ function getNum(primeList, result) {
 		if (element === 0) {
 			break;
 		}
+
 		number *= primeList[i] ** element;
 		if (result < number) {
 			return result + 1;
 		}
 	}
+
 	return number;
 }

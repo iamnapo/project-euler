@@ -112,6 +112,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 105 solution is: ${sum}`;
 };
 
@@ -126,8 +127,10 @@ function makeSubsetSum(a, mm) {
 		if ((m & 1) === 1) {
 			sum += element;
 		}
+
 		m >>= 1;
 	}
+
 	return sum;
 }
 
@@ -139,12 +142,14 @@ function verifyRule1(a) {
 			if (k >= a.length) {
 				break;
 			}
+
 			k = a.indexOf(a[i], k);
 			if (k !== -1 && ((i & k) === 0)) {
 				return false;
 			}
 		}
 	}
+
 	return true;
 }
 
@@ -158,5 +163,6 @@ function verifyRule2(a) {
 			return false;
 		}
 	}
+
 	return true;
 }

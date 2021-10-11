@@ -6,6 +6,7 @@ export default () => {
 			break;
 		}
 	}
+
 	return `Problem 38 solution is: ${result}`;
 };
 
@@ -16,5 +17,6 @@ function isPandigital(n) {
 			return false;
 		}
 	}
+
 	return n.length === 9;
 }

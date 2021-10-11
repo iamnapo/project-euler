@@ -8,8 +8,10 @@ export default () => {
 			val += sign * (n ** pow);
 			sign *= -1;
 		}
+
 		seq.push(val);
 	}
+
 	for (let k = 1; k < 11; k += 1) {
 		let potFit = 0;
 		for (let i = 1; i <= k; i += 1) {
@@ -19,11 +21,14 @@ export default () => {
 					[num, den] = [num * (k - j + 1), den * (i - j)];
 				}
 			}
+
 			potFit += seq[i - 1] * (num / den);
 		}
+
 		if (potFit !== seq[k]) {
 			sum += potFit;
 		}
 	}
+
 	return `Problem 101 solution is: ${sum}`;
 };

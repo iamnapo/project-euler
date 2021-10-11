@@ -1007,6 +1007,7 @@ function getCards() {
 			suit: hand[1],
 		}));
 	}
+
 	return cards;
 }
 
@@ -1035,11 +1036,13 @@ export default () => {
 					break;
 				}
 			}
+
 			if (won) {
 				count += 1;
 			}
 		}
 	}
+
 	return `Problem 54 solution is: ${count}`;
 };
 
@@ -1055,12 +1058,15 @@ function score(h) {
 			pairs.push(el);
 		}
 	}
+
 	if (pairs.length === 1) {
 		sc = { category: 1, tiebraker: [pairs[0], ...values] };
 	}
+
 	if (pairs.length === 2) {
 		sc = { category: 2, tiebraker: [pairs[0], pairs[1], ...values] };
 	}
+
 	const triplets = [];
 	for (const el of values) {
 		const tmp = values.filter((i) => i === el).length;
@@ -1068,20 +1074,25 @@ function score(h) {
 			triplets.push(el);
 		}
 	}
+
 	if (triplets.length === 1) {
 		sc = { category: 3, tiebraker: [triplets[0]] };
 	}
+
 	const inOrder = (values[0] - values[1] === 1) && (values[1] - values[2] === 1) && (values[2] - values[3] === 1) && (values[3] - values[4] === 1);
 	if (inOrder) {
 		sc = { category: 4, tiebraker: [values[0]] };
 	}
+
 	const inSuit = Boolean(hand.map((el) => el.suit).reduce((a, b) => ((a === b) ? a : Number.NaN)));
 	if (inSuit) {
 		sc = { category: 4, tiebraker: values[0] };
 	}
+
 	if (pairs.length === 1 && triplets.length === 1) {
 		sc = { category: 5, tiebraker: [triplets[0]] };
 	}
+
 	const quads = [];
 	for (const el of values) {
 		const tmp = values.filter((i) => i === el).length;
@@ -1089,14 +1100,18 @@ function score(h) {
 			quads.push(el);
 		}
 	}
+
 	if (quads.length === 1) {
 		sc = { category: 6, tiebraker: [quads[0]] };
 	}
+
 	if (inSuit && inOrder) {
 		sc = { category: 7, tiebraker: [values[0]] };
 	}
+
 	if (inSuit && inOrder && values[0] === "14") {
 		sc = { category: 8, tiebraker: [] };
 	}
+
 	return sc;
 }

@@ -12,6 +12,7 @@ export default () => {
 			break;
 		}
 	}
+
 	return `Problem 61 solution is: ${solution.reduce((a, b) => a + b)}`;
 };
 
@@ -43,10 +44,12 @@ function generateNumbers(type) {
 			default:
 				break;
 		}
+
 		if (number > 999) {
 			newNumbers.push(number);
 		}
 	}
+
 	return newNumbers;
 }
 
@@ -61,6 +64,7 @@ function findNext(last, length) {
 						break;
 					}
 				}
+
 				if (unique && (Math.trunc(numbers[i][j] / 100) === (solution[last] % 100))) {
 					solution[i] = numbers[i][j];
 					if ((length === 5 && Math.trunc(solution[5] / 100) === solution[i] % 100) || findNext(i, length + 1)) {
@@ -68,8 +72,10 @@ function findNext(last, length) {
 					}
 				}
 			}
+
 			solution[i] = 0;
 		}
 	}
+
 	return false;
 }

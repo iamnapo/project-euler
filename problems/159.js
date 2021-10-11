@@ -12,5 +12,6 @@ export default () => {
 			if (mdrs[i * j] < x + mdrs[j]) mdrs[i * j] = x + mdrs[j];
 		}
 	}
+
 	return `Problem 159 solution is: ${mdrs.slice(2).reduce((a, b) => a + b, 0)}`;
 };

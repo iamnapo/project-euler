@@ -7,6 +7,7 @@ export default () => {
 			[xMax, result] = [x, D];
 		}
 	}
+
 	return `Problem 66 solution is: ${result}`;
 };
 
@@ -19,11 +20,13 @@ function chakravala(N) {
 	if (k === 0) {
 		return 0;
 	}
+
 	while (k !== 1) {
 		const absK = Math.abs(k);
 		if (k === -1 || absK === 2 || (absK === 4 && !((a && 1) && (b && 1)))) {
 			return Math.trunc(((a ** 2) + (N * (b ** 2))) / absK);
 		}
+
 		const diff = (m + m0) % absK;
 		const mL = m0 - diff;
 		const mH = mL + absK;
@@ -32,5 +35,6 @@ function chakravala(N) {
 		b = Math.trunc((a + (m * b)) / absK);
 		k = Math.trunc(((m ** 2) - N) / k);
 	}
+
 	return a;
 }

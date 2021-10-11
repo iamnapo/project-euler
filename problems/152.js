@@ -26,6 +26,7 @@ function* subsets(array, offset = 0) {
 			yield subset;
 		}
 	}
+
 	yield [];
 }
 
@@ -40,6 +41,7 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -48,6 +50,7 @@ function primeFactors(num) {
 	for (let i = 2; i < num; i += 1) {
 		if (num % i === 0 && isPrime(i)) arr.push(i);
 	}
+
 	return arr.length > 0 ? arr : [num];
 }
 
@@ -56,6 +59,7 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }
 

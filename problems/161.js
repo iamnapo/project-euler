@@ -23,6 +23,7 @@ function f(n, grid, W, H) {
 		cache.set(key, f(n + 1, grid, W, H));
 		return cache.get(key);
 	}
+
 	let total = 0n;
 	for (const p of piece) {
 		let found = false;
@@ -32,12 +33,14 @@ function f(n, grid, W, H) {
 				break;
 			}
 		}
+
 		if (!found) {
 			const g = [...grid];
 			for (const [xx, yy] of p) g[(r + yy) * W + (c + xx)] = 1;
 			total += BigInt(f(n + 1, g, W, H));
 		}
 	}
+
 	cache.set(key, total);
 	return cache.get(key);
 }

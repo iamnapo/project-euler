@@ -3,6 +3,7 @@ export default () => {
 	for (let i = 1; primeList.length < 1e4; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
+
 	const queue = [[]];
 	let ind = 0;
 	for (;;) {
@@ -30,5 +31,6 @@ function isPrime(n) {
 		if (n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }

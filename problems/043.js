@@ -37,6 +37,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 43 solution is: ${sum}`;
 };
 
@@ -47,5 +48,6 @@ function isPandigital(n) {
 			return false;
 		}
 	}
+
 	return n.length === 10;
 }

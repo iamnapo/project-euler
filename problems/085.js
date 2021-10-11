@@ -10,11 +10,13 @@ export default () => {
 			closestArea = x * y;
 			error = Math.abs(rects - target);
 		}
+
 		if (rects > target) {
 			x -= 1;
 		} else {
 			y += 1;
 		}
 	}
+
 	return `Problem 85 solution is: ${closestArea}`;
 };

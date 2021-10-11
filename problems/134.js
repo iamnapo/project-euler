@@ -6,28 +6,33 @@ export default () => {
 	for (let a = 0; a < sieve.length; a += 1) {
 		sieve[a] = (a % 2 === 0) ? a === 2 : a % 3 !== 0;
 	}
+
 	for (let b = 6; b + b < sieve.length; b += 6) {
 		if (sieve[b - 1]) {
 			for (let j = b + b - 2; j < sieve.length; j += (b - 1)) {
 				sieve[j] = false;
 			}
 		}
+
 		if (sieve[b + 1]) {
 			for (let j = b + b + 2; j < sieve.length; j += (b + 1)) {
 				sieve[j] = false;
 			}
 		}
 	}
+
 	while (p1 < max) {
 		let p2 = p1 + 2;
 		while (!sieve[Math.trunc(p2)]) {
 			p2 += 2;
 		}
+
 		const head = Math.trunc(10 ** Math.ceil(Math.log10(p1)));
 		const val = (head * (((p2 - p1) * inverseMod2(head, p2)) % p2)) + p1;
 		sum = add(sum, [...val.toString()].map((el) => Number.parseInt(el, 10)));
 		p1 = p2;
 	}
+
 	return `Problem 134 solution is: ${sum.join("")}`;
 };
 
@@ -44,8 +49,10 @@ function add(a, b) {
 		} else {
 			c = 0;
 		}
+
 		sum.unshift(s);
 	}
+
 	if (c) sum.unshift(c);
 	return sum;
 }
@@ -54,6 +61,7 @@ function nextPrime(x) {
 	for (let d = 2; d * d <= (x + 1); d += 1) {
 		if ((x + 1) % d === 0) return nextPrime(x + 1);
 	}
+
 	return x + 1;
 }
 

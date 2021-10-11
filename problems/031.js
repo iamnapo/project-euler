@@ -16,5 +16,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 31 solution is: ${ways}`;
 };

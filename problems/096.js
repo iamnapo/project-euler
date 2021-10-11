@@ -9,6 +9,7 @@ export default () => {
 		const tmp = solve(puzzle);
 		sum += Number.parseInt(tmp.slice(0, 3), 10);
 	}
+
 	return `Problem 96 solution is: ${sum}`;
 };
 
@@ -23,9 +24,11 @@ function getCandidate(index) {
 	if (index >= puzzleTable.length) {
 		return true;
 	}
+
 	if (puzzleTable[index] !== 0) {
 		return getCandidate(index + 1);
 	}
+
 	for (let i = 1; i < 10; i += 1) {
 		if (checkCandidate(i, Math.floor(index / 9), index % 9)) {
 			puzzleTable[index] = i;
@@ -34,6 +37,7 @@ function getCandidate(index) {
 			}
 		}
 	}
+
 	puzzleTable[index] = 0;
 	return false;
 }
@@ -45,5 +49,6 @@ function checkCandidate(num, row, col) {
 			return false;
 		}
 	}
+
 	return true;
 }

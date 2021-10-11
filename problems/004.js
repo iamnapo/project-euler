@@ -8,6 +8,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 4 solution is: ${max}`;
 };
 

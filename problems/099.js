@@ -1010,5 +1010,6 @@ export default () => {
 			[max, maxPair] = [tmp, pair];
 		}
 	}
+
 	return `Problem 99 solution is: ${pairs.indexOf(maxPair) + 1}`;
 };

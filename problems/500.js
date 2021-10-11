@@ -12,6 +12,7 @@ export default () => {
 			}
 		}
 	}
+
 	factors.sort((a, b) => a - b);
 	return `Problem 500 solution is: ${factors.slice(0, 500_500).reduce((a, b) => (a * b) % 500_500_507, 1)}`;
 };

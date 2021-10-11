@@ -18,5 +18,6 @@ function isPandigital(n) {
 			return false;
 		}
 	}
+
 	return n.length === 9;
 }

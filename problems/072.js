@@ -7,6 +7,7 @@ export default () => {
 				phi[j] = (phi[j] / i) * (i - 1);
 			}
 		}
+
 		result += phi[i];
 	}
 

@@ -5,6 +5,7 @@ export default () => {
 			sum += n;
 		}
 	}
+
 	return `Problem 36 solution is: ${sum}`;
 };
 

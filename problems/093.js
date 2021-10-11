@@ -12,6 +12,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 93 solution is: ${list.pop()}`;
 };
 
@@ -35,14 +36,17 @@ function testLen(...a) {
 		} else {
 			s[l] += aa;
 		}
+
 		return s[l];
 	};
+
 	const ck = () => {
 		const x = calc(o3);
 		if (x > 0 && Math.floor(x) === x) {
 			r[x] = x;
 		}
 	};
+
 	for (i0 = 0; i0 < 4; i0 += 1) {
 		for (i1 = 0; i1 < 4; i1 += 1) {
 			if (i1 !== i0) {
@@ -92,6 +96,7 @@ function testLen(...a) {
 			}
 		}
 	}
+
 	p = 0;
 	r.every((v) => {
 		p += 1;

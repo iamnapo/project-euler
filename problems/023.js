@@ -10,6 +10,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 23 solution is: ${Array.from({ length: 28_123 }, (_, ind) => ind).filter((a) => !canBeWritten.has(a)).reduce((a, b) => a + b)}`;
 };
 
@@ -21,5 +22,6 @@ function isAbundant(n) {
 	for (let i = 2; i <= sqrt; i += 1) {
 		if (n % i === 0) sum += i + (i ** 2 === n ? 0 : n / i);
 	}
+
 	return sum > n;
 }

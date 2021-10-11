@@ -14,9 +14,11 @@ function add(a, b) {
 	while (a.length < b.length) {
 		a.unshift(0);
 	}
+
 	while (a.length > b.length) {
 		b.unshift(0);
 	}
+
 	let c = 0;
 	const sum = [];
 	for (let i = a.length - 1; i > -1; i -= 1) {
@@ -27,10 +29,13 @@ function add(a, b) {
 		} else {
 			c = 0;
 		}
+
 		sum.unshift(s);
 	}
+
 	if (c) {
 		sum.unshift(c);
 	}
+
 	return sum;
 }

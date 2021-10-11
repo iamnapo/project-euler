@@ -13,6 +13,7 @@ function initCounts(digitSum) {
 	for (let i = 1; i < 10; i += 1) {
 		for (let j = 0; j < Math.min(9, digitSum - i) + 1; j += 1) x[i][j] = 1;
 	}
+
 	return x;
 }
 
@@ -24,5 +25,6 @@ function nextCounts(x, digitSum) {
 			for (let k = 0; k < Math.min(9, digitSum - i - j) + 1; k += 1) y[j][k] += x[i][j];
 		}
 	}
+
 	return y;
 }

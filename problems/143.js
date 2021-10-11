@@ -13,6 +13,7 @@ export default () => {
 			}
 		}
 	}
+
 	pairs.sort((a, b) => a[0] - b[0]);
 	const index = Array.from({ length: limit }, () => -1);
 
@@ -21,6 +22,7 @@ export default () => {
 			index[element[0]] = i;
 		}
 	}
+
 	const sums = Array.from({ length: limit }, () => false);
 	for (let i = 0; i < pairs.length; i += 1) {
 		const [a, b] = pairs[i];
@@ -32,6 +34,7 @@ export default () => {
 			if (next[0] !== a) {
 				break;
 			}
+
 			va.push(next[1]);
 		}
 
@@ -40,6 +43,7 @@ export default () => {
 			if (next[0] !== b) {
 				break;
 			}
+
 			vb.push(next[1]);
 		}
 
@@ -56,6 +60,7 @@ export default () => {
 			result += i;
 		}
 	}
+
 	return `Problem 143 solution is: ${result}`;
 };
 
@@ -64,5 +69,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

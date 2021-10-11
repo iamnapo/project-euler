@@ -25,6 +25,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 155 solution is: ${setsFract.size}`;
 };
 

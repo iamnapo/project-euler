@@ -4,6 +4,7 @@ export default () => {
 		if (isPrime(i)) {
 			count += 1;
 		}
+
 		if (count === 10_001) {
 			return `Problem 7 solution is: ${i}`;
 		}
@@ -16,5 +17,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number !== 1;
 }

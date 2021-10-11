@@ -24,8 +24,10 @@ export default () => {
 				}
 			}
 		}
+
 		sum += v[0];
 	}
+
 	return `Problem 655 solution is: ${sum}`;
 };
 
@@ -37,5 +39,6 @@ function powMod(base, exp, mod) {
 		t = (t ** 2) % mod;
 		exp >>= 1;
 	}
+
 	return r;
 }

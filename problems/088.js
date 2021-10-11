@@ -14,6 +14,7 @@ export default () => {
 			if (curMaxFactor === numFactors) {
 				break;
 			}
+
 			if (factors[0] < factors[1]) {
 				factors[0] += 1;
 			} else {
@@ -21,6 +22,7 @@ export default () => {
 				factors[curMaxFactor - 1] = Number.MAX_SAFE_INTEGER;
 				factors[0] = 2;
 			}
+
 			j += 1;
 			factors[1] = factors[0] - 1;
 		} else if (j === curMaxFactor - 1) {
@@ -31,6 +33,7 @@ export default () => {
 				prod *= factors[i];
 				sum += factors[i];
 			}
+
 			if (prod > maxNumber) {
 				j -= 1;
 			} else {
@@ -47,5 +50,6 @@ export default () => {
 			j -= 1;
 		}
 	}
+
 	return `Problem 88 solution is: ${[...new Set(k)].reduce((a, b) => a + b)}`;
 };

@@ -10,10 +10,12 @@ export default () => {
 				result += 1;
 				break;
 			}
+
 			if (j === 1) break;
 			str = j.toString();
 			j = 0;
 		}
 	}
+
 	return `Problem 92 solution is: ${result}`;
 };

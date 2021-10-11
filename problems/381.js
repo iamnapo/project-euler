@@ -3,6 +3,7 @@ export default () => {
 	for (let i = 2; i < 1e8; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
+
 	let pcount = 0;
 	for (let i = 2; i < primeList.length; i += 1) {
 		const s = primeList[i];
@@ -14,8 +15,10 @@ export default () => {
 				break;
 			}
 		}
+
 		pcount += (count + y) % s;
 	}
+
 	return `Problem 381 solution is: ${pcount}`;
 };
 
@@ -30,5 +33,6 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }

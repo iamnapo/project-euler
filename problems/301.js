@@ -4,5 +4,6 @@ export default () => {
 		const x = n ^ (2 * n) ^ (3 * n);
 		if (x === 0) count += 1;
 	}
+
 	return `Problem 301 solution is: ${count}`;
 };

@@ -55,15 +55,18 @@ export default () => {
 				edges.push([vertex, r, graph[vertex][r]]);
 			}
 		}
+
 		for (const element of edges) {
 			if (element[2] < minEdge[2] && !visited.includes(element[1])) {
 				minEdge = element;
 			}
 		}
+
 		edges.splice(edges.indexOf(minEdge), 1);
 		MST.push(minEdge);
 		[, vertex] = minEdge;
 		minEdge = [null, null, Number.POSITIVE_INFINITY];
 	}
+
 	return `Problem 107 solution is: ${(graph.flat().reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`;
 };

@@ -15,6 +15,7 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -28,5 +29,6 @@ function Harshad(n, s, strong) {
 			total += a;
 		}
 	}
+
 	return total;
 }

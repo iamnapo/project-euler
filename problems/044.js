@@ -10,6 +10,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 44 solution is: ${D}`;
 };
 
@@ -17,5 +18,6 @@ function isPentagonal(num) {
 	if (num === 0) {
 		return false;
 	}
+
 	return ((Math.sqrt(1 + (24 * num)) + 1) / 6) % 1 === 0;
 }

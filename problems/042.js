@@ -7,15 +7,18 @@ export default () => {
 	for (let i = 1; i < 79; i += 1) {
 		triangles.push(0.5 * i * (i + 1));
 	}
+
 	let count = 0;
 	for (const w of words) {
 		let score = 0;
 		for (const letter of w) {
 			score += alphabet.indexOf(letter) + 1;
 		}
+
 		if (triangles.includes(score)) {
 			count += 1;
 		}
 	}
+
 	return `Problem 42 solution is: ${count}`;
 };

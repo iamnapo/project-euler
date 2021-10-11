@@ -12,5 +12,6 @@ export default () => {
 			sum += i;
 		}
 	}
+
 	return `Problem 30 solution is: ${sum}`;
 };

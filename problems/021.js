@@ -6,6 +6,7 @@ export default () => {
 			sum += i;
 		}
 	}
+
 	return `Problem 21 solution is: ${sum}`;
 };
 
@@ -16,5 +17,6 @@ function d(n) {
 			sum += i;
 		}
 	}
+
 	return sum;
 }

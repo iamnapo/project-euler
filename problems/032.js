@@ -8,6 +8,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 32 solution is: ${[...products].reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`;
 };
 
@@ -18,5 +19,6 @@ function isPandigital(n) {
 			return false;
 		}
 	}
+
 	return n.length === 9;
 }

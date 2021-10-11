@@ -6,6 +6,7 @@ export default () => {
 			result += Math.min(Math.trunc((y * fact) / x), Math.trunc(((50 - x) * fact) / y)) * 2;
 		}
 	}
+
 	return `Problem 91 solution is: ${result}`;
 };
 
@@ -16,5 +17,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

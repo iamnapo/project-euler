@@ -5,6 +5,7 @@ export default () => {
 			count += 1;
 		}
 	}
+
 	return `Problem 55 solution is: ${count}`;
 };
 
@@ -16,6 +17,7 @@ function isLychrel(num) {
 			return false;
 		}
 	}
+
 	return true;
 }
 

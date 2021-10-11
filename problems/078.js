@@ -19,6 +19,7 @@ export default () => {
 		if (p[n] === 0) {
 			break;
 		}
+
 		n += 1;
 	}
 

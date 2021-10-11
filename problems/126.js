@@ -10,6 +10,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 126 solution is: ${count.indexOf(1000)}`;
 };
 

@@ -5,6 +5,7 @@ export default () => {
 			primeList.push(i);
 		}
 	}
+
 	let consec = 1;
 	let result = 2 * 3 * 5 * 7;
 	while (consec < 4) {
@@ -15,6 +16,7 @@ export default () => {
 			consec = 0;
 		}
 	}
+
 	return `Problem 47 solution is: ${result - 3}`;
 };
 
@@ -24,6 +26,7 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }
 
@@ -35,17 +38,21 @@ function numberOfPrimeFacors(number, primeList) {
 		if (element ** 2 > number) {
 			return nod + 1;
 		}
+
 		pf = false;
 		while (remain % element === 0) {
 			pf = true;
 			remain = Math.trunc(remain / element);
 		}
+
 		if (pf) {
 			nod += 1;
 		}
+
 		if (remain === 1) {
 			return nod;
 		}
 	}
+
 	return nod;
 }

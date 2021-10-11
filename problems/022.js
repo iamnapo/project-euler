@@ -12,7 +12,9 @@ export default () => {
 		for (const letter of name) {
 			score += alphabet.indexOf(letter) + 1;
 		}
+
 		total += (index + 1) * score;
 	}
+
 	return `Problem 22 solution is: ${total}`;
 };

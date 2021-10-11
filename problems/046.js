@@ -5,6 +5,7 @@ export default () => {
 			primeList.push(i);
 		}
 	}
+
 	let result = 1;
 	let notFound = true;
 	while (notFound) {
@@ -16,9 +17,11 @@ export default () => {
 				notFound = true;
 				break;
 			}
+
 			j += 1;
 		}
 	}
+
 	return `Problem 46 solution is: ${result}`;
 };
 
@@ -28,6 +31,7 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }
 

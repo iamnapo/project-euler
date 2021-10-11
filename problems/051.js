@@ -16,6 +16,7 @@ export default () => {
 							if (familySize(k, pattern) === 8) {
 								result = candidate;
 							}
+
 							break;
 						}
 					}
@@ -23,6 +24,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 51 solution is: ${result}`;
 };
 
@@ -30,28 +32,36 @@ function isPrime(n) {
 	if (n <= 1) {
 		return false;
 	}
+
 	if (n === 2) {
 		return true;
 	}
+
 	if (n % 2 === 0) {
 		return false;
 	}
+
 	if (n < 9) {
 		return true;
 	}
+
 	if (n % 3 === 0) {
 		return false;
 	}
+
 	let counter = 5;
 	while ((counter * counter) <= n) {
 		if (n % counter === 0) {
 			return false;
 		}
+
 		if (n % (counter + 2) === 0) {
 			return false;
 		}
+
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -86,6 +96,7 @@ function familySize(repeatingNumber, pattern) {
 			fSize += 1;
 		}
 	}
+
 	return fSize;
 }
 
@@ -95,6 +106,7 @@ function generateNumber(repNumber, filledPattern) {
 		temp *= 10;
 		temp += (element === -1) ? repNumber : element;
 	}
+
 	return temp;
 }
 
@@ -109,5 +121,6 @@ function fillPattern(pattern, number) {
 			filledPattern[i] = -1;
 		}
 	}
+
 	return filledPattern;
 }

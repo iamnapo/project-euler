@@ -8,10 +8,12 @@ export default () => {
 			tmp = Number.parseInt(tmp / 10, 10);
 			sum += factorial(d);
 		}
+
 		if (sum === i) {
 			result += i;
 		}
 	}
+
 	return `Problem 34 solution is: ${result}`;
 };
 
@@ -19,5 +21,6 @@ function factorial(n) {
 	if (n === 0 || n === 1) {
 		return 1;
 	}
+
 	return n * factorial(n - 1);
 }

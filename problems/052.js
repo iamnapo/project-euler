@@ -12,10 +12,12 @@ function sameDigits(a, b) {
 			return false;
 		}
 	}
+
 	for (const d of b) {
 		if (!a.includes(d)) {
 			return false;
 		}
 	}
+
 	return a.length === b.length;
 }

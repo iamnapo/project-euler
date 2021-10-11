@@ -109,8 +109,10 @@ export default () => {
 			const temp = [numbers[1][j] + numbers[0][j], numbers[1][j] + numbers[0][j + 1]];
 			newRow.push(temp.filter((n) => Number.isFinite(n)).reduce((a, b) => Math.max(a, b)));
 		}
+
 		numbers[1] = newRow;
 		numbers = numbers.slice(1);
 	}
+
 	return `Problem 67 solution is: ${numbers[0].reduce((a, b) => Math.max(a, b))}`;
 };

@@ -16,5 +16,6 @@ function countdivisors(num) {
 			count += 2;
 		}
 	}
+
 	return count;
 }

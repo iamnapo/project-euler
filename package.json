@@ -32,7 +32,8 @@
 		"extends": "iamnapo",
 		"rules": {
 			"max-len": "off",
-			"no-bitwise": "off"
+			"no-bitwise": "off",
+			"import/no-anonymous-default-export": "off"
 		}
 	},
 	"ava": {
@@ -40,15 +41,13 @@
 		"files": [
 			"!tests/655.test.js"
 		],
-		"verbose": true,
-		"timeout": "2m"
+		"timeout": "2m",
+		"verbose": true
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
 		"eslint": "^7.32.0",
-		"eslint-config-iamnapo": "^16.1.0",
-		"eslint-plugin-import": "^2.24.2",
-		"eslint-plugin-unicorn": "^36.0.0"
+		"eslint-config-iamnapo": "^18.0.0"
 	},
 	"engines": {
 		"node": ">=12"

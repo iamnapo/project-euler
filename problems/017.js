@@ -43,10 +43,12 @@ export default () => {
 		if (third > 0) {
 			sum += singleDigit[third] + 7;
 		} // "hundred"
+
 		const temp = second === 1 ? tens[first] : doubleDigit[second] + singleDigit[first];
 		if (temp > 0) {
 			sum += temp + (third > 0 ? 3 : 0);
 		} // "and"
 	}
+
 	return `Problem 17 solution is: ${sum}`;
 };

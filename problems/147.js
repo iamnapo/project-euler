@@ -10,6 +10,7 @@ export default () => {
 			}
 		}
 	}
+
 	for (let pX = 0.5; pX < N; pX += 0.5) {
 		for (let pY = 0; pY < M; pY += 0.5) {
 			if ((pX + pY) % 1 === 0) {
@@ -22,5 +23,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 147 solution is: ${count}`;
 };

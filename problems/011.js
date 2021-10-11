@@ -32,6 +32,7 @@ export default () => {
 			max = product > max ? product : max;
 		}
 	}
+
 	for (let i = 0; i < 20; i += 1) {
 		for (let j = 0; j < 20; j += 1) {
 			if (!(i + 3 > 19 || j + 3 > 19)) {
@@ -39,10 +40,12 @@ export default () => {
 				for (let k = 0; k < 4; k += 1) {
 					product *= grid[i + k][j + k];
 				}
+
 				max = product > max ? product : max;
 			}
 		}
 	}
+
 	for (let i = 0; i < 20; i += 1) {
 		for (let j = 0; j < 20; j += 1) {
 			if (!(i + 3 > 19 || j - 3 < 0)) {
@@ -50,9 +53,11 @@ export default () => {
 				for (let k = 0; k < 4; k += 1) {
 					product *= grid[i + k][j - k];
 				}
+
 				max = product > max ? product : max;
 			}
 		}
 	}
+
 	return `Problem 11 solution is: ${max}`;
 };

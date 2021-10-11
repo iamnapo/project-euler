@@ -10,6 +10,7 @@ export default () => {
 		wList[key] = wList[key] || [];
 		wList[key].push(w);
 	}
+
 	const pairs = Object.values(wList).filter((a) => a.length > 1);
 	const max = 10 ** Math.max(...pairs.map((w) => w[0].length));
 	const squares = [];
@@ -22,6 +23,7 @@ export default () => {
 		squares[l] = squares[l] || [];
 		squares[l].push(s);
 	}
+
 	let mq = 0;
 	for (const w of pairs) {
 		const [w0, w1] = w;
@@ -44,6 +46,7 @@ export default () => {
 					if (mq < Number(q0)) {
 						mq = Number(q0);
 					}
+
 					if (mq < Number(q1)) {
 						mq = Number(q1);
 					}
@@ -51,5 +54,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 98 solution is: ${mq}`;
 };

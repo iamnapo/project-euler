@@ -3,6 +3,7 @@ export default () => {
 	for (let i = 1490; primeList.length < 10_000; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
+
 	for (let i = 0; i < primeList.length; i += 1) {
 		for (let j = i + 1; j < primeList.length; j += 1) {
 			const k = (2 * primeList[j]) - primeList[i];
@@ -11,6 +12,7 @@ export default () => {
 			}
 		}
 	}
+
 	return null;
 };
 
@@ -20,6 +22,7 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }
 
@@ -31,10 +34,12 @@ function isPermutation(numA, numB) {
 			return false;
 		}
 	}
+
 	for (const c of tmpB) {
 		if (!tmpA.includes(c)) {
 			return false;
 		}
 	}
+
 	return true;
 }

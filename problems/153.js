@@ -11,6 +11,7 @@ export default () => {
 			res += BigInt(2 * a * r);
 		}
 	}
+
 	return `Problem 153 solution is: ${res}`;
 };
 
@@ -29,6 +30,7 @@ function sumOfDivisors(n) {
 	for (let k = 1; k < k0 + 1; k += 1) {
 		res += k * Math.trunc(n / k);
 	}
+
 	const l0 = Math.trunc(n / k0);
 	const t0 = triangular(Math.trunc(k0));
 	for (let l = 1; l < l0 + 1; l += 1) res += triangular(Math.trunc(n / l)) - t0;

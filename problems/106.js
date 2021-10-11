@@ -5,6 +5,7 @@ export default () => {
 		result += (choose(n, i) * choose(n - i, i)) / 2;
 		result -= choose(n, 2 * i) * catalanNumber(i);
 	}
+
 	return `Problem 106 solution is: ${result}`;
 };
 
@@ -19,5 +20,6 @@ function choose(n, kk) {
 		res *= n - k + i;
 		res /= i;
 	}
+
 	return res;
 }

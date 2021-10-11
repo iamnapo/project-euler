@@ -14,8 +14,10 @@ function isPandigital(n) {
 		if (!n.includes(d)) {
 			return false;
 		}
+
 		digits[i] = "-";
 	}
+
 	return true;
 }
 
@@ -25,5 +27,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }

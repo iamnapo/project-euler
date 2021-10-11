@@ -10,5 +10,6 @@ function f(n) {
 	} else {
 		cache.set(n, f(n / 2n) + f(n / 2n - 1n));
 	}
+
 	return cache.get(n);
 }

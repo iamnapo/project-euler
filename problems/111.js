@@ -7,8 +7,10 @@ export default () => {
 			k += 1;
 			l = gen(i, k, [], 10);
 		}
+
 		res = [...res, ...l];
 	}
+
 	return `Problem 111 solution is: ${res.reduce((a, b) => a + b, 0)}`;
 };
 
@@ -16,28 +18,36 @@ function isPrime(n) {
 	if (n <= 1) {
 		return false;
 	}
+
 	if (n === 2) {
 		return true;
 	}
+
 	if (n % 2 === 0) {
 		return false;
 	}
+
 	if (n < 9) {
 		return true;
 	}
+
 	if (n % 3 === 0) {
 		return false;
 	}
+
 	let counter = 5;
 	while ((counter * counter) <= n) {
 		if (n % counter === 0) {
 			return false;
 		}
+
 		if (n % (counter + 2) === 0) {
 			return false;
 		}
+
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -48,6 +58,7 @@ function lton(l) {
 	for (const d of l) {
 		n = (n * s) + d;
 	}
+
 	return n;
 }
 
@@ -60,6 +71,7 @@ function gen(d, k, l, n) {
 		const number = lton(l);
 		return (isPrime(number) && numlen(number, 10)) ? [number] : [];
 	}
+
 	let res = [];
 	if (k === 0) {
 		res = [...res, ...gen(d, k, [...l, d], n - 1)];
@@ -68,5 +80,6 @@ function gen(d, k, l, n) {
 			res = d === i ? [...res, ...gen(d, k, [...l, d], n - 1)] : [...res, ...gen(d, k - 1, [...l, i], n - 1)];
 		}
 	}
+
 	return res;
 }

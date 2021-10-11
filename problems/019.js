@@ -5,9 +5,11 @@ export default () => {
 		if (temp.getFullYear() === 2001) {
 			break;
 		}
+
 		if (temp.getDay() === 1) {
 			count += 1;
 		}
 	}
+
 	return `Problem 19 solution is: ${count}`;
 };

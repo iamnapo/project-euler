@@ -5,6 +5,7 @@ export default () => {
 		D = D.slice(0, Math.trunc(D.length / 2) + 1);
 		for (let i = 0; i < D.length; i += 1) sum += divisors(gcd((10 ** n) + D[i], (10 ** n) + (100 ** n) / D[i])).length;
 	}
+
 	return `Problem 157 solution is: ${sum}`;
 };
 
@@ -24,6 +25,7 @@ function divisors(n) {
 			if (i * i !== n) back.push(n / i);
 		}
 	}
+
 	back.reverse();
 	return [...front, ...back];
 }

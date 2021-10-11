@@ -8,9 +8,11 @@ export default () => {
 				if (n % i === 0) shouldInclude = isPrime(i + n / i);
 				if (!shouldInclude) break;
 			}
+
 			if (shouldInclude) sum += n;
 		}
 	}
+
 	return `Problem 357 solution is: ${sum}`;
 };
 
@@ -25,5 +27,6 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }

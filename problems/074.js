@@ -10,6 +10,7 @@ export default () => {
 			n = factorialSum(n);
 			count += 1;
 		}
+
 		if (count === 57 && [169, 363_601, 1454].includes(n)) {
 			result += 1;
 		}
@@ -27,5 +28,6 @@ function factorialSum(n) {
 		res += f[tmp % 10];
 		tmp = Math.trunc(tmp / 10);
 	}
+
 	return res;
 }

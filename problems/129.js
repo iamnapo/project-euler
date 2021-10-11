@@ -12,12 +12,14 @@ function aa(n) {
 	if (gcd(n, 10) !== 1) {
 		return 0;
 	}
+
 	let x = 1;
 	let k = 1;
 	while (x !== 0) {
 		x = ((x * 10) + 1) % n;
 		k += 1;
 	}
+
 	return k;
 }
 
@@ -26,5 +28,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

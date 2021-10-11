@@ -8,6 +8,7 @@ export default () => {
 		cache = Array.from({ length: m + 1 }, () => 0);
 		solutions += g(m, i);
 	}
+
 	return `Problem 116 solution is: ${solutions}`;
 };
 
@@ -16,12 +17,15 @@ function g(m, n) {
 	if (n > m) {
 		return solutions;
 	}
+
 	if (cache[m] !== 0) {
 		return cache[m];
 	}
+
 	for (let startpos = 0; startpos <= m - n; startpos += 1) {
 		solutions += g(m - startpos - n, n) + 1;
 	}
+
 	cache[m] = solutions;
 	return solutions;
 }

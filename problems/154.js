@@ -14,8 +14,10 @@ export default () => {
 				p5 *= 5;
 			}
 		}
+
 		[v2[n], v5[n]] = [d2, d5];
 	}
+
 	let count = 0;
 	for (let i = 0; i <= 66_664; i += 1) {
 		for (let j = i; j <= (N - i) / 2; j += 1) {
@@ -23,5 +25,6 @@ export default () => {
 			if ((V5N12 >= v5[i] + v5[j] + v5[k]) && (V2N12 >= v2[i] + v2[j] + v2[k])) count += (i === j || j === k) ? 3 : 6;
 		}
 	}
+
 	return `Problem 154 solution is: ${count}`;
 };

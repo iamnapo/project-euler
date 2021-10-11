@@ -6,10 +6,12 @@ function R(goal) {
 	for (let i = 2; i < 1e2; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
+
 	for (const p of primeList) {
 		for (let i = 2; i < p; i += 1) {
 			if (((r * i) / (d * i - 1)) < goal) return d * i;
 		}
+
 		r *= p - 1;
 		d *= p;
 		if ((r / (d - 1)) < goal) return d;
@@ -27,5 +29,6 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }

@@ -6,8 +6,10 @@ export default () => {
 			temp *= i;
 			temp %= 1e10;
 		}
+
 		result += temp;
 		result %= 1e10;
 	}
+
 	return `Problem 48 solution is: ${result}`;
 };

@@ -6,6 +6,7 @@ export default () => {
 		if (s < max) break;
 		max = s;
 	}
+
 	return `Problem 158 solution is: ${max}`;
 };
 

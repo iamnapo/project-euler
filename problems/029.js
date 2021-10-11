@@ -5,5 +5,6 @@ export default () => {
 			powers.add(a ** b);
 		}
 	}
+
 	return `Problem 29 solution is: ${powers.size}`;
 };

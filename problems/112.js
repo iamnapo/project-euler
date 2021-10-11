@@ -4,6 +4,7 @@ export default () => {
 		if (!isLeft(n) && !isRight(n)) {
 			bouncy += 1;
 		}
+
 		if (bouncy / n >= 0.99) {
 			return `Problem 112 solution is: ${n}`;
 		}
@@ -17,6 +18,7 @@ function isLeft(n) {
 			return false;
 		}
 	}
+
 	return true;
 }
 
@@ -27,5 +29,6 @@ function isRight(n) {
 	for (const i of tmp) {
 		res.push(Number.parseInt(i, 10));
 	}
+
 	return isLeft(res.join(""));
 }

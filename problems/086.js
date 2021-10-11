@@ -11,5 +11,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 86 solution is: ${l}`;
 };

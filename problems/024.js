@@ -9,16 +9,20 @@ export default () => {
 				k = i;
 			}
 		}
+
 		if (k === -1) {
 			break;
 		}
+
 		for (let i = 0; i < a.length; i += 1) {
 			if (a[k] < a[i]) {
 				l = i;
 			}
 		}
+
 		[a[k], a[l]] = [a[l], a[k]];
 		a = [...a.slice(0, k + 1), ...a.slice(k + 1).reverse()];
 	}
+
 	return `Problem 24 solution is: ${a.join("")}`;
 };

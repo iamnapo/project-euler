@@ -8,14 +8,17 @@ export default () => {
 	for (let i = 0; i < gridSize; i += 1) {
 		res[i] = grid[i][gridSize - 1];
 	}
+
 	for (let i = gridSize - 2; i > -1; i -= 1) {
 		res[0] += grid[0][i];
 		for (let j = 1; j < gridSize; j += 1) {
 			res[j] = Math.min(res[j - 1] + grid[j][i], res[j] + grid[j][i]);
 		}
+
 		for (let j = gridSize - 2; j >= 0; j -= 1) {
 			res[j] = Math.min(res[j], res[j + 1] + grid[j][i]);
 		}
 	}
+
 	return `Problem 82 solution is: ${Math.min(...res)}`;
 };

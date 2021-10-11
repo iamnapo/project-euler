@@ -8,6 +8,7 @@ function t(n) {
 	if (n === 0) {
 		return 0;
 	}
+
 	const highPow = Math.trunc(Math.log(n) / Math.log(7));
 	const a = Math.trunc(n / (7 ** highPow));
 	return (triangle(a) * (triangle(7) ** highPow)) + ((a + 1) * t(n - (a * (7 ** highPow))));

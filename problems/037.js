@@ -10,8 +10,10 @@ export default () => {
 					goodLeft = false;
 					break;
 				}
+
 				tmp = tmp.slice(1);
 			}
+
 			if (goodLeft) {
 				let goodRight = true;
 				tmp = n.toString();
@@ -21,14 +23,17 @@ export default () => {
 						goodRight = false;
 						break;
 					}
+
 					tmp = tmp.slice(0, -1);
 				}
+
 				if (goodRight) {
 					sum.push(n);
 				}
 			}
 		}
 	}
+
 	return `Problem 37 solution is: ${sum.reduce((a, b) => a + b)}`;
 };
 
@@ -38,5 +43,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }

@@ -13,10 +13,12 @@ export default () => {
 				a = Math.trunc((limit + m) / d);
 				period += 1;
 			} while (a !== 2 * limit);
+
 			if (period % 2 === 1) {
 				result += 1;
 			}
 		}
 	}
+
 	return `Problem 64 solution is: ${result}`;
 };

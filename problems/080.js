@@ -6,6 +6,7 @@ export default () => {
 			for (const el of lsqrt(n)) sum += el;
 		}
 	}
+
 	return `Problem 80 solution is: ${sum}`;
 };
 
@@ -14,6 +15,7 @@ function carre(l) {
 	for (let i = 0; i < 100; i += 1) {
 		for (let j = 0; j < Math.min(100, 110 - i); j += 1) rep[i + j] += l[i] * l[j];
 	}
+
 	for (let d = 109; d > 0; d -= 1) {
 		if (rep[d] >= 10) {
 			const k = Math.trunc(rep[d] / 10);
@@ -21,6 +23,7 @@ function carre(l) {
 			rep[d - 1] += k;
 		}
 	}
+
 	return rep;
 }
 
@@ -40,5 +43,6 @@ function lsqrt(n) {
 			d += 1;
 		}
 	}
+
 	return l;
 }

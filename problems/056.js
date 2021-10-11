@@ -9,6 +9,7 @@ export default () => {
 			if (tmp > result) result = tmp;
 		}
 	}
+
 	return null;
 };
 
@@ -31,8 +32,10 @@ function add(a, b) {
 		} else {
 			c = 0;
 		}
+
 		sum.unshift(s);
 	}
+
 	if (c) sum.unshift(c);
 	return sum;
 }

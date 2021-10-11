@@ -8,10 +8,12 @@ export default () => {
 		grid[gridSize - 1][i] += grid[gridSize - 1][i + 1];
 		grid[i][gridSize - 1] += grid[i + 1][gridSize - 1];
 	}
+
 	for (let i = gridSize - 2; i > -1; i -= 1) {
 		for (let j = gridSize - 2; j > -1; j -= 1) {
 			grid[i][j] += Math.min(grid[i + 1][j], grid[i][j + 1]);
 		}
 	}
+
 	return `Problem 81 solution is: ${grid[0][0]}`;
 };

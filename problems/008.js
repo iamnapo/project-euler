@@ -8,5 +8,6 @@ export default () => {
 			max = t;
 		}
 	}
+
 	return `Problem 8 solution is: ${max}`;
 };

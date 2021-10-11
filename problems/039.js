@@ -9,5 +9,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 39 solution is: ${p.indexOf(Math.max(...p))}`;
 };

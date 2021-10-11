@@ -6,5 +6,6 @@ export default () => {
 		sum += (i ** 2) - (2 * (i - 1)); // Bottom left
 		sum += (i ** 2) - (3 * (i - 1)); // Bottom right
 	}
+
 	return `Problem 28 solution is: ${sum}`;
 };

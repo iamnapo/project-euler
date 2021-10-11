@@ -14,5 +14,6 @@ function fibonacci(n) {
 		[a, b] = [b, sum];
 		n -= 1;
 	}
+
 	return sum;
 }

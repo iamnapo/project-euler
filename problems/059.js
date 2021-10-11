@@ -7,6 +7,7 @@ export default () => {
 	for (let i = 0; i < aMessage.length; i += 1) {
 		aMessage[i] = Array.from({ length: maxSize + 1 }, () => 0);
 	}
+
 	const key = Array.from({ length: keyLength }, () => 0);
 	for (const [i, element] of cipher.entries()) {
 		const j = i % keyLength;
@@ -15,13 +16,16 @@ export default () => {
 			key[j] = element;
 		}
 	}
+
 	const spaceASCII = 32;
 	for (let i = 0; i < keyLength; i += 1) {
 		key[i] ^= spaceASCII;
 	}
+
 	const encryptedMessage = Array.from({ length: cipher.length });
 	for (const [i, element] of cipher.entries()) {
 		encryptedMessage[i] = element ^ key[i % key.length];
 	}
+
 	return `Problem 59 solution is: ${encryptedMessage.reduce((a, b) => a + b)}`;
 };

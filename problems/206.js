@@ -3,5 +3,6 @@ export default () => {
 	for (let i = 1_010_101_010n; i < 1_389_026_623n; i += 10n) {
 		if (pattern.test(i ** 2n)) return `Problem 206 solution is: ${i}`;
 	}
+
 	return null;
 };

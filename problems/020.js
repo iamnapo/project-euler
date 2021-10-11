@@ -10,6 +10,7 @@ export default () => {
 				big[j] -= 10;
 			}
 		}
+
 		while (c !== 0) {
 			const j = big.push(c);
 			c = 0;
@@ -19,5 +20,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 20 solution is: ${big.reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`;
 };

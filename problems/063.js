@@ -7,5 +7,6 @@ export default () => {
 		result += 10 - lower;
 		n += 1;
 	}
+
 	return `Problem 63 solution is: ${result}`;
 };

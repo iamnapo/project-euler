@@ -28,9 +28,11 @@ export default () => {
 		if (a.rad > b.rad) {
 			return 1;
 		}
+
 		if (a.rad < b.rad) {
 			return -1;
 		}
+
 		return a.number > b.number ? 1 : -1;
 	});
 
@@ -41,6 +43,7 @@ export default () => {
 			if (a.rad * radicals[c].rad > chalf) {
 				break;
 			}
+
 			if (a.number < chalf) {
 				const b = c - a.number;
 				if (a.rad * radicals[b].rad * radc < c && gcd(a.rad, radicals[b].rad) === 1) {
@@ -49,6 +52,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 127 solution is: ${result}`;
 };
 
@@ -59,5 +63,6 @@ function gcd(a, b) {
 	while (x % y !== 0) {
 		[x, y] = [y, x % y];
 	}
+
 	return y;
 }

@@ -8,6 +8,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 53 solution is: ${count}`;
 };
 
@@ -15,5 +16,6 @@ function factorial(n) {
 	if (n === 0 || n === 1) {
 		return 1;
 	}
+
 	return n * factorial(n - 1);
 }

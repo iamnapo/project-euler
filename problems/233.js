@@ -13,10 +13,12 @@ export default () => {
 			}
 		}
 	}
+
 	for (let p = 0, sum = 0; p < limit3; p += 1) {
 		sum += s[p];
 		s[p] = sum;
 	}
+
 	let sum = 0n;
 	for (let p = 5; (5 ** 3) * (p ** 3) < limit; p += 4) {
 		const a = p ** 3;
@@ -32,6 +34,7 @@ export default () => {
 			}
 		}
 	}
+
 	for (let p = 5; (5 ** 3) * (p ** 7) < limit; p += 4) {
 		const a = p ** 7;
 		if (isPrime(p)) {
@@ -41,6 +44,7 @@ export default () => {
 			}
 		}
 	}
+
 	for (let p = 5; (5 ** 2) * (p ** 10) < limit; p += 4) {
 		const a = p ** 10;
 		if (isPrime(p)) {
@@ -50,6 +54,7 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 233 solution is: ${sum}`;
 };
 
@@ -64,5 +69,6 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }

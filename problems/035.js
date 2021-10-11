@@ -10,14 +10,17 @@ export default () => {
 					allGood = false;
 					break;
 				}
+
 				tmp = tmp.toString();
 				tmp = Number.parseInt(tmp[tmp.length - 1] + tmp.slice(0, -1), 10);
 			}
+
 			if (allGood) {
 				count += 1;
 			}
 		}
 	}
+
 	return `Problem 35 solution is: ${count}`;
 };
 
@@ -27,5 +30,6 @@ function isPrime(number) {
 			return false;
 		}
 	}
+
 	return number > 1;
 }

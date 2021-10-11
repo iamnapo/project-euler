@@ -8,12 +8,14 @@ export default () => {
 			}
 		}
 	}
+
 	let num = 1;
 	let den = 1;
 	for (const pair of pairs) {
 		num *= pair[0];
 		den *= pair[1];
 	}
+
 	return `Problem 33 solution is: ${den / gcd(num, den)}`;
 };
 
@@ -21,6 +23,7 @@ function isCurious(pair) {
 	if (pair[0] % 10 === Math.floor(pair[1] / 10) && pair[0] % 10 !== 0) {
 		return pair[0] / pair[1] === (Math.floor(pair[0] / 10)) / (pair[1] % 10);
 	}
+
 	return false;
 }
 
@@ -28,5 +31,6 @@ function gcd(a, b) {
 	if (b) {
 		return gcd(b, a % b);
 	}
+
 	return Math.abs(a);
 }

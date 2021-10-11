@@ -28,5 +28,6 @@ export default () => {
 			}
 		}
 	}
+
 	return `Problem 345 solution is: ${sum[32_767]}`;
 };

@@ -4,6 +4,7 @@ export default () => {
 		for (let j = 1; j < 21; j += 1) {
 			isDivisible = isDivisible && (i % j === 0);
 		}
+
 		if (isDivisible) {
 			return `Problem 5 solution is: ${i}`;
 		}

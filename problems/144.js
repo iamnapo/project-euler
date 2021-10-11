@@ -24,5 +24,6 @@ export default () => {
 		yO = (slopeB * xO) + interceptB;
 		result += 1;
 	}
+
 	return `Problem 144 solution is: ${result}`;
 };

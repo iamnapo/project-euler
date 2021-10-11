@@ -11,10 +11,12 @@ export default () => {
 				break;
 			}
 		}
+
 		if (count > max) {
 			max = count;
 			maxNum = i;
 		}
 	}
+
 	return `Problem 14 solution is: ${maxNum}`;
 };

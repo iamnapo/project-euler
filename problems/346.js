@@ -11,12 +11,15 @@ export default () => {
 				d.add(n);
 				s += BigInt(n);
 			}
+
 			n = b * n + 1;
 			if (n >= limit) break;
 		}
+
 		b += 1;
 		b2 = b * (b + 1) + 1;
 		if (b2 >= limit) break;
 	}
+
 	return `Problem 346 solution is: ${s}`;
 };

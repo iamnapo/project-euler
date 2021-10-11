@@ -3,6 +3,7 @@ export default () => {
 	for (let i = 2; i < 1e7; i += 1) {
 		if (isPrime(i)) primeList.push(i);
 	}
+
 	let total = 0;
 	for (let i = 0; i < primeList.length; i += 1) {
 		for (let j = i + 1; j < primeList.length; j += 1) {
@@ -10,6 +11,7 @@ export default () => {
 			total += best(primeList[i], primeList[j]);
 		}
 	}
+
 	return `Problem 347 solution is: ${total}`;
 };
 
@@ -24,6 +26,7 @@ function isPrime(n) {
 		if (n % counter === 0 || n % (counter + 2) === 0) return false;
 		counter += 6;
 	}
+
 	return true;
 }
 
@@ -36,7 +39,9 @@ function best(p, q) {
 			maximum = Math.max(maximum, (p ** a) * (q ** b));
 			b += 1;
 		}
+
 		a += 1;
 	}
+
 	return maximum;
 }

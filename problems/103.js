@@ -3,6 +3,7 @@ export default () => {
 	for (let i = 0; i < 6; i += 1) {
 		v = next(v);
 	}
+
 	return `Problem 103 solution is: ${v.map((el) => el.toString()).join("")}`;
 };
 
@@ -16,6 +17,7 @@ function next(v) {
 	for (let i = 0; i < v.length; i += 1) {
 		o1.push(v[i] + v[l]);
 	}
+
 	if (v.length === 1) {
 		return o1;
 	}
@@ -35,5 +37,6 @@ function distance(v) {
 	for (let i = 1; i < v.length; i += 1) {
 		r.push(v[i] - v[i - 1]);
 	}
+
 	return r;
 }

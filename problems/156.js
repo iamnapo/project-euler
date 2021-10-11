@@ -12,6 +12,7 @@ export default () => {
 			}
 		}
 	};
+
 	for (let i = 1; i < 10; i += 1) graduallyDecrease(i, 10 ** 11);
 	return `Problem 156 solution is: ${count}`;
 };

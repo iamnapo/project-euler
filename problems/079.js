@@ -12,6 +12,7 @@ export default () => {
 				break;
 			}
 		}
+
 		if (found) {
 			return `Problem 79 solution is: ${i}`;
 		}
