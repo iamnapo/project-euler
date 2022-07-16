@@ -26,8 +26,8 @@ function allCombination(k, n) {
 	for (;;) {
 		combs.push(comb);
 		comb = [...comb];
-		if (combs[combs.length - 1][k - 1] === 9) {
-			combs[combs.length - 1][k - 1] = 6;
+		if (combs.at(-1)[k - 1] === 9) {
+			combs.at(-1)[k - 1] = 6;
 		}
 
 		let i = k - 1;

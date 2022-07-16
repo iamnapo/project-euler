@@ -25,7 +25,7 @@
 	"type": "module",
 	"scripts": {
 		"ava": "ava",
-		"lint": "eslint . --cache",
+		"lint": "eslint . --ext .js --cache",
 		"test": "npm run lint && npm run ava"
 	},
 	"eslintConfig": {
@@ -46,11 +46,11 @@
 		"verbose": true
 	},
 	"devDependencies": {
-		"ava": "^4.1.0",
-		"eslint": "^8.12.0",
-		"eslint-config-iamnapo": "^24.0.0"
+		"ava": "^4.3.1",
+		"eslint": "^8.19.0",
+		"eslint-config-iamnapo": "^26.0.0"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=14"
 	}
 }

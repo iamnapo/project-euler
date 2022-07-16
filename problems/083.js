@@ -20,7 +20,7 @@ export default () => {
 		}
 
 		frontier.splice(index, 1);
-		const node = path[path.length - 1];
+		const node = path.at(-1);
 		explored.add(node.toString());
 		if (node.toString() === target.toString()) return `Problem 83 solution is: ${min}`;
 		for (const neighbor of neighbors(node)) {
