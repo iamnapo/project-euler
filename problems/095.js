@@ -1,13 +1,10 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
 	const limit = 1e06;
 	let result = 0;
 	let chainLength = 0;
-	const primeList = [];
-	for (let i = 0; primeList.length < 1e05; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(1e5);
 
 	const numbers = Array.from({ length: limit + 1 }, () => false);
 	for (let i = 2; i < limit + 1; i += 1) {
@@ -48,43 +45,6 @@ export default () => {
 
 	return `Problem 95 solution is: ${result}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}
 
 function sumOfFactors(number, primeList) {
 	let n = number;

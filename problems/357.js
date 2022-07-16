@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	let sum = 1;
 	for (let n = 2; n < 1e8; n += 4) {
@@ -15,18 +17,3 @@ export default () => {
 
 	return `Problem 357 solution is: ${sum}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) return false;
-	if (n === 2) return true;
-	if (n % 2 === 0) return false;
-	if (n < 9) return true;
-	if (n % 3 === 0) return false;
-	let counter = 5;
-	while (counter ** 2 <= n) {
-		if (n % counter === 0 || n % (counter + 2) === 0) return false;
-		counter += 6;
-	}
-
-	return true;
-}

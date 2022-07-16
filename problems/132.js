@@ -1,12 +1,9 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
 	let result = 0;
 	let count = 0;
-	const primeList = [];
-	for (let i = 0; primeList.length < 5e04; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(5e4);
 
 	const k = 1e09;
 	let i = 0;
@@ -22,43 +19,6 @@ export default () => {
 
 	return `Problem 132 solution is: ${result}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}
 
 function expmod(base, exp, mod) {
 	if (exp === 0) {

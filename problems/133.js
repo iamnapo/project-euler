@@ -1,11 +1,8 @@
+import getPrimesLessThan from "./common/get-primes-less-than.js";
+
 export default () => {
 	let result = 10;
-	const primeList = [];
-	for (let i = 6; i < 1e05; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getPrimesLessThan(1e5, { after: 6 });
 
 	for (const element of primeList) {
 		if (otherFactor(a(element))) {
@@ -15,43 +12,6 @@ export default () => {
 
 	return `Problem 133 solution is: ${result}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}
 
 function a(n) {
 	let x = 1;

@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	const fiveDigitPattern = get5digitPatterns();
 	const sixDigitPattern = get6digitPatterns();
@@ -27,43 +29,6 @@ export default () => {
 
 	return `Problem 51 solution is: ${result}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}
 
 function get5digitPatterns() {
 	const retVal = Array.from({ length: 4 });

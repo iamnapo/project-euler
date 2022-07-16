@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 const perm = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default () => {
@@ -54,41 +56,4 @@ function checkPartitions(startIndex, prev) {
 	}
 
 	return count;
-}
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
 }

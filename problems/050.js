@@ -1,12 +1,9 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
 	let result = 0;
 	let numberOfPrimes = 0;
-	const primeList = [];
-	for (let i = 1; primeList.length < 1e06; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(1e6);
 
 	const primeSum = [];
 	primeSum[0] = 0;
@@ -30,12 +27,3 @@ export default () => {
 	return `Problem 50 solution is: ${result}`;
 };
 
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number > 1;
-}

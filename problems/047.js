@@ -1,10 +1,7 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
-	const primeList = [];
-	for (let i = 2; primeList.length < 1000; i += 1) { // 1000 LGTM
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(1000); // 1000 LGTM
 
 	let consec = 1;
 	let result = 2 * 3 * 5 * 7;
@@ -19,16 +16,6 @@ export default () => {
 
 	return `Problem 47 solution is: ${result - 3}`;
 };
-
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number > 1;
-}
 
 function numberOfPrimeFacors(number, primeList) {
 	let nod = 0;

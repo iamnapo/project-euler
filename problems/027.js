@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	let prod = 0;
 	let maxN = 0;
@@ -21,11 +23,3 @@ export default () => {
 
 	return `Problem 27 solution is: ${prod}`;
 };
-
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) return false;
-	}
-
-	return number > 1;
-}

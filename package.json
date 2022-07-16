@@ -24,9 +24,8 @@
 	},
 	"type": "module",
 	"scripts": {
-		"ava": "ava",
 		"lint": "eslint . --ext .js --cache",
-		"test": "npm run lint && npm run ava"
+		"test": "npm run lint && node --test"
 	},
 	"eslintConfig": {
 		"extends": "iamnapo",
@@ -37,16 +36,7 @@
 			"import/no-unresolved": "off"
 		}
 	},
-	"ava": {
-		"failFast": false,
-		"files": [
-			"!tests/655.test.js"
-		],
-		"timeout": "2m",
-		"verbose": true
-	},
 	"devDependencies": {
-		"ava": "^4.3.1",
 		"eslint": "^8.19.0",
 		"eslint-config-iamnapo": "^26.0.0"
 	},

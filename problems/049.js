@@ -1,8 +1,8 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+import isPrime from "./common/is-prime.js";
+
 export default () => {
-	const primeList = [];
-	for (let i = 1490; primeList.length < 10_000; i += 1) {
-		if (isPrime(i)) primeList.push(i);
-	}
+	const primeList = getFirstNPrimes(1e4, { after: 1490 });
 
 	for (let i = 0; i < primeList.length; i += 1) {
 		for (let j = i + 1; j < primeList.length; j += 1) {
@@ -15,16 +15,6 @@ export default () => {
 
 	return null;
 };
-
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number > 1;
-}
 
 function isPermutation(numA, numB) {
 	const tmpA = numA.toString().length === 4 ? numA.toString() : numA.toString().padStart(4, 0);

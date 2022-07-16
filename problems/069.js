@@ -1,10 +1,7 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
-	const primeList = [];
-	for (let i = 1; primeList.length < 200; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(200);
 
 	let result = 1;
 	let i = 0;
@@ -15,40 +12,3 @@ export default () => {
 
 	return `Problem 69 solution is: ${result}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}

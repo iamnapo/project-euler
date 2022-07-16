@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	const sum = [];
 	for (let n = 11; sum.length < 11; n += 1) {
@@ -37,12 +39,3 @@ export default () => {
 	return `Problem 37 solution is: ${sum.reduce((a, b) => a + b)}`;
 };
 
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number > 1;
-}

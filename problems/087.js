@@ -1,10 +1,7 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
-	const primeList = [];
-	for (let i = 0; primeList.length < 5000; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(5000);
 
 	const powers = Array.from({ length: 3 }, () => []);
 	const target = 5e07;
@@ -45,40 +42,3 @@ export default () => {
 
 	return `Problem 87 solution is: ${numbers.size}`;
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}

@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	let count = 0;
 	const array = Array.from({ length: 79 }, (_, ind) => ind + 2).filter((el) => primeFactors(el).every((factor) => [2, 3, 5, 7, 13].includes(factor)));
@@ -28,21 +30,6 @@ function* subsets(array, offset = 0) {
 	}
 
 	yield [];
-}
-
-function isPrime(n) {
-	if (n <= 1) return false;
-	if (n === 2) return true;
-	if (n % 2 === 0) return false;
-	if (n < 9) return true;
-	if (n % 3 === 0) return false;
-	let counter = 5;
-	while (counter ** 2 <= n) {
-		if (n % counter === 0 || n % (counter + 2) === 0) return false;
-		counter += 6;
-	}
-
-	return true;
 }
 
 function primeFactors(num) {

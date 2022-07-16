@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	let count = 0;
 	for (let i = 1; ; i += 1) {
@@ -10,13 +12,3 @@ export default () => {
 		}
 	}
 };
-
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number !== 1;
-}

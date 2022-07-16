@@ -1,10 +1,7 @@
+import getFirstNPrimes from "./common/get-first-n-primes.js";
+
 export default () => {
-	const primeList = [];
-	for (let i = 0; primeList.length < 10; i += 1) {
-		if (isPrime(i)) {
-			primeList.push(i);
-		}
-	}
+	const primeList = getFirstNPrimes(10);
 
 	const limit = 1000;
 	for (let n = 1; ;n += 1) {
@@ -13,43 +10,6 @@ export default () => {
 		}
 	}
 };
-
-function isPrime(n) {
-	if (n <= 1) {
-		return false;
-	}
-
-	if (n === 2) {
-		return true;
-	}
-
-	if (n % 2 === 0) {
-		return false;
-	}
-
-	if (n < 9) {
-		return true;
-	}
-
-	if (n % 3 === 0) {
-		return false;
-	}
-
-	let counter = 5;
-	while ((counter * counter) <= n) {
-		if (n % counter === 0) {
-			return false;
-		}
-
-		if (n % (counter + 2) === 0) {
-			return false;
-		}
-
-		counter += 6;
-	}
-
-	return true;
-}
 
 function noDSquared(number, primelist) {
 	let nod = 1;

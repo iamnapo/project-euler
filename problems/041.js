@@ -1,3 +1,5 @@
+import isPrime from "./common/is-prime.js";
+
 export default () => {
 	// 8 and 9 digit pandigitals are always divisable by 3
 	for (let i = 7_654_321; ; i -= 1) {
@@ -19,14 +21,4 @@ function isPandigital(n) {
 	}
 
 	return true;
-}
-
-function isPrime(number) {
-	for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
-		if (number % i === 0) {
-			return false;
-		}
-	}
-
-	return number > 1;
 }
