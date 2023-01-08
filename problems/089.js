@@ -3,6 +3,6 @@ const numbers = "MMMMDCLXXII MMDCCCLXXXIII MMMDLXVIIII MMMMDXCV DCCCLXXII MMCCCV
 export default () => {
 	const patterns = /DCCCC|LXXXX|VIIII|CCCC|XXXX|IIII/g;
 	const replacement = "§§";
-	const result = numbers.length - numbers.replace(patterns, replacement).length;
+	const result = numbers.length - numbers.replaceAll(patterns, replacement).length;
 	return `Problem 89 solution is: ${result}`;
 };

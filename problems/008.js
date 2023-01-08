@@ -3,7 +3,7 @@ const num = "7316717653133062491922511967442657474235534919493496983520312774506
 export default () => {
 	let max = 0;
 	for (let i = 1; i < 988; i += 1) {
-		const t = [...num.slice(i, i + 13)].reduce((a, b) => a * b);
+		const t = [...num.slice(i, i + 13)].reduce((a, b) => a * b); // eslint-disable-line unicorn/no-useless-spread
 		if (t > max) {
 			max = t;
 		}
