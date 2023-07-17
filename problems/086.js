@@ -5,7 +5,7 @@ export default () => {
 	while (count < target) {
 		l += 1;
 		for (let wh = 3; wh <= 2 * l; wh += 1) {
-			const sqrt = Math.sqrt((wh * wh) + (l * l));
+			const sqrt = Math.hypot(wh, l);
 			if (sqrt === Math.trunc(sqrt)) {
 				count += (wh <= l) ? wh / 2 : 1 + (l - ((wh + 1) / 2));
 			}
