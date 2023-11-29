@@ -1,4 +1,4 @@
-export default () => {
+const problem650 = () => {
 	const end = 2e4 + 1;
 	const mod = 1_000_000_007n;
 	const pf = [new Map(), new Map()];
@@ -65,3 +65,5 @@ function primeFactors(n) {
 	if (n > 2) fac.push(n);
 	return fac;
 }
+
+export default problem650;

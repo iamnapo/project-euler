@@ -1,4 +1,4 @@
-export default () => {
+const problem072 = () => {
 	const phi = Array.from({ length: 1e06 + 1 }, (_, ind) => ind);
 	let result = 0;
 	for (let i = 2; i <= 1e06; i += 1) {
@@ -13,3 +13,5 @@ export default () => {
 
 	return `Problem 72 solution is: ${result}`;
 };
+
+export default problem072;

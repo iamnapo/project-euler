@@ -1,4 +1,4 @@
-export default () => {
+const problem064 = () => {
 	let result = 0;
 	for (let n = 2; n < 10_001; n += 1) {
 		const limit = Math.trunc(Math.sqrt(n));
@@ -22,3 +22,5 @@ export default () => {
 
 	return `Problem 64 solution is: ${result}`;
 };
+
+export default problem064;

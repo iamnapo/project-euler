@@ -1001,7 +1001,7 @@ const pairs = [
 	[13_846, 725_685],
 ];
 
-export default () => {
+const problem099 = () => {
 	let max = 0;
 	let maxPair = [1, 1];
 	for (const pair of pairs) {
@@ -1013,3 +1013,5 @@ export default () => {
 
 	return `Problem 99 solution is: ${pairs.indexOf(maxPair) + 1}`;
 };
+
+export default problem099;

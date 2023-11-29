@@ -1,4 +1,4 @@
-export default () => {
+const problem017 = () => {
 	const singleDigit = [
 		0, // Zero
 		3, // One
@@ -52,3 +52,5 @@ export default () => {
 
 	return `Problem 17 solution is: ${sum}`;
 };
+
+export default problem017;

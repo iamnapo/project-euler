@@ -1,6 +1,6 @@
 import test from "node:test";
-import assert from "node:assert";
+import { equal } from "node:assert/strict";
 
 import problem205 from "../problems/205.js";
 
-test("Problem 205", () => assert.strictEqual(problem205(), "Problem 205 solution is: 0.5731441"));
+test("Problem 205", () => equal(problem205(), "Problem 205 solution is: 0.5731441"));

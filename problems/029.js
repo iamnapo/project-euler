@@ -1,4 +1,4 @@
-export default () => {
+const problem029 = () => {
 	const powers = new Set();
 	for (let a = 2; a < 101; a += 1) {
 		for (let b = 2; b < 101; b += 1) {
@@ -8,3 +8,5 @@ export default () => {
 
 	return `Problem 29 solution is: ${powers.size}`;
 };
+
+export default problem029;

@@ -1,4 +1,4 @@
-export default () => {
+const problem091 = () => {
 	let result = 50 * 50 * 3;
 	for (let x = 1; x < 51; x += 1) {
 		for (let y = 1; y < 51; y += 1) {
@@ -20,3 +20,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem091;

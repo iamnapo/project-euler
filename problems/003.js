@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem003 = () => {
 	let factor;
 	let start = 600_851_475_143;
 	for (let i = 3; i < start + 1; i += 1) {
@@ -12,3 +12,5 @@ export default () => {
 
 	return `Problem 3 solution is: ${factor}`;
 };
+
+export default problem003;

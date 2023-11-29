@@ -1,4 +1,4 @@
-export default () => {
+const problem056 = () => {
 	let result = 0;
 	for (let a = 99; a > 0; a -= 1) {
 		for (let b = 99; b > 0; b -= 1) {
@@ -39,3 +39,5 @@ function add(a, b) {
 	if (c) sum.unshift(c);
 	return sum;
 }
+
+export default problem056;

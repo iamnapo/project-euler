@@ -1,7 +1,7 @@
 const solution = Array.from({ length: 6 }, () => 0);
 const numbers = Array.from({ length: 6 });
 
-export default () => {
+const problem061 = () => {
 	for (let i = 0; i < 6; i += 1) {
 		numbers[i] = generateNumbers(i);
 	}
@@ -92,3 +92,5 @@ function findNext(last, length) {
 
 	return false;
 }
+
+export default problem061;

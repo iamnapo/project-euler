@@ -1,4 +1,4 @@
-export default () => `Problem 148 solution is: ${t(1e9)}`;
+const problem148 = () => `Problem 148 solution is: ${t(1e9)}`;
 
 function triangle(n) {
 	return (n * (n + 1) * 0.5);
@@ -13,3 +13,5 @@ function t(n) {
 	const a = Math.trunc(n / (7 ** highPow));
 	return (triangle(a) * (triangle(7) ** highPow)) + ((a + 1) * t(n - (a * (7 ** highPow))));
 }
+
+export default problem148;

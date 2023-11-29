@@ -1,4 +1,4 @@
-export default () => {
+const problem053 = () => {
 	let count = 0;
 	for (let n = 1; n < 101; n += 1) {
 		for (let r = 0; r <= n; r += 1) {
@@ -19,3 +19,5 @@ function factorial(n) {
 
 	return n * factorial(n - 1);
 }
+
+export default problem053;

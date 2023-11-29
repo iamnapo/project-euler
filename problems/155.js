@@ -1,4 +1,4 @@
-export default () => {
+const problem155 = () => {
 	const n = 18;
 	const sets = [[], [[60, 1]]];
 	const setsFract = new Set(["60|1"]);
@@ -34,3 +34,5 @@ function gcd(a, b) {
 	while (x % y !== 0) [x, y] = [y, x % y];
 	return y;
 }
+
+export default problem155;

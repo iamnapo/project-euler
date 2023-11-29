@@ -1,4 +1,4 @@
-export default () => {
+const problem121 = () => {
 	const outcomes = Array.from({ length: 16 }, () => 0);
 	outcomes[15] = 1;
 	outcomes[14] = 1;
@@ -26,3 +26,5 @@ export default () => {
 
 	return `Problem 121 solution is: ${Math.trunc(total / positive)}`;
 };
+
+export default problem121;

@@ -1,4 +1,4 @@
-export default () => {
+const problem164 = () => {
 	const digitSum = 9;
 	const length = 20;
 	const s = Math.max(0, Math.min(9 * 3, digitSum));
@@ -28,3 +28,5 @@ function nextCounts(x, digitSum) {
 
 	return y;
 }
+
+export default problem164;

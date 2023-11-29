@@ -1,4 +1,4 @@
-export default () => {
+const problem144 = () => {
 	let result = 0;
 
 	let xA = 0;
@@ -27,3 +27,5 @@ export default () => {
 
 	return `Problem 144 solution is: ${result}`;
 };
+
+export default problem144;

@@ -16,7 +16,7 @@ let numbers = [
 	[4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23],
 ];
 
-export default () => {
+const problem018 = () => {
 	numbers = numbers.reverse();
 	while (numbers.length > 1) {
 		const newRow = [];
@@ -31,3 +31,5 @@ export default () => {
 
 	return `Problem 18 solution is: ${numbers[0].reduce((a, b) => Math.max(a, b))}`;
 };
+
+export default problem018;

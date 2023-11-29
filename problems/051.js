@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem051 = () => {
 	const fiveDigitPattern = get5digitPatterns();
 	const sixDigitPattern = get6digitPatterns();
 	let result = Number.MAX_SAFE_INTEGER;
@@ -89,3 +89,5 @@ function fillPattern(pattern, number) {
 
 	return filledPattern;
 }
+
+export default problem051;

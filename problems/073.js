@@ -1,4 +1,4 @@
-export default () => {
+const problem073 = () => {
 	const limit = 12_000;
 	let [a, b, c, d] = [1, 3, 4000, 11_999];
 	let result = 0;
@@ -13,3 +13,5 @@ export default () => {
 
 	return `Problem 73 solution is: ${result}`;
 };
+
+export default problem073;

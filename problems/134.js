@@ -1,4 +1,4 @@
-export default () => {
+const problem134 = () => {
 	const max = 1e6;
 	let p1 = 5;
 	let sum = [0];
@@ -73,3 +73,5 @@ function inverseMod(p, q, lastS, lastT, s, t) {
 	if (q === 0) return lastS;
 	return inverseMod(q, p % q, s, t, lastS - (s * Math.trunc(p / q)), lastT - (t * Math.trunc(p / q)));
 }
+
+export default problem134;

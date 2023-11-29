@@ -1,4 +1,4 @@
-export default () => {
+const problem055 = () => {
 	let count = 0;
 	for (let i = 10; i < 10_000; i += 1) {
 		if (isLychrel(i)) {
@@ -24,3 +24,5 @@ function isLychrel(num) {
 function isPalindrome(string) {
 	return (string === [...string].reverse().join("")) && string[0] !== "0";
 }
+
+export default problem055;

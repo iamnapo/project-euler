@@ -101,7 +101,7 @@ const sets = [
 	[681, 603, 638, 611, 584, 303, 454, 607, 606, 605, 596],
 ];
 
-export default () => {
+const problem105 = () => {
 	let sum = 0;
 	for (const set of sets) {
 		set.sort();
@@ -166,3 +166,5 @@ function verifyRule2(a) {
 
 	return true;
 }
+
+export default problem105;

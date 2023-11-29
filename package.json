@@ -31,13 +31,12 @@
 		"extends": "iamnapo",
 		"rules": {
 			"max-len": "off",
-			"no-bitwise": "off",
-			"import/no-anonymous-default-export": "off"
+			"no-bitwise": "off"
 		}
 	},
 	"devDependencies": {
-		"eslint": "^8.45.0",
-		"eslint-config-iamnapo": "^32.0.0"
+		"eslint": "^8.54.0",
+		"eslint-config-iamnapo": "^33.0.0"
 	},
 	"engines": {
 		"node": ">=14"

@@ -1,7 +1,7 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem060 = () => {
 	const primeList = getFirstNPrimes(1e4);
 
 	const queue = [[]];
@@ -18,3 +18,5 @@ export default () => {
 		}
 	}
 };
+
+export default problem060;

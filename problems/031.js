@@ -1,4 +1,4 @@
-export default () => {
+const problem031 = () => {
 	const TARGET = 200;
 	let ways = 0;
 	for (let a = TARGET; a > -1; a -= 200) {
@@ -19,3 +19,5 @@ export default () => {
 
 	return `Problem 31 solution is: ${ways}`;
 };
+
+export default problem031;

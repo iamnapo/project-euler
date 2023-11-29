@@ -1,4 +1,4 @@
-export default () => {
+const problem101 = () => {
 	let sum = 0;
 	const seq = [];
 	for (let n = 1; n < 12; n += 1) {
@@ -32,3 +32,5 @@ export default () => {
 
 	return `Problem 101 solution is: ${sum}`;
 };
+
+export default problem101;

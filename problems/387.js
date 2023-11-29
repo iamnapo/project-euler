@@ -1,7 +1,7 @@
 import isPrime from "./common/is-prime.js";
 
 let total = 0;
-export default () => {
+const problem387 = () => {
 	for (let i = 1; i < 10; i += 1) Harshad(i, i, 0);
 	return `Problem 387 solution is: ${total}`;
 };
@@ -19,3 +19,5 @@ function Harshad(n, s, strong) {
 
 	return total;
 }
+
+export default problem387;

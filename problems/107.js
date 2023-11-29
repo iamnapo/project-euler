@@ -41,7 +41,7 @@ const graph = [
 	[774, 289, 833, 257, 0, 381, 239, 722, 711, 468, 933, 0, 0, 17, 0, 0, 148, 0, 0, 853, 0, 0, 0, 0, 264, 194, 260, 947, 0, 752, 147, 0, 0, 343, 112, 273, 344, 680, 540, 0],
 ];
 
-export default () => {
+const problem107 = () => {
 	const V = graph.length;
 	let vertex = 0;
 	const MST = [];
@@ -70,3 +70,5 @@ export default () => {
 
 	return `Problem 107 solution is: ${(graph.flat().reduce((a, b) => a + b, 0) / 2) - MST.map((el) => el[2]).reduce((a, b) => a + b, 0)}`;
 };
+
+export default problem107;

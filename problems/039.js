@@ -1,4 +1,4 @@
-export default () => {
+const problem039 = () => {
 	const p = Array.from({ length: 1001 }, () => 0);
 	for (let i = 1; i < 999; i += 1) {
 		for (let j = 1; i + j < 1000; j += 1) {
@@ -12,3 +12,5 @@ export default () => {
 
 	return `Problem 39 solution is: ${p.indexOf(Math.max(...p))}`;
 };
+
+export default problem039;

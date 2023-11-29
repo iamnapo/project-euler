@@ -1,4 +1,4 @@
-export default () => {
+const problem028 = () => {
 	let sum = 1;
 	for (let i = 3; i < 1002; i += 2) {
 		sum += i ** 2; // Top right
@@ -9,3 +9,5 @@ export default () => {
 
 	return `Problem 28 solution is: ${sum}`;
 };
+
+export default problem028;

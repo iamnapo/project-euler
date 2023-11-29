@@ -1,4 +1,4 @@
-export default () => {
+const problem066 = () => {
 	let result = 5;
 	let xMax = 9;
 	for (let D = 8; D < 1001; D += 1) {
@@ -38,3 +38,5 @@ function chakravala(N) {
 
 	return a;
 }
+
+export default problem066;

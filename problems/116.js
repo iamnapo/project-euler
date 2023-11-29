@@ -1,6 +1,6 @@
 let cache;
 
-export default () => {
+const problem116 = () => {
 	let solutions = 0;
 	const m = 50;
 	const [nmax, nmin] = [4, 2];
@@ -29,3 +29,5 @@ function g(m, n) {
 	cache[m] = solutions;
 	return solutions;
 }
+
+export default problem116;

@@ -1,4 +1,4 @@
-export default () => {
+const problem012 = () => {
 	let triangle = 1;
 	for (let i = 2; ; i += 1) {
 		triangle += i;
@@ -19,3 +19,5 @@ function countdivisors(num) {
 
 	return count;
 }
+
+export default problem012;

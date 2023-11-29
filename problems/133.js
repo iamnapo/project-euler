@@ -1,6 +1,6 @@
 import getPrimesLessThan from "./common/get-primes-less-than.js";
 
-export default () => {
+const problem133 = () => {
 	let result = 10;
 	const primeList = getPrimesLessThan(1e5, { after: 6 });
 
@@ -37,3 +37,5 @@ function otherFactor(k) {
 
 	return k > 1;
 }
+
+export default problem133;

@@ -1,4 +1,4 @@
-export default () => {
+const problem043 = () => {
 	const digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 	let sum = 0;
 	for (let sub17 = 17; sub17 < 1000; sub17 += 17) {
@@ -51,3 +51,5 @@ function isPandigital(n) {
 
 	return n.length === 10;
 }
+
+export default problem043;

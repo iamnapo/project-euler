@@ -1,4 +1,4 @@
-export default () => {
+const problem103 = () => {
 	let v = [1];
 	for (let i = 0; i < 6; i += 1) {
 		v = next(v);
@@ -40,3 +40,5 @@ function distance(v) {
 
 	return r;
 }
+
+export default problem103;

@@ -1,4 +1,4 @@
-export default () => {
+const problem080 = () => {
 	let sum = 0;
 	const carres = new Set([4, 9, 16, 25, 36, 49, 64, 81]);
 	for (let n = 2; n < 100; n += 1) {
@@ -46,3 +46,5 @@ function lsqrt(n) {
 
 	return l;
 }
+
+export default problem080;

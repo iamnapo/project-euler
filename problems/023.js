@@ -1,4 +1,4 @@
-export default () => {
+const problem023 = () => {
 	const canBeWritten = new Set();
 	const abundants = Array.from({ length: 28_123 }, (_, ind) => ind).filter(isAbundant);
 	for (let i = 12; i < 28_123; i += 1) {
@@ -25,3 +25,5 @@ function isAbundant(n) {
 
 	return sum > n;
 }
+
+export default problem023;

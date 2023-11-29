@@ -1,4 +1,4 @@
-export default () => {
+const problem145 = () => {
 	let count = 0;
 	const limit = 1e09;
 	for (let i = 1; i < limit; i += 2) {
@@ -33,3 +33,5 @@ function isReversible(n) {
 
 	return true;
 }
+
+export default problem145;

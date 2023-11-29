@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem087 = () => {
 	const primeList = getFirstNPrimes(5000);
 
 	const powers = Array.from({ length: 3 }, () => []);
@@ -42,3 +42,5 @@ export default () => {
 
 	return `Problem 87 solution is: ${numbers.size}`;
 };
+
+export default problem087;

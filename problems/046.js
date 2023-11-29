@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem046 = () => {
 	const primeList = getFirstNPrimes(1000);
 
 	let result = 1;
@@ -25,3 +25,5 @@ export default () => {
 function isTwiceSquare(number) {
 	return Math.sqrt(number / 2) % 1 === 0;
 }
+
+export default problem046;

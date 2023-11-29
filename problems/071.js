@@ -1,4 +1,4 @@
-export default () => {
+const problem071 = () => {
 	const n1 = 3;
 	const d1 = 7;
 	let nbest = 0;
@@ -35,3 +35,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem071;

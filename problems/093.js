@@ -1,4 +1,4 @@
-export default () => {
+const problem093 = () => {
 	const list = [];
 	let [a, b, c, d, r] = [0, 0, 0, 0, 0];
 	for (a = 1; a < 10; a += 1) {
@@ -104,3 +104,5 @@ function testLen(...a) {
 	});
 	return p - 1;
 }
+
+export default problem093;

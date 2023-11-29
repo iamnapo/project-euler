@@ -1,6 +1,6 @@
 import getPrimesLessThan from "./common/get-primes-less-than.js";
 
-export default () => `Problem 243 solution is: ${R(15_499 / 94_744)}`;
+const problem243 = () => `Problem 243 solution is: ${R(15_499 / 94_744)}`;
 
 function R(goal) {
 	let [r, d] = [1, 1];
@@ -16,3 +16,5 @@ function R(goal) {
 		if ((r / (d - 1)) < goal) return d;
 	}
 }
+
+export default problem243;

@@ -1,4 +1,4 @@
-export default () => {
+const problem153 = () => {
 	const n = 1e8;
 	const cache = [];
 	const cacheSize = 10 ** 4;
@@ -54,3 +54,5 @@ function* sternBrocot(n) {
 		}
 	}
 }
+
+export default problem153;

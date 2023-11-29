@@ -1,4 +1,4 @@
-export default () => {
+const problem119 = () => {
 	let potentialNumbers = [];
 	for (let b = 2; b < 100; b += 1) {
 		for (let e = 2; e < 10; e += 1) potentialNumbers.push([b ** e, b]);
@@ -20,3 +20,5 @@ function digitSum(number) {
 	const tmp = [...number.toString()].map((a) => Number.parseInt(a, 10));
 	return tmp.reduce((a, b) => a + b);
 }
+
+export default problem119;

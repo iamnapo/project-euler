@@ -1,4 +1,4 @@
-export default () => {
+const problem146 = () => {
 	let sum = 0;
 	const limit = 15e07;
 	const step = 2 * 3 * 5 * 7 * 11 * 13 * 17 * 19;
@@ -64,3 +64,5 @@ function powMod(a, p, m) {
 function hopefullyPrime(p) {
 	return powMod(2n, p - 1n, p) === 1n;
 }
+
+export default problem146;

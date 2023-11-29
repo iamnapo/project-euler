@@ -1,4 +1,4 @@
-export default () => {
+const problem044 = () => {
 	const LIMIT = 1e04; // LGTM!
 	let D = Number.MAX_SAFE_INTEGER;
 	for (let j = 1; j <= LIMIT; j += 1) {
@@ -21,3 +21,5 @@ function isPentagonal(num) {
 
 	return ((Math.sqrt(1 + (24 * num)) + 1) / 6) % 1 === 0;
 }
+
+export default problem044;

@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem041 = () => {
 	// 8 and 9 digit pandigitals are always divisable by 3
 	for (let i = 7_654_321; ; i -= 1) {
 		if (isPandigital(i.toString()) && isPrime(i)) {
@@ -22,3 +22,5 @@ function isPandigital(n) {
 
 	return true;
 }
+
+export default problem041;

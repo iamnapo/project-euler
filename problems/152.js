@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem152 = () => {
 	let count = 0;
 	const array = Array.from({ length: 79 }, (_, ind) => ind + 2).filter((el) => primeFactors(el).every((factor) => [2, 3, 5, 7, 13].includes(factor)));
 	const lcm = lcmOfMany(array.map((el) => el ** 2));
@@ -59,3 +59,5 @@ function lcmOfMany(arr) {
 	for (let i = 0; i < arr.length; i += 1) n = lcmOfTwo(arr[i], n);
 	return n;
 }
+
+export default problem152;

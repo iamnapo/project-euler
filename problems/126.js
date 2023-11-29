@@ -1,4 +1,4 @@
-export default () => {
+const problem126 = () => {
 	const limit = 30_000;
 	const count = Array.from({ length: limit + 1 }, () => 0);
 	for (let z = 1; cubes(z, z, z, 1) <= limit; z += 1) {
@@ -17,3 +17,5 @@ export default () => {
 function cubes(x, y, z, n) {
 	return (2 * ((x * y) + (y * z) + (x * z))) + (4 * (x + y + z + n - 2) * (n - 1));
 }
+
+export default problem126;

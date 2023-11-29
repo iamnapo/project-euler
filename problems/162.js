@@ -1,4 +1,4 @@
-export default () => `Problem 162 solution is: ${f(16n).toString(16).toUpperCase()}`;
+const problem162 = () => `Problem 162 solution is: ${f(16n).toString(16).toUpperCase()}`;
 
 function g(n, r) {
 	if (r === 0n) return 16n ** n;
@@ -15,3 +15,5 @@ function factorial(n) {
 	if (n === 0n || n === 1n) return 1n;
 	return n * factorial(n - 1n);
 }
+
+export default problem162;

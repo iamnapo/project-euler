@@ -1,4 +1,4 @@
-export default () => {
+const problem156 = () => {
 	let count = 1;
 	const graduallyDecrease = (d, n) => {
 		while (n > 10) {
@@ -28,3 +28,5 @@ function f(n, d) {
 	if (firstDigit === d) return tmp + otherDigits + 1;
 	return tmp + (10 ** numOfOtherDigits);
 }
+
+export default problem156;

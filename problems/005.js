@@ -1,4 +1,4 @@
-export default () => {
+const problem005 = () => {
 	for (let i = 1; ; i += 1) {
 		let isDivisible = true;
 		for (let j = 1; j < 21; j += 1) {
@@ -10,3 +10,5 @@ export default () => {
 		}
 	}
 };
+
+export default problem005;

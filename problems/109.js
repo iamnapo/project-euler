@@ -1,4 +1,4 @@
-export default () => {
+const problem109 = () => {
 	const limit = 100;
 	let result = 0;
 	const scores = [];
@@ -42,3 +42,5 @@ export default () => {
 
 	return `Problem 109 solution is: ${result}`;
 };
+
+export default problem109;

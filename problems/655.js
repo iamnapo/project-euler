@@ -1,5 +1,5 @@
 
-export default () => {
+const problem655 = () => {
 	const [M, N] = [10_000_019, 32];
 	let sum = 0;
 	let v = Array.from({ length: M }, () => 0);
@@ -42,3 +42,5 @@ function powMod(base, exp, mod) {
 
 	return r;
 }
+
+export default problem655;

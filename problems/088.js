@@ -1,4 +1,4 @@
-export default () => {
+const problem088 = () => {
 	const maxK = 12_000;
 	const maxNumber = 2 * maxK;
 	const numFactors = Math.trunc(Math.log10(maxNumber) / Math.log10(2));
@@ -53,3 +53,5 @@ export default () => {
 
 	return `Problem 88 solution is: ${[...new Set(k)].reduce((a, b) => a + b)}`;
 };
+
+export default problem088;

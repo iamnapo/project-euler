@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem047 = () => {
 	const primeList = getFirstNPrimes(1000); // 1000 LGTM
 
 	let consec = 1;
@@ -43,3 +43,5 @@ function numberOfPrimeFacors(number, primeList) {
 
 	return nod;
 }
+
+export default problem047;

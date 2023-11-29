@@ -1,4 +1,4 @@
-export default () => {
+const problem094 = () => {
 	let [x, y] = [2, 1];
 	const limit = 1e09;
 	let result = 0;
@@ -27,3 +27,5 @@ export default () => {
 
 	return `Problem 94 solution is: ${result}`;
 };
+
+export default problem094;

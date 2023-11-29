@@ -1001,7 +1001,7 @@ const triangles = [
 	[-965, -728, 560, 569, -708, -247],
 ];
 
-export default () => {
+const problem102 = () => {
 	let result = 0;
 	for (const triangle of triangles) {
 		const [xA, yA, xB, yB, xC, yC] = triangle;
@@ -1015,3 +1015,5 @@ export default () => {
 
 	return `Problem 102 solution is: ${result}`;
 };
+
+export default problem102;

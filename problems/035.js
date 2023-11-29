@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem035 = () => {
 	let count = 0;
 	for (let n = 2; n < 1e06; n += 1) {
 		if (isPrime(n)) {
@@ -26,3 +26,4 @@ export default () => {
 	return `Problem 35 solution is: ${count}`;
 };
 
+export default problem035;

@@ -1,6 +1,6 @@
 import getPrimesLessThan from "./common/get-primes-less-than.js";
 
-export default () => {
+const problem347 = () => {
 	const primeList = getPrimesLessThan(1e7);
 
 	let total = 0;
@@ -29,3 +29,5 @@ function best(p, q) {
 
 	return maximum;
 }
+
+export default problem347;

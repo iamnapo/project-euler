@@ -4,7 +4,7 @@ const names = [
 
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-export default () => {
+const problem022 = () => {
 	names.sort();
 	let total = 0;
 	for (const [index, name] of names.entries()) {
@@ -18,3 +18,5 @@ export default () => {
 
 	return `Problem 22 solution is: ${total}`;
 };
+
+export default problem022;

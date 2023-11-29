@@ -1,4 +1,4 @@
-export default () => {
+const problem141 = () => {
 	const limit = 1e12;
 	const progressiveSquares = [];
 
@@ -31,3 +31,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem141;

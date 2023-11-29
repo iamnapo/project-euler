@@ -1,4 +1,4 @@
-export default () => {
+const problem106 = () => {
 	let result = 0;
 	const n = 12;
 	for (let i = 2; i <= n / 2; i += 1) {
@@ -23,3 +23,5 @@ function choose(n, kk) {
 
 	return res;
 }
+
+export default problem106;

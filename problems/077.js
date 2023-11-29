@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem077 = () => {
 	let target = 2;
 	const primeList = getFirstNPrimes(2000);
 
@@ -23,3 +23,5 @@ export default () => {
 
 	return `Problem 77 solution is: ${target}`;
 };
+
+export default problem077;

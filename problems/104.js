@@ -1,4 +1,4 @@
-export default () => {
+const problem104 = () => {
 	let [fn1, fn2] = [1, 1];
 	for (let n = 3; ; n += 1) {
 		[fn1, fn2] = [(fn1 + fn2) % 1e9, fn1];
@@ -21,3 +21,5 @@ function isPandigital(n) {
 
 	return n.length === 9;
 }
+
+export default problem104;

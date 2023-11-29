@@ -1,4 +1,4 @@
-export default () => {
+const problem346 = () => {
 	const limit = 1e12;
 	const d = new Set();
 	let b = 2;
@@ -23,3 +23,5 @@ export default () => {
 
 	return `Problem 346 solution is: ${s}`;
 };
+
+export default problem346;

@@ -1,4 +1,4 @@
-export default () => {
+const problem032 = () => {
 	const products = new Set();
 	for (let a = 1; a < 9876; a += 1) {
 		for (let b = 1; b < 9876; b += 1) {
@@ -22,3 +22,5 @@ function isPandigital(n) {
 
 	return n.length === 9;
 }
+
+export default problem032;

@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem058 = () => {
 	let noOfPrimes = 3;
 	let sl = 2;
 	let c = 9;
@@ -19,3 +19,5 @@ export default () => {
 
 	return `Problem 58 solution is: ${sl + 1}`;
 };
+
+export default problem058;

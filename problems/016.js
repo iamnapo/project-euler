@@ -1,4 +1,4 @@
-export default () => {
+const problem016 = () => {
 	const big = [2];
 	let c = 0;
 	for (let i = 1; i < 1000; i += 1) {
@@ -23,3 +23,5 @@ export default () => {
 
 	return `Problem 16 solution is: ${big.reduce((a, b) => Number.parseInt(a, 10) + Number.parseInt(b, 10))}`;
 };
+
+export default problem016;

@@ -1,4 +1,4 @@
-export default () => {
+const problem024 = () => {
 	// https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order
 	let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 	for (let count = 1; count < 1e06; count += 1) {
@@ -26,3 +26,5 @@ export default () => {
 
 	return `Problem 24 solution is: ${a.join("")}`;
 };
+
+export default problem024;

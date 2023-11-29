@@ -1,4 +1,4 @@
-export default () => {
+const problem142 = () => {
 	let [a, b, c, d, e, f] = Array.from({ length: 6 }, () => 0);
 	let solved = false;
 	let result = 0;
@@ -34,3 +34,5 @@ function isSquare(n) {
 	const tmp = Math.trunc(Math.sqrt(n));
 	return tmp ** 2 === n;
 }
+
+export default problem142;

@@ -1,4 +1,4 @@
-export default () => {
+const problem034 = () => {
 	let result = 0;
 	for (let i = 10; i < 2_540_161; i += 1) {
 		let sum = 0;
@@ -24,3 +24,5 @@ function factorial(n) {
 
 	return n * factorial(n - 1);
 }
+
+export default problem034;

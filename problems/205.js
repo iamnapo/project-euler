@@ -1,4 +1,4 @@
-export default () => {
+const problem205 = () => {
 	const peter = distribution(4, 9);
 	const colin = distribution(6, 6);
 	let t = 0;
@@ -21,3 +21,5 @@ function distribution(sides, number) {
 	for (let j = 0; j < r.length; j += 1) r[j] /= s;
 	return r;
 }
+
+export default problem205;

@@ -1,4 +1,4 @@
-export default () => {
+const problem160 = () => {
 	const number = 1e12;
 	let res = mulNot5(1e5);
 	for (let num = number; num > 0; num /= 5) {
@@ -16,3 +16,5 @@ function mulNot5(number) {
 
 	return res;
 }
+
+export default problem160;

@@ -1,4 +1,4 @@
-export default () => {
+const problem112 = () => {
 	let bouncy = 0;
 	for (let n = 1; ; n += 1) {
 		if (!isLeft(n) && !isRight(n)) {
@@ -32,3 +32,5 @@ function isRight(n) {
 
 	return isLeft(res.join(""));
 }
+
+export default problem112;

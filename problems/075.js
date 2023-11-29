@@ -1,4 +1,4 @@
-export default () => {
+const problem075 = () => {
 	const triangles = Array.from({ length: 1_500_001 }, () => 0);
 	let result = 0;
 	const limit = Math.trunc(Math.sqrt(1_500_000 / 2));
@@ -37,3 +37,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem075;

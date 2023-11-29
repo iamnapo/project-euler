@@ -1,4 +1,4 @@
-export default () => {
+const problem157 = () => {
 	let sum = 0;
 	for (let n = 1; n < 10; n += 1) {
 		let D = divisors(100 ** n);
@@ -29,3 +29,5 @@ function divisors(n) {
 	back.reverse();
 	return [...front, ...back];
 }
+
+export default problem157;

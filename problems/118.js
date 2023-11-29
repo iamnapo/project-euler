@@ -2,7 +2,7 @@ import isPrime from "./common/is-prime.js";
 
 const perm = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export default () => {
+const problem118 = () => {
 	let count = 0;
 	do {
 		count += checkPartitions(0, 0);
@@ -57,3 +57,5 @@ function checkPartitions(startIndex, prev) {
 
 	return count;
 }
+
+export default problem118;

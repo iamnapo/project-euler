@@ -1,4 +1,4 @@
-export default () => {
+const problem147 = () => {
 	let count = 0;
 	const [M, N] = [47, 43];
 	for (let pX = 0; pX < N; pX += 1) {
@@ -26,3 +26,5 @@ export default () => {
 
 	return `Problem 147 solution is: ${count}`;
 };
+
+export default problem147;

@@ -1,5 +1,5 @@
 const cache = new Map();
-export default () => {
+const problem161 = () => {
 	const [W, H] = [9, 12];
 	return `Problem 161 solution is: ${f(0, Array.from({ length: W * H }, () => -1), W, H)}`;
 };
@@ -44,3 +44,5 @@ function f(n, grid, W, H) {
 	cache.set(key, total);
 	return cache.get(key);
 }
+
+export default problem161;

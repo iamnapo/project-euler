@@ -1,4 +1,4 @@
-export default () => `Problem 163 solution is: ${T(36)}`;
+const problem163 = () => `Problem 163 solution is: ${T(36)}`;
 
 function T60(n) {
 	let t = 0;
@@ -25,3 +25,5 @@ function T(n) {
 	// Torsten Sillke, 1999
 	return T60(n) + T90(n) + T120(n);
 }
+
+export default problem163;

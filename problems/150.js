@@ -1,4 +1,4 @@
-export default () => {
+const problem150 = () => {
 	const s = [];
 	const triangular = [];
 	let tmp = 0;
@@ -34,3 +34,5 @@ export default () => {
 
 	return `Problem 150 solution is: ${min}`;
 };
+
+export default problem150;

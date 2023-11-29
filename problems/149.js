@@ -1,4 +1,4 @@
-export default () => {
+const problem149 = () => {
 	const grid = generateGrid();
 	const n = grid[0].length;
 	let ans = 0;
@@ -52,3 +52,5 @@ function maxSubSum(grid, x, y, dx, dy) {
 
 	return ans;
 }
+
+export default problem149;

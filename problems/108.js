@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem108 = () => {
 	const primeList = getFirstNPrimes(10);
 
 	const limit = 1000;
@@ -34,3 +34,5 @@ function noDSquared(number, primelist) {
 
 	return nod;
 }
+
+export default problem108;

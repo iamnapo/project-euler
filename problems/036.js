@@ -1,4 +1,4 @@
-export default () => {
+const problem036 = () => {
 	let sum = 0;
 	for (let n = 1; n < 1e06; n += 1) {
 		if (isPalindrome(n.toString()) && isPalindrome(n.toString(2))) {
@@ -12,3 +12,5 @@ export default () => {
 function isPalindrome(string) {
 	return (string === [...string].reverse().join("")) && string[0] !== "0";
 }
+
+export default problem036;

@@ -1,4 +1,4 @@
-export default () => `Problem 169 solution is: ${f(10n ** 25n)}`;
+const problem169 = () => `Problem 169 solution is: ${f(10n ** 25n)}`;
 
 const cache = new Map();
 function f(n) {
@@ -13,3 +13,5 @@ function f(n) {
 
 	return cache.get(n);
 }
+
+export default problem169;

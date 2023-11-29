@@ -1,4 +1,4 @@
-export default () => {
+const problem158 = () => {
 	let max = 0;
 	for (let n = 2; n < 26; n += 1) {
 		let s = 0;
@@ -18,3 +18,5 @@ function factorial(n) {
 	if (n === 0 || n === 1) return 1;
 	return n * factorial(n - 1);
 }
+
+export default problem158;

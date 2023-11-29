@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem111 = () => {
 	let res = [];
 	for (let i = 0; i < 10; i += 1) {
 		let l = gen(i, 0, [], 10);
@@ -48,3 +48,5 @@ function gen(d, k, l, n) {
 
 	return res;
 }
+
+export default problem111;

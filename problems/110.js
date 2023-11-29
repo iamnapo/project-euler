@@ -2,7 +2,7 @@ import getFirstNPrimes from "./common/get-first-n-primes.js";
 
 let exponents;
 
-export default () => {
+const problem110 = () => {
 	const primeList = getFirstNPrimes(15);
 
 	exponents = Array.from({ length: primeList.length }, () => 0);
@@ -68,3 +68,5 @@ function getNum(primeList, result) {
 
 	return number;
 }
+
+export default problem110;

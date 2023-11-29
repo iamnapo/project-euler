@@ -16,7 +16,7 @@ const matrix = [
 	[813, 883, 451, 509, 615, 77, 281, 613, 459, 205, 380, 274, 302, 35, 805],
 ];
 
-export default () => {
+const problem345 = () => {
 	const sum = Array.from({ length: 32_768 }, () => 0);
 	const bc = Array.from({ length: 32_768 }, () => 0);
 	for (let i = 1; i < 32_768; i += 1) bc[i] = (i & 1) + bc[i >> 1];
@@ -31,3 +31,5 @@ export default () => {
 
 	return `Problem 345 solution is: ${sum[32_767]}`;
 };
+
+export default problem345;

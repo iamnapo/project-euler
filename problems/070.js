@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem070 = () => {
 	let result = 1;
 	let bestRatio = Number.POSITIVE_INFINITY;
 	const limit = 1e07;
@@ -49,3 +49,5 @@ function isPerm(m, n) {
 
 	return true;
 }
+
+export default problem070;

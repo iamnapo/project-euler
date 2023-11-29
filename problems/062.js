@@ -1,4 +1,4 @@
-export default () => {
+const problem062 = () => {
 	let result = {};
 	let n = 345;
 	let found = false;
@@ -39,3 +39,5 @@ function makeSmallestPerm(n) {
 
 	return retVal;
 }
+
+export default problem062;

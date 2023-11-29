@@ -5,7 +5,7 @@ class Radical {
 	}
 }
 
-export default () => {
+const problem124 = () => {
 	const target = 10_000;
 	const limit = 100_000 + 1;
 
@@ -36,3 +36,5 @@ export default () => {
 	});
 	return `Problem 124 solution is: ${radicals[target].number}`;
 };
+
+export default problem124;

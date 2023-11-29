@@ -1,4 +1,4 @@
-export default () => {
+const problem140 = () => {
 	let [a, r, x, y] = [2, 0, -1, -1];
 
 	for (let i = 0; i < 15; i += 1) {
@@ -12,3 +12,5 @@ export default () => {
 
 	return `Problem 140 solution is: ${r}`;
 };
+
+export default problem140;

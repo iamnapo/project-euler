@@ -5,7 +5,7 @@ class Radical {
 	}
 }
 
-export default () => {
+const problem127 = () => {
 	let result = 0;
 	const limit = 120_000;
 	const radicals = Array.from({ length: limit + 1 });
@@ -66,3 +66,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem127;

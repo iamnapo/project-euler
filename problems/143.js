@@ -1,4 +1,4 @@
-export default () => {
+const problem143 = () => {
 	const limit = 120_000;
 	const limitSQ = 347;
 	const pairs = [];
@@ -72,3 +72,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem143;

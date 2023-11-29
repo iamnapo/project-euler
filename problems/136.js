@@ -1,4 +1,4 @@
-export default () => {
+const problem136 = () => {
 	const n = 5e07;
 	const solutions = Array.from({ length: n + 1 }, () => 0);
 	for (let u = 1; u <= n; u += 1) {
@@ -11,3 +11,5 @@ export default () => {
 
 	return `Problem 136 solution is: ${solutions.filter((el) => el === 1).length}`;
 };
+
+export default problem136;

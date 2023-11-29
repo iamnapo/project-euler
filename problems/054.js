@@ -1011,7 +1011,7 @@ function getCards() {
 	return cards;
 }
 
-export default () => {
+const problem054 = () => {
 	let count = 0;
 	const cards = getCards();
 	for (const play of cards) {
@@ -1115,3 +1115,5 @@ function score(h) {
 
 	return sc;
 }
+
+export default problem054;

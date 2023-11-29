@@ -1,4 +1,4 @@
-export default () => {
+const problem138 = () => {
 	let result = 0;
 
 	for (let i = 0; i < 12; i += 1) result += fibonacci(((i + 1) * 6) + 3) / 2;
@@ -17,3 +17,5 @@ function fibonacci(n) {
 
 	return sum;
 }
+
+export default problem138;

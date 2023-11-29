@@ -1,4 +1,4 @@
-export default () => {
+const problem030 = () => {
 	const POWER = 5;
 	let sum = 0;
 	for (let i = 2; i < 1e06; i += 1) { // 1e06 looks big enough to me
@@ -15,3 +15,5 @@ export default () => {
 
 	return `Problem 30 solution is: ${sum}`;
 };
+
+export default problem030;

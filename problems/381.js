@@ -1,6 +1,6 @@
 import getPrimesLessThan from "./common/get-primes-less-than.js";
 
-export default () => {
+const problem381 = () => {
 	const primeList = getPrimesLessThan(1e8);
 
 	let pcount = 0;
@@ -20,3 +20,5 @@ export default () => {
 
 	return `Problem 381 solution is: ${pcount}`;
 };
+
+export default problem381;

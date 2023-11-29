@@ -1,4 +1,4 @@
-export default () => {
+const problem129 = () => {
 	const limit = 1_000_001;
 	let n = limit;
 	while (aa(n) < limit) {
@@ -31,3 +31,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem129;

@@ -1,6 +1,6 @@
 let cache;
 
-export default () => {
+const problem114 = () => {
 	const m = 50;
 	const n = 3;
 	cache = Array.from({ length: m + 1 }, () => 0);
@@ -26,3 +26,5 @@ function f(m, n) {
 	cache[m] = solutions;
 	return solutions;
 }
+
+export default problem114;

@@ -1,6 +1,6 @@
 let cache;
 
-export default () => {
+const problem115 = () => {
 	let solutions = 0;
 	const n = 50;
 	let m = n - 1;
@@ -32,3 +32,5 @@ function f(m, n) {
 	cache[m] = solutions;
 	return solutions;
 }
+
+export default problem115;

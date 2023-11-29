@@ -21,7 +21,7 @@ const grid = [
 	[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48],
 ];
 
-export default () => {
+const problem011 = () => {
 	let max = 0;
 	for (let i = 0; i < 20; i += 1) {
 		const col = grid.map((x) => x[i]);
@@ -61,3 +61,5 @@ export default () => {
 
 	return `Problem 11 solution is: ${max}`;
 };
+
+export default problem011;

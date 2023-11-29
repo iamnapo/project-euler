@@ -1,4 +1,4 @@
-export default () => {
+const problem159 = () => {
 	const mdrs = [0];
 	const N = 1e6;
 	const range = Array.from({ length: 9 }, (_, ind) => ind + 1);
@@ -15,3 +15,5 @@ export default () => {
 
 	return `Problem 159 solution is: ${mdrs.slice(2).reduce((a, b) => a + b, 0)}`;
 };
+
+export default problem159;

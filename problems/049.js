@@ -1,7 +1,7 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem049 = () => {
 	const primeList = getFirstNPrimes(1e4, { after: 1490 });
 
 	for (let i = 0; i < primeList.length; i += 1) {
@@ -33,3 +33,5 @@ function isPermutation(numA, numB) {
 
 	return true;
 }
+
+export default problem049;

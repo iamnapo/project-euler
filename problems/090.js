@@ -1,4 +1,4 @@
-export default () => {
+const problem090 = () => {
 	let result = 0;
 	const combs = allCombination(6, 10);
 	for (let i = 0; i < combs.length; i += 1) {
@@ -61,3 +61,5 @@ function isValidCombinations(d1, d2) {
 
 	return valid;
 }
+
+export default problem090;

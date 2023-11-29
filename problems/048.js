@@ -1,4 +1,4 @@
-export default () => {
+const problem048 = () => {
 	let result = 0;
 	for (let i = 1; i < 1001; i += 1) {
 		let temp = i;
@@ -13,3 +13,5 @@ export default () => {
 
 	return `Problem 48 solution is: ${result}`;
 };
+
+export default problem048;

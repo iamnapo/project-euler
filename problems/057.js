@@ -1,4 +1,4 @@
-export default () => {
+const problem057 = () => {
 	let count = 0;
 	let n = [3];
 	let d = [2];
@@ -51,3 +51,5 @@ function add(a, b) {
 
 	return sum;
 }
+
+export default problem057;

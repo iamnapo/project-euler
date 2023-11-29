@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem130 = () => {
 	const limit = 25;
 	let found = 0;
 	let n = 1;
@@ -43,3 +43,5 @@ function gcd(a, b) {
 
 	return y;
 }
+
+export default problem130;

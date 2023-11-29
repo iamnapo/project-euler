@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem037 = () => {
 	const sum = [];
 	for (let n = 11; sum.length < 11; n += 1) {
 		if (isPrime(n)) {
@@ -39,3 +39,4 @@ export default () => {
 	return `Problem 37 solution is: ${sum.reduce((a, b) => a + b)}`;
 };
 
+export default problem037;

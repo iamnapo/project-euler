@@ -1,6 +1,6 @@
 import isPrime from "./common/is-prime.js";
 
-export default () => {
+const problem233 = () => {
 	const limit = 1e11;
 	const limit2 = Math.trunc(limit / ((5 ** 3) * (13 ** 2)));
 	const limit3 = Math.trunc(limit2 / 17 + 1);
@@ -60,3 +60,4 @@ export default () => {
 	return `Problem 233 solution is: ${sum}`;
 };
 
+export default problem233;

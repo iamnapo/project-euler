@@ -1,4 +1,4 @@
-export default () => {
+const problem078 = () => {
 	const p = [];
 	p.push(1);
 	let n = 1;
@@ -25,3 +25,5 @@ export default () => {
 
 	return `Problem 78 solution is: ${n}`;
 };
+
+export default problem078;

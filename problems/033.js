@@ -1,4 +1,4 @@
-export default () => {
+const problem033 = () => {
 	const pairs = [];
 	for (let b = 2; b < 100; b += 1) {
 		for (let a = 1; a < b; a += 1) {
@@ -34,3 +34,5 @@ function gcd(a, b) {
 
 	return Math.abs(a);
 }
+
+export default problem033;

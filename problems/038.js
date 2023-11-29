@@ -1,4 +1,4 @@
-export default () => {
+const problem038 = () => {
 	let result = 0;
 	for (let i = 9387; i > 9233; i -= 1) {
 		result = [i, 2 * i].join("");
@@ -20,3 +20,5 @@ function isPandigital(n) {
 
 	return n.length === 9;
 }
+
+export default problem038;

@@ -1,4 +1,4 @@
-export default () => {
+const problem085 = () => {
 	let error = Number.MAX_SAFE_INTEGER;
 	let closestArea = 0;
 	const target = 2e06;
@@ -20,3 +20,5 @@ export default () => {
 
 	return `Problem 85 solution is: ${closestArea}`;
 };
+
+export default problem085;

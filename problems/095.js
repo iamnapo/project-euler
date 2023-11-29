@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem095 = () => {
 	const limit = 1e06;
 	let result = 0;
 	let chainLength = 0;
@@ -73,3 +73,5 @@ function sumOfFactors(number, primeList) {
 
 	return sum - number;
 }
+
+export default problem095;

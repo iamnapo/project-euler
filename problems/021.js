@@ -1,4 +1,4 @@
-export default () => {
+const problem021 = () => {
 	let sum = 0;
 	for (let i = 0; i < 10_000; i += 1) {
 		const b = d(i);
@@ -20,3 +20,5 @@ function d(n) {
 
 	return sum;
 }
+
+export default problem021;

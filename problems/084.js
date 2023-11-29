@@ -2,7 +2,7 @@ let cPos = 0;
 let ccPos = 0;
 let chancePos = 0;
 
-export default () => {
+const problem084 = () => {
 	const board = Array.from({ length: 40 }, () => 0);
 	const samples = 1e06;
 	let doubles = 0;
@@ -93,3 +93,5 @@ function chance() {
 		cPos -= 3;
 	}
 }
+
+export default problem084;

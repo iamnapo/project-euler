@@ -1,4 +1,4 @@
-export default () => {
+const problem045 = () => {
 	for (let n = 286; ; n += 1) {
 		const tn = (n * (n + 1)) / 2;
 		if (isPentagonal(tn) && isHexagonal(tn)) {
@@ -22,3 +22,5 @@ function isHexagonal(num) {
 
 	return ((Math.sqrt(1 + (8 * num)) + 1) / 4) % 1 === 0;
 }
+
+export default problem045;

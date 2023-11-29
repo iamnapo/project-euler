@@ -1,4 +1,4 @@
-export default () => {
+const problem125 = () => {
 	const limit = 1e8;
 	const sqrtLimit = Math.sqrt(limit);
 	let sum = 0;
@@ -24,3 +24,5 @@ export default () => {
 function isPalindrome(string) {
 	return (string === [...string].reverse().join("")) && string[0] !== "0";
 }
+
+export default problem125;

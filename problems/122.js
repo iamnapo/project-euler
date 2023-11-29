@@ -2,7 +2,7 @@ const limit = 200;
 let cost;
 let path;
 
-export default () => {
+const problem122 = () => {
 	cost = Array.from({ length: limit + 1 }, () => Number.MAX_SAFE_INTEGER);
 	path = Array.from({ length: limit + 1 }, () => 0);
 	let result = 0;
@@ -27,3 +27,5 @@ function backtrack(power, depth) {
 		backtrack(power + path[i], depth + 1);
 	}
 }
+
+export default problem122;

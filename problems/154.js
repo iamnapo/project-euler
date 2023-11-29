@@ -1,4 +1,4 @@
-export default () => {
+const problem154 = () => {
 	const N = 200_000;
 	const V5N12 = 49_998 - 12;
 	const V2N12 = 199_994 - 12;
@@ -28,3 +28,5 @@ export default () => {
 
 	return `Problem 154 solution is: ${count}`;
 };
+
+export default problem154;

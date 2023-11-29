@@ -1,6 +1,6 @@
 import getFirstNPrimes from "./common/get-first-n-primes.js";
 
-export default () => {
+const problem132 = () => {
 	let result = 0;
 	let count = 0;
 	const primeList = getFirstNPrimes(5e4);
@@ -31,3 +31,5 @@ function expmod(base, exp, mod) {
 
 	return (base * expmod(base, (exp - 1), mod)) % mod;
 }
+
+export default problem132;

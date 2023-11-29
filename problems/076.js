@@ -1,4 +1,4 @@
-export default () => {
+const problem076 = () => {
 	const ways = Array.from({ length: 101 }, () => 0);
 	ways[0] = 1;
 
@@ -10,3 +10,5 @@ export default () => {
 
 	return `Problem 76 solution is: ${ways.pop(-1)}`;
 };
+
+export default problem076;
