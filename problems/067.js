@@ -107,14 +107,14 @@ const problem067 = () => {
 		const newRow = [];
 		for (let j = 0; j < numbers[1].length; j += 1) {
 			const temp = [numbers[1][j] + numbers[0][j], numbers[1][j] + numbers[0][j + 1]];
-			newRow.push(temp.filter((n) => Number.isFinite(n)).reduce((a, b) => Math.max(a, b)));
+			newRow.push(Math.max(...temp.filter(Number.isFinite)));
 		}
 
 		numbers[1] = newRow;
 		numbers = numbers.slice(1);
 	}
 
-	return `Problem 67 solution is: ${numbers[0].reduce((a, b) => Math.max(a, b))}`;
+	return `Problem 67 solution is: ${Math.max(...numbers[0])}`;
 };
 
 export default problem067;

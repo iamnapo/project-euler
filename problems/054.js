@@ -1084,7 +1084,7 @@ function score(h) {
 		sc = { category: 4, tiebraker: [values[0]] };
 	}
 
-	const inSuit = Boolean(hand.map((el) => el.suit).reduce((a, b) => ((a === b) ? a : Number.NaN)));
+	const inSuit = hand.every((el) => el.suit === hand[0].suit);
 	if (inSuit) {
 		sc = { category: 4, tiebraker: values[0] };
 	}

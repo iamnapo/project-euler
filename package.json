@@ -35,8 +35,8 @@
 		}
 	},
 	"devDependencies": {
-		"eslint": "^8.54.0",
-		"eslint-config-iamnapo": "^33.0.0"
+		"eslint": "^8.56.0",
+		"eslint-config-iamnapo": "^35.0.0"
 	},
 	"engines": {
 		"node": ">=14"
