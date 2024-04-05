@@ -30,13 +30,13 @@
 	"eslintConfig": {
 		"extends": "iamnapo",
 		"rules": {
-			"max-len": "off",
+			"@stylistic/max-len": "off",
 			"no-bitwise": "off"
 		}
 	},
 	"devDependencies": {
-		"eslint": "^8.56.0",
-		"eslint-config-iamnapo": "^35.0.0"
+		"eslint": "^8.57.0",
+		"eslint-config-iamnapo": "^36.0.0"
 	},
 	"engines": {
 		"node": ">=14"
