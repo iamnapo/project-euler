@@ -24,19 +24,12 @@
 	},
 	"type": "module",
 	"scripts": {
-		"lint": "eslint . --ext .js --cache",
-		"test": "npm run lint && node --test test/*.test.js"
-	},
-	"eslintConfig": {
-		"extends": "iamnapo",
-		"rules": {
-			"@stylistic/max-len": "off",
-			"no-bitwise": "off"
-		}
+		"lint": "eslint . --cache",
+		"test": "npm run lint && node --test"
 	},
 	"devDependencies": {
-		"eslint": "^8.57.0",
-		"eslint-config-iamnapo": "^36.0.0"
+		"eslint": "^8.57.1",
+		"eslint-config-iamnapo": "^37.0.0"
 	},
 	"engines": {
 		"node": ">=14"

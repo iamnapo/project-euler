@@ -102,6 +102,6 @@ const numbers = [
 	53_503_534_226_472_524_250_874_054_075_591_789_781_264_330_331_690,
 ];
 
-const problem013 = () => `Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString().replaceAll(",", "").slice(0, 10)}`;
+const problem013 = () => `Problem 13 solution is: ${numbers.reduce((a, b) => a + b).toLocaleString("en").replaceAll(",", "").slice(0, 10)}`;
 
 export default problem013;

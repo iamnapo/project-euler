@@ -27,9 +27,9 @@ const problem011 = () => {
 		const col = grid.map((x) => x[i]);
 		for (let j = 0; j < 16; j += 1) {
 			let product = grid[i].slice(j, j + 4).reduce((a, b) => a * b);
-			max = product > max ? product : max;
+			max = Math.max(product, max);
 			product = col.slice(j, j + 4).reduce((a, b) => a * b);
-			max = product > max ? product : max;
+			max = Math.max(product, max);
 		}
 	}
 
@@ -41,7 +41,7 @@ const problem011 = () => {
 					product *= grid[i + k][j + k];
 				}
 
-				max = product > max ? product : max;
+				max = Math.max(product, max);
 			}
 		}
 	}
@@ -54,7 +54,7 @@ const problem011 = () => {
 					product *= grid[i + k][j - k];
 				}
 
-				max = product > max ? product : max;
+				max = Math.max(product, max);
 			}
 		}
 	}
