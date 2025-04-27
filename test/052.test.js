@@ -1,5 +1,5 @@
-import test from "node:test";
 import { equal } from "node:assert/strict";
+import test from "node:test";
 
 import problem052 from "../problems/052.js";
 

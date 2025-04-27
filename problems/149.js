@@ -40,9 +40,9 @@ function maxSubSum(grid, x, y, dx, dy) {
 	let [ans, cur] = [0, 0];
 	while (
 		x < n
-    && x >= 0
-    && y < n
-    && y >= 0
+		&& x >= 0
+		&& y < n
+		&& y >= 0
 	) {
 		cur = Math.max(0, cur + grid[x][y]);
 		ans = Math.max(ans, cur);

@@ -6,12 +6,12 @@ const problem146 = () => {
 	for (let a = 0; a < step; a += 1) {
 		if (
 			a % 10 === 0
-      && a % 3 !== 0
-      && [3, 4].includes(a % 7)
-      && ![2, 3, 8, 9].includes(a % 11)
-      && [1, 3, 4, 9, 10, 12].includes(a % 13)
-      && ![2, 4, 5, 12, 13, 15].includes(a % 17)
-      && ![4, 5, 7, 12, 14, 15].includes(a % 19)
+			&& a % 3 !== 0
+			&& [3, 4].includes(a % 7)
+			&& ![2, 3, 8, 9].includes(a % 11)
+			&& [1, 3, 4, 9, 10, 12].includes(a % 13)
+			&& ![2, 4, 5, 12, 13, 15].includes(a % 17)
+			&& ![4, 5, 7, 12, 14, 15].includes(a % 19)
 		) {
 			offsets.push(a);
 		}
@@ -52,7 +52,7 @@ function powMod(a, p, m) {
 		return a % m;
 	}
 
-	let r = powMod(a, p / BigInt(2), m);
+	let r = powMod(a, p / 2n, m);
 	r = (r ** 2n) % m;
 	if (p & 1n) {
 		r *= a % m;

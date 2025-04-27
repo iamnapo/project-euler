@@ -1,4 +1,4 @@
-import eslintConfigIamnapo from "eslint-config-iamnapo"; // eslint-disable-line import/no-extraneous-dependencies
+import eslintConfigIamnapo from "eslint-config-iamnapo";
 
 const config = [
 	...eslintConfigIamnapo.configs.default.map((cfg) => ({
