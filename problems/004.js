@@ -13,7 +13,7 @@ const problem004 = () => {
 };
 
 function isPalindrome(string) {
-	return string === [...string].reverse().join("");
+	return string === [...string].toReversed().join("");
 }
 
 export default problem004;

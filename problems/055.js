@@ -12,7 +12,7 @@ const problem055 = () => {
 function isLychrel(num) {
 	let tmp = num;
 	for (let i = 0; i < 50; i += 1) {
-		tmp += Number.parseInt([...tmp.toString()].reverse().join(""), 10);
+		tmp += Number.parseInt([...tmp.toString()].toReversed().join(""), 10);
 		if (isPalindrome(tmp.toString())) {
 			return false;
 		}
@@ -22,7 +22,7 @@ function isLychrel(num) {
 }
 
 function isPalindrome(string) {
-	return (string === [...string].reverse().join("")) && string[0] !== "0";
+	return (string === [...string].toReversed().join("")) && string[0] !== "0";
 }
 
 export default problem055;

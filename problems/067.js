@@ -102,7 +102,7 @@ let numbers = [
 ];
 
 const problem067 = () => {
-	numbers = numbers.reverse();
+	numbers.reverse();
 	while (numbers.length > 1) {
 		const newRow = [];
 		for (let j = 0; j < numbers[1].length; j += 1) {

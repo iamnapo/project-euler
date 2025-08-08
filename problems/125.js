@@ -22,7 +22,7 @@ const problem125 = () => {
 };
 
 function isPalindrome(string) {
-	return (string === [...string].reverse().join("")) && string[0] !== "0";
+	return (string === [...string].toReversed().join("")) && string[0] !== "0";
 }
 
 export default problem125;

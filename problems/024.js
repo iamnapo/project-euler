@@ -21,7 +21,7 @@ const problem024 = () => {
 		}
 
 		[a[k], a[l]] = [a[l], a[k]];
-		a = [...a.slice(0, k + 1), ...a.slice(k + 1).reverse()];
+		a = [...a.slice(0, k + 1), ...a.slice(k + 1).toReversed()];
 	}
 
 	return `Problem 24 solution is: ${a.join("")}`;
