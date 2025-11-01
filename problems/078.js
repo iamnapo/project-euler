@@ -1,6 +1,5 @@
 const problem078 = () => {
-	const p = [];
-	p.push(1);
+	const p = [1];
 	let n = 1;
 	for (;;) {
 		let i = 0;

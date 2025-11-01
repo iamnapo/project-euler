@@ -31,7 +31,7 @@ const problem084 = () => {
 		board[cPos] += 1;
 	}
 
-	const index = board.map((el, i) => ({ ind: i, val: el })).sort((x, y) => {
+	const index = board.map((el, i) => ({ ind: i, val: el })).toSorted((x, y) => {
 		if (x.val < y.val) {
 			return 1;
 		}

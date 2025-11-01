@@ -6,7 +6,7 @@ const problem098 = () => {
 	const wList = [];
 	let key;
 	for (const w of words) {
-		key = [...w].sort();
+		key = [...w].toSorted();
 		wList[key] = wList[key] || [];
 		wList[key].push(w);
 	}

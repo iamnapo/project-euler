@@ -1,16 +1,14 @@
+import { defineConfig } from "eslint/config";
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
-const config = [
-	...eslintConfigIamnapo.configs.default.map((cfg) => ({
-		...cfg,
-		files: [eslintConfigIamnapo.filePatterns.default],
-	})),
+const config = defineConfig([
 	{
+		files: [eslintConfigIamnapo.filePatterns.default],
+		extends: [eslintConfigIamnapo.configs.default],
 		rules: {
 			"@stylistic/max-len": "off",
-			"no-bitwise": "off",
 		},
 	},
-];
+]);
 
 export default config;

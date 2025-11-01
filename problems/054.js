@@ -1048,7 +1048,7 @@ const problem054 = () => {
 
 function score(h) {
 	let sc = {};
-	const hand = h.sort((a, b) => b.value - a.value);
+	const hand = h.toSorted((a, b) => b.value - a.value);
 	sc = { category: 0, tiebraker: hand.map((el) => el.value) };
 	const values = hand.map((el) => el.value);
 	const pairs = [];

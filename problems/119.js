@@ -1,10 +1,10 @@
 const problem119 = () => {
-	let potentialNumbers = [];
+	const potentialNumbers = [];
 	for (let b = 2; b < 100; b += 1) {
 		for (let e = 2; e < 10; e += 1) potentialNumbers.push([b ** e, b]);
 	}
 
-	potentialNumbers = potentialNumbers.sort((a, b) => a[0] - b[0]);
+	potentialNumbers.sort((a, b) => a[0] - b[0]);
 	let n = 1;
 	for (const [a, b] of potentialNumbers) {
 		if (digitSum(a) === b) {
